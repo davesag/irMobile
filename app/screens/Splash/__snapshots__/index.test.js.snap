@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rendering rendered correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "backgroundColor": "#F8F9FA",
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "flex-start",
+      "marginBottom": 25,
+      "top": 40,
+    }
+  }
+>
+  <Text>
+    Independent Reserve
+  </Text>
+</View>
+`;
