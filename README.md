@@ -72,7 +72,7 @@ Ref: [facebook.github.io/react-native/docs/getting-started#xcode](https://facebo
 yarn ios
 ```
 
-**TROUBLESHOOTING NOTE**: If you are having trouble bundling the app for the first time on ios delete `/leflair-app/ios/build`
+**TROUBLESHOOTING NOTE**: If you are having trouble bundling the app for the first time on ios delete `/ios/build`
 and rerun `yarn ios`
 
 #### Run in Android Studio
@@ -100,3 +100,9 @@ _to be completed_
 ## Contributing
 
 Please see the [contributing notes](CONTRIBUTING.md).
+
+### Other ways to contribute
+
+- Join Independent Reserve using my referral code [`www.independentreserve.com/invite/AJNEHL`](https://www.independentreserve.com/invite/AJNEHL)
+- Send me Ether. `0xbd64860033c15c0af5df5a886b997f63a7723d5a`
+- Send me Bitcoin. `1HiqYdJZGmGDaj1ryKjEjaB2RRZuZebZxZ`
