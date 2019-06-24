@@ -18,17 +18,25 @@ export const restoreKeys = state => ({
 
 // only save the keys to the state when they have been successfully retreived from
 // the device's storage
-export const restoreKeysSuccess = (
-  state,
-  { payload: { apiKey, apiSecret } }
-) => ({
-  ...state,
-  apiKey,
-  apiSecret,
-  busy: false,
-  error: null,
-  message: null
-})
+export const restoreKeysSuccess = (state, { payload }) => {
+  const result = {
+    ...state,
+    busy: false,
+    error: null,
+    message: null
+  }
+  return payload
+    ? {
+        ...result,
+        apiKey: payload.apiKey,
+        apiSecret: payload.apiSecret
+      }
+    : {
+        ...result,
+        apiKey: null,
+        apiSecret: null
+      }
+}
 
 // error might be an actual error or simple that there are no keys in the local database
 export const restoreKeysFail = (state, { payload: error, error: isError }) => ({

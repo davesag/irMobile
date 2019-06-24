@@ -41,7 +41,7 @@ describe('saga', () => {
     describe('RESTORE_KEYS', () => {
       const action = { type: 'RESTORE_KEYS' }
 
-      describe('when there are keys to restore', () => {
+      describe('when there is no error', () => {
         const it = sagaHelper(saga.worker(action))
 
         afterAll(resetStubs)
@@ -53,20 +53,6 @@ describe('saga', () => {
 
         it('dispatches restoreKeysSuccess with the keys', result => {
           expect(result).toEqual(put(actions.restoreKeysSuccess(keys)))
-        })
-      })
-
-      describe('when there are no keys', () => {
-        const it = sagaHelper(saga.worker(action))
-        afterAll(resetStubs)
-
-        it('calls getData with the correct key', result => {
-          expect(result).toEqual(call(persistence.getData, KEY))
-          return null
-        })
-
-        it('dispatches restoreKeysFail with message "No Keys"', result => {
-          expect(result).toEqual(put(actions.restoreKeysFail('No Keys')))
         })
       })
 

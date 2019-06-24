@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
 
-import irReducer from './ir/reducer'
+import ir from './ir/reducer'
 
 const createReducer = combineReducers({
-  irReducer
+  ir
 })
 
 export default createReducer
