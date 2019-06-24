@@ -4,17 +4,19 @@ exports[`rendering rendered correctly 1`] = `
 <View
   style={
     Object {
-      "alignItems": "stretch",
-      "backgroundColor": "#F8F9FA",
+      "alignItems": "center",
       "flex": 1,
-      "flexDirection": "column",
-      "justifyContent": "flex-start",
-      "marginBottom": 25,
-      "top": 40,
+      "justifyContent": "center",
     }
   }
 >
-  <Text>
+  <Text
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
     Independent Reserve
   </Text>
 </View>

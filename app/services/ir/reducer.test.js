@@ -23,17 +23,37 @@ describe('IR Reducer', () => {
 
     describe('#restoreKeysSuccess', () => {
       const state = defaultState({ busy: true })
-      const expected = {
-        ...state,
-        busy: false,
-        apiKey,
-        apiSecret
-      }
 
-      it('returns expected state', () => {
-        expect(
-          reducer.restoreKeysSuccess(state, { payload: { apiKey, apiSecret } })
-        ).toEqual(expected)
+      describe('if there were keys to restore', () => {
+        const expected = {
+          ...state,
+          busy: false,
+          apiKey,
+          apiSecret
+        }
+
+        it('returns expected state', () => {
+          expect(
+            reducer.restoreKeysSuccess(state, {
+              payload: { apiKey, apiSecret }
+            })
+          ).toEqual(expected)
+        })
+      })
+
+      describe('if there were no keys to restore', () => {
+        const expected = {
+          ...state,
+          busy: false,
+          apiKey: null,
+          apiSecret: null
+        }
+
+        it('returns expected state', () => {
+          expect(reducer.restoreKeysSuccess(state, { payload: null })).toEqual(
+            expected
+          )
+        })
       })
     })
 

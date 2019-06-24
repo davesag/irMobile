@@ -26,8 +26,7 @@ export default () => {
       case 'RESTORE_KEYS':
         try {
           keys = yield call(getData, KEY)
-          if (keys) yield put(restoreKeysSuccess(keys))
-          else yield put(restoreKeysFail('No Keys'))
+          yield put(restoreKeysSuccess(keys))
         } catch (err) {
           yield put(restoreKeysFail(err))
         }
