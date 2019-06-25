@@ -1,6 +1,8 @@
 # ir-app
 
-An iOS and Android mobile app that uses the [ir-api](https://github.com/davesag/ir-api) to interact with Independent Reserve
+An iOS and Android mobile app that uses the [ir-api](https://github.com/davesag/ir-api) to interact with Independent Reserve.
+
+Note this is a 3rd Party app and is not developed by, or supported by Independent Reserve.
 
 ## Branches
 
