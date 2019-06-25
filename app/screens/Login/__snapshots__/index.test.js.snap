@@ -11,14 +11,10 @@ exports[`rendering rendered correctly 1`] = `
     }
   }
 >
-  <Text
-    style={
-      Object {
-        "fontSize": 32,
-      }
-    }
-  >
-    Splash Screen
-  </Text>
+  <View>
+    <Text>
+      API Details Form
+    </Text>
+  </View>
 </RCTSafeAreaView>
 `;

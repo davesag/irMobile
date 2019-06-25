@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`basic form rendered correctly  1`] = `
+<View>
+  <Text>
+    API Details Form
+  </Text>
+</View>
+`;
