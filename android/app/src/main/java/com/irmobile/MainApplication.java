@@ -1,4 +1,4 @@
-package com.independentreserveapp;
+package com.irmobile;
 
 import android.app.Application;
 
