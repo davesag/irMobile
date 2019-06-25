@@ -9,8 +9,8 @@
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "prettier": "prettier --write '**/*.{js,json,css,md}'",
     "clean": "watchman watch-del-all && rm -rf node_modules && yarn install && rm -rf /tmp/metro-bundler-cache-* && rm -rf /tmp/haste-map-react-native-packager-*",
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "android": "ENVFILE=.env.develop react-native run-android",
+    "ios": "ENVFILE=.env.develop react-native run-ios",
     "clean-android": "watchman watch-del-all && rm -rf node_modules && rm -rf $TMPDIR/react-* && rm -rf $TMPDIR/npm-* && yarn install && ./android/gradlew clean -p ./android/ && yarn start -- --reset-cache",
     "clean-ios": "watchman watch-del-all && rm -rf node_modules && rm -rf $TMPDIR/react-* && rm -rf $TMPDIR/npm-* && yarn install && rm -rf ios/build && yarn start -- --reset-cache",
     "storybook": "storybook start",
@@ -98,8 +98,12 @@
       "<rootDir>setupTests.js"
     ],
     "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/*"
+    ],
+    "coveragePathIgnorePatterns": [
       "<rootDir>/node_modules/*",
-      "<rootDir>/app/App.js"
+      "<rootDir>/storybook/*",
+      "story.js"
     ],
     "coverageThreshold": {
       "global": {

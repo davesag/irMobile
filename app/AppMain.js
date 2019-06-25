@@ -3,27 +3,43 @@
  */
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { createAppContainer, createStackNavigator } from 'react-navigation'
+import {
+  createAppContainer,
+  createBottomTabNavigator,
+  createStackNavigator
+} from 'react-navigation'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-// import Config from 'react-native-config'
+import Config from 'react-native-config'
 import { View } from 'react-native'
+
+import StoryBookUI from '../storybook'
 
 import { restoreKeys } from './services/ir/actions'
 
 import SplashScreen from './screens/Splash'
-import splashNav from './screens/Splash/navigationOptions'
+import LoginScreen from './screens/Login'
 
-// Establish stack navigator
-const StackNavigator = createStackNavigator(
-  {
-    Splash: {
-      screen: SplashScreen,
-      navigationOptions: splashNav
-    }
-  },
-  { mode: 'modal' }
-)
+const useStorybook = nav =>
+  Config.STORYBOOK === 'true'
+    ? /* istanbul ignore next */ {
+        ...nav,
+        StoryBook: StoryBookUI
+      }
+    : nav
+
+const navBar = useStorybook({
+  Splash: SplashScreen,
+  Login: LoginScreen
+})
+
+const MainNavigator = createBottomTabNavigator(navBar)
+
+const StackNavigator = createStackNavigator({
+  MainNavigator: { screen: MainNavigator },
+  Splash: { screen: SplashScreen },
+  Login: { screen: LoginScreen }
+})
 
 const AppContainer = createAppContainer(StackNavigator)
 

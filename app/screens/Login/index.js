@@ -1,14 +1,16 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { SafeAreaView, Text } from 'react-native'
+import { SafeAreaView } from 'react-native'
 
 import { navigationShape } from '../../shapes'
 
+import APIDetailsForm from '../../components/APIDetailsForm'
+
 import styles from './styles'
 
-export class SplashScreen extends PureComponent {
+export class LoginScreen extends Component {
   static navigationOptions = {
-    title: 'Splash Screen'
+    title: 'Log In'
   }
 
   static propTypes = {
@@ -18,10 +20,10 @@ export class SplashScreen extends PureComponent {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <Text style={styles.text}>Splash Screen</Text>
+        <APIDetailsForm />
       </SafeAreaView>
     )
   }
 }
 
-export default SplashScreen
+export default LoginScreen
