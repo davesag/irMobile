@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { SafeAreaView, Text } from 'react-native'
+import { SafeAreaView } from 'react-native'
+import { Text } from 'react-native-elements'
 
 import { navigationShape } from '../../shapes'
 
@@ -18,7 +19,7 @@ export class SplashScreen extends PureComponent {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <Text style={styles.text}>Splash Screen</Text>
+        <Text h3>Splash Screen</Text>
       </SafeAreaView>
     )
   }
