@@ -1,4 +1,5 @@
-export const getKeys = ({ ir: { apiKey, apiSecret } }) => ({
+export const getKeys = ({ ir: { apiKey, apiSecret, requireAuth } }) => ({
   apiKey,
-  apiSecret
+  apiSecret,
+  requireAuth
 })

@@ -3,6 +3,7 @@ import { createReducer } from 'reduxsauce'
 export const INITIAL_STATE = {
   apiKey: null, // consider encrypting this.
   apiSecret: null, // consider encrypting this.
+  requireAuth: false,
   error: null, // either an Error object or an error message
   busy: false, // check to see if we are mid-save, restore, or clear
   message: null // the error's message, no matter if error is an Error or just a message.
@@ -29,12 +30,14 @@ export const restoreKeysSuccess = (state, { payload }) => {
     ? {
         ...result,
         apiKey: payload.apiKey,
-        apiSecret: payload.apiSecret
+        apiSecret: payload.apiSecret,
+        requireAuth: payload.requireAuth
       }
     : {
         ...result,
         apiKey: null,
-        apiSecret: null
+        apiSecret: null,
+        requireAuth: false
       }
 }
 
@@ -47,10 +50,14 @@ export const restoreKeysFail = (state, { payload: error, error: isError }) => ({
 })
 
 // put the keys in the state here rather than wait for success.
-export const saveKeys = (state, { payload: { apiKey, apiSecret } }) => ({
+export const saveKeys = (
+  state,
+  { payload: { apiKey, apiSecret, requireAuth } }
+) => ({
   ...state,
   apiKey,
   apiSecret,
+  requireAuth,
   busy: true,
   error: null,
   message: null
@@ -78,6 +85,7 @@ export const clearKeys = state => ({
   ...state,
   apiKey: null,
   apiSecret: null,
+  requireAuth: false,
   busy: true,
   error: null,
   message: null

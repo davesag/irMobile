@@ -7,6 +7,7 @@ const defaultState = (fields = {}) => ({ ...reducer.INITIAL_STATE, ...fields })
 describe('IR Reducer', () => {
   const apiKey = 'some api key'
   const apiSecret = 'some api secret'
+  const requireAuth = true
 
   describe('Restore Keys', () => {
     describe('#restoreKeys', () => {
@@ -29,13 +30,14 @@ describe('IR Reducer', () => {
           ...state,
           busy: false,
           apiKey,
-          apiSecret
+          apiSecret,
+          requireAuth
         }
 
         it('returns expected state', () => {
           expect(
             reducer.restoreKeysSuccess(state, {
-              payload: { apiKey, apiSecret }
+              payload: { apiKey, apiSecret, requireAuth }
             })
           ).toEqual(expected)
         })
@@ -46,7 +48,8 @@ describe('IR Reducer', () => {
           ...state,
           busy: false,
           apiKey: null,
-          apiSecret: null
+          apiSecret: null,
+          requireAuth: false
         }
 
         it('returns expected state', () => {
@@ -102,18 +105,21 @@ describe('IR Reducer', () => {
         ...state,
         apiKey,
         apiSecret,
+        requireAuth,
         busy: true
       }
 
       it('returns expected state', () => {
         expect(
-          reducer.saveKeys(state, { payload: { apiKey, apiSecret } })
+          reducer.saveKeys(state, {
+            payload: { apiKey, apiSecret, requireAuth }
+          })
         ).toEqual(expected)
       })
     })
 
     describe('#saveKeysSuccess', () => {
-      const state = defaultState({ busy: true, apiKey, apiSecret })
+      const state = defaultState({ busy: true, apiKey, apiSecret, requireAuth })
       const expected = {
         ...state,
         busy: false
@@ -127,7 +133,7 @@ describe('IR Reducer', () => {
     describe('#saveKeysFail', () => {
       const message = 'oops'
       const error = new Error(message)
-      const state = defaultState({ busy: true, apiKey, apiSecret })
+      const state = defaultState({ busy: true, apiKey, apiSecret, requireAuth })
       const expected = {
         ...state,
         busy: false,
@@ -145,11 +151,12 @@ describe('IR Reducer', () => {
 
   describe('Clear Keys', () => {
     describe('#clearKeys', () => {
-      const state = defaultState({ apiKey, apiSecret })
+      const state = defaultState({ apiKey, apiSecret, requireAuth })
       const expected = {
         ...state,
         apiKey: null,
         apiSecret: null,
+        requireAuth: false,
         busy: true
       }
 

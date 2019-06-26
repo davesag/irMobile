@@ -3,7 +3,8 @@ import * as actions from './actions'
 describe('IR actions', () => {
   const apiKey = 'some api key'
   const apiSecret = 'some api secret'
-  const keys = { apiKey, apiSecret }
+  const requireAuth = true
+  const keys = { apiKey, apiSecret, requireAuth }
 
   describe('#restoreKeys', () => {
     describe('request', () => {
