@@ -36,9 +36,9 @@ const navBar = useStorybook({
 const MainNavigator = createBottomTabNavigator(navBar)
 
 const StackNavigator = createStackNavigator({
-  MainNavigator: { screen: MainNavigator },
-  Splash: { screen: SplashScreen },
-  Login: { screen: LoginScreen }
+  MainNavigator: MainNavigator,
+  Splash: SplashScreen,
+  Login: LoginScreen
 })
 
 const AppContainer = createAppContainer(StackNavigator)

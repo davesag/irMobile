@@ -9,18 +9,18 @@ const keys = {
   apiSecret: 'abcd123'
 }
 
-storiesOf('Forms', module)
-  .add('APIDetailsForm without initial values', () => (
+storiesOf('APIDetailsForm', module)
+  .add('empty', () => (
     <SafeAreaView>
       <APIDetailsForm onSave={() => {}} />
     </SafeAreaView>
   ))
-  .add('APIDetailsForm with initial values', () => (
+  .add('with values', () => (
     <SafeAreaView>
       <APIDetailsForm keys={keys} requireAuth={true} onSave={() => {}} />
     </SafeAreaView>
   ))
-  .add('APIDetailsForm is saving', () => (
+  .add('saving', () => (
     <SafeAreaView>
       <APIDetailsForm keys={keys} requireAuth={true} saving onSave={() => {}} />
     </SafeAreaView>

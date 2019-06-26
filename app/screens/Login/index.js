@@ -19,13 +19,16 @@ export class LoginScreen extends Component {
 
   static propTypes = {
     navigation: PropTypes.shape(navigationShape).isRequired,
+    saveKeys: PropTypes.func.isRequired,
     keys: PropTypes.shape(keysShape),
-    requireAuth: PropTypes.bool
+    requireAuth: PropTypes.bool,
+    saving: PropTypes.bool
   }
 
   static defaultProps = {
     keys: null,
-    requireAuth: false
+    requireAuth: false,
+    saving: false
   }
 
   render() {
@@ -43,7 +46,7 @@ export class LoginScreen extends Component {
           saving={saving}
           keys={keys}
           requireAuth={requireAuth}
-          onSave={this.props.saveKeys}
+          onSave={saveKeys}
         />
       </SafeAreaView>
     )

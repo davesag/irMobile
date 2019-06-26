@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { View } from 'react-native'
-import { Button, CheckBox, Input, Text } from 'react-native-elements'
+import { Button, CheckBox, Input } from 'react-native-elements'
 
 import { keysShape } from '../../shapes'
 
 import styles from './styles'
 
-const cleanKey = key => key.replace(/[^a-z0-9\-]/gi, '')
+const cleanKey = key => key.replace(/[^a-z0-9-]/gi, '')
 
 class APIDetailsForm extends Component {
   static propTypes = {
@@ -73,7 +73,7 @@ class APIDetailsForm extends Component {
   render() {
     const { apiKey, apiSecret, requireAuth } = this.state
 
-    const { saving, onSave } = this.props
+    const { saving } = this.props
     const disabled = this.canBeSubmitted()
 
     return (

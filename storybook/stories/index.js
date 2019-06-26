@@ -1,1 +1,6 @@
+import '../../app/components/AccountBalances/story'
 import '../../app/components/APIDetailsForm/story'
+import '../../app/components/Table/story'
+import '../../app/components/Table/Header/story'
+import '../../app/components/Table/Row/story'
+import '../../app/components/Table/Footer/story'
