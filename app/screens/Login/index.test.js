@@ -6,8 +6,6 @@ import 'react-native'
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import * as reactRedux from 'react-redux'
-
 import LoginScreen, { mapStateToProps, mapDispatchToProps } from '.'
 
 const apiKey = 'some-key'
