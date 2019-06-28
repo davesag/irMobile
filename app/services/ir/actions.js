@@ -1,15 +1,18 @@
 import { createActions } from 'redux-actions'
 
 export const ACTIONS = [
-  'RESTORE_KEYS',
-  'RESTORE_KEYS_SUCCESS',
-  'RESTORE_KEYS_FAIL',
-  'SAVE_KEYS',
-  'SAVE_KEYS_SUCCESS',
-  'SAVE_KEYS_FAIL',
   'CLEAR_KEYS',
+  'CLEAR_KEYS_FAIL',
   'CLEAR_KEYS_SUCCESS',
-  'CLEAR_KEYS_FAIL'
+  'GET_BALANCES',
+  'GET_BALANCES_FAIL',
+  'GET_BALANCES_SUCCESS',
+  'RESTORE_KEYS',
+  'RESTORE_KEYS_FAIL',
+  'RESTORE_KEYS_SUCCESS',
+  'SAVE_KEYS',
+  'SAVE_KEYS_FAIL',
+  'SAVE_KEYS_SUCCESS'
 ]
 
 const actions = ACTIONS.reduce((acc, elem) => {
@@ -18,13 +21,16 @@ const actions = ACTIONS.reduce((acc, elem) => {
 }, {})
 
 export const {
-  restoreKeys,
-  restoreKeysSuccess,
-  restoreKeysFail,
-  saveKeys,
-  saveKeysSuccess,
-  saveKeysFail,
   clearKeys,
+  clearKeysFail,
   clearKeysSuccess,
-  clearKeysFail
+  getBalances,
+  getBalancesFail,
+  getBalancesSuccess,
+  restoreKeys,
+  restoreKeysFail,
+  restoreKeysSuccess,
+  saveKeys,
+  saveKeysFail,
+  saveKeysSuccess
 } = createActions(actions)

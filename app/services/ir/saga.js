@@ -3,12 +3,15 @@ import { takeEvery, call, put, select } from 'redux-saga/effects'
 import {
   restoreKeysSuccess,
   restoreKeysFail,
+  getBalancesSuccess,
+  getBalancesFail,
   saveKeysSuccess,
   saveKeysFail,
   clearKeysSuccess,
   clearKeysFail
 } from './actions'
 
+import { getBalances } from './api'
 import { storeData, getData, clearData } from '../persistence'
 import { getKeys } from './selectors'
 
@@ -47,6 +50,16 @@ export default () => {
           yield put(clearKeysSuccess())
         } catch (err) {
           yield put(clearKeysFail(err))
+        }
+        /* istanbul ignore next */ break
+      case 'GET_BALANCES':
+        try {
+          keys = yield select(getKeys)
+          if (!keys) throw new Error('Missing API Keys')
+          const balances = yield call(getBalances, keys.apiKey, keys.apiSecret)
+          yield put(getBalancesSuccess(balances))
+        } catch (err) {
+          yield put(getBalancesFail(err))
         }
         /* istanbul ignore next */ break
       default:
