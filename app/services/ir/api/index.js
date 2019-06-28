@@ -42,7 +42,10 @@ export const getBalances = async (
     return [rate, availableBalance * rate]
   }
 
+  console.log('about to fetch base data using keys', apiKey, apiSecret)
   const [allowedCoins, fxRates, accounts] = await fetchBaseData()
+  console.log('fetched', allowedCoins, fxRates, accounts)
+
   const current = accounts.filter(onlyWithBalance)
   const coins = current.map(({ currencyCode }) => currencyCode)
   const { crypto, fiat } = separateCryptoFromFiat(allowedCoins, coins)

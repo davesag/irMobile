@@ -28,7 +28,10 @@ describe('saga', () => {
 
     it('triggers events handlers', result => {
       expect(result).toEqual(
-        takeEvery(['RESTORE_KEYS', 'SAVE_KEYS', 'CLEAR_KEYS'], saga.worker)
+        takeEvery(
+          ['RESTORE_KEYS', 'SAVE_KEYS', 'CLEAR_KEYS', 'GET_BALANCES'],
+          saga.worker
+        )
       )
     })
   })

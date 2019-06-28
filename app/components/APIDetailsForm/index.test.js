@@ -67,56 +67,93 @@ describe('submit', () => {
   })
 })
 
-describe('updateField', () => {
-  beforeAll(() => {
-    tree = renderer.create(
-      <APIDetailsForm keys={keys} requireAuth={true} onSave={() => {}} />
-    )
+describe('updating fields', () => {
+  describe('#updateField', () => {
+    beforeAll(() => {
+      tree = renderer.create(
+        <APIDetailsForm keys={keys} requireAuth={true} onSave={() => {}} />
+      )
+    })
+
+    describe('with a valid value', () => {
+      const newKey = 'some-new-key'
+
+      beforeAll(() => {
+        tree.getInstance().updateField('apiKey')(newKey)
+      })
+
+      it('updated the state correctly', () => {
+        expect(tree.getInstance().state).toHaveProperty('apiKey', {
+          value: newKey,
+          error: null
+        })
+      })
+    })
+
+    describe('with empty string', () => {
+      beforeAll(() => {
+        tree.getInstance().updateField('apiKey')('')
+      })
+
+      it('updated the state correctly', () => {
+        expect(tree.getInstance().state).toHaveProperty('apiKey', {
+          value: '',
+          error: 'Required field'
+        })
+      })
+    })
   })
 
-  describe('with a valid value', () => {
-    const newKey = 'some-new-key'
+  describe('#toggleField', () => {
+    beforeAll(() => {
+      tree = renderer.create(
+        <APIDetailsForm keys={keys} requireAuth={true} onSave={() => {}} />
+      )
+      tree.getInstance().toggleField('requireAuth')()
+    })
+
+    it('updated the state correctly', () => {
+      expect(tree.getInstance().state).toHaveProperty('requireAuth', {
+        value: false
+      })
+    })
+  })
+
+  describe('#updateApiKey', () => {
+    const newKey = 'some new-key'
+    const expected = 'ee-e'
 
     beforeAll(() => {
-      tree.getInstance().updateField('apiKey')(newKey)
+      tree = renderer.create(
+        <APIDetailsForm keys={keys} requireAuth={true} onSave={() => {}} />
+      )
+      tree.getInstance().updateApiKey(newKey)
     })
 
     it('updated the state correctly', () => {
       expect(tree.getInstance().state).toHaveProperty('apiKey', {
-        value: newKey,
+        value: expected,
         error: null
       })
     })
   })
 
-  describe('with empty string', () => {
+  describe('#updateApiSecret', () => {
+    const newSecret = 'some new-secret'
+    const expected = 'eeece'
+
     beforeAll(() => {
-      tree.getInstance().updateField('apiKey')('')
+      tree = renderer.create(
+        <APIDetailsForm keys={keys} requireAuth={true} onSave={() => {}} />
+      )
+      tree.getInstance().updateApiSecret(newSecret)
     })
 
     it('updated the state correctly', () => {
-      expect(tree.getInstance().state).toHaveProperty('apiKey', {
-        value: '',
-        error: 'Required field'
+      expect(tree.getInstance().state).toHaveProperty('apiSecret', {
+        value: expected,
+        error: null
       })
-    })
-  })
-})
-
-describe('toggleField', () => {
-  beforeAll(() => {
-    tree = renderer.create(
-      <APIDetailsForm keys={keys} requireAuth={true} onSave={() => {}} />
-    )
-  })
-
-  beforeAll(() => {
-    tree.getInstance().toggleField('requireAuth')()
-  })
-
-  it('updated the state correctly', () => {
-    expect(tree.getInstance().state).toHaveProperty('requireAuth', {
-      value: false
     })
   })
 })

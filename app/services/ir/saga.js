@@ -68,7 +68,10 @@ export default () => {
   }
 
   function* watcher() {
-    yield takeEvery(['RESTORE_KEYS', 'SAVE_KEYS', 'CLEAR_KEYS'], worker)
+    yield takeEvery(
+      ['RESTORE_KEYS', 'SAVE_KEYS', 'CLEAR_KEYS', 'GET_BALANCES'],
+      worker
+    )
   }
 
   return { worker, watcher }
