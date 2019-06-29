@@ -6,5 +6,8 @@ export default StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'stretch',
     margin: 10
+  },
+  button: {
+    paddingTop: 10
   }
 })

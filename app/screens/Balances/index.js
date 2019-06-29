@@ -45,7 +45,11 @@ export class BalancesScreen extends Component {
         <View>
           <Text h3>Missing Keys</Text>
           <Text>We need your Independent Reserve API Keys</Text>
-          <Button title="Enter Keys…" onPress={this.navigateToLogin} />
+          <Button
+            style={styles.button}
+            title="Enter Keys…"
+            onPress={this.navigateToLogin}
+          />
         </View>
       )
 
@@ -54,6 +58,7 @@ export class BalancesScreen extends Component {
         <Text h3>Balances</Text>
         <AccountBalances balances={balances} />
         <Button
+          style={styles.button}
           title="Refresh"
           onPress={this.refreshBalances}
           loading={loading}

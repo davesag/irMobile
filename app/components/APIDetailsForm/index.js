@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { View } from 'react-native'
+import { Keyboard, View } from 'react-native'
 import { Button, CheckBox, Input } from 'react-native-elements'
 
 import { keysShape } from '../../shapes'
@@ -38,20 +38,25 @@ class APIDetailsForm extends Component {
       },
       requireAuth: {
         value: props.requireAuth
-      }
+      },
+      dirty: false
     }
   }
 
   updateField = field => value => {
     if (value) {
-      this.setState({ [field]: { value, error: null } })
+      this.setState({ [field]: { value, error: null }, dirty: true })
     } else {
-      this.setState({ [field]: { value, error: 'Required field' } })
+      this.setState({
+        [field]: { value, error: 'Required field' },
+        dirty: true
+      })
     }
   }
 
   toggleField = field => () => {
-    this.setState({ [field]: { value: !this.state[field].value } })
+    this.setState({ [field]: { value: !this.state[field].value }, dirty: true })
+    Keyboard.dismiss()
   }
 
   updateApiKey = text => {
@@ -62,27 +67,33 @@ class APIDetailsForm extends Component {
     this.updateField('apiSecret')(cleanSecret(text))
   }
 
-  canBeSubmitted = () => {
-    const { apiKey, apiSecret } = this.state
+  canNotBeSubmitted = () => {
+    const { apiKey, apiSecret, dirty } = this.state
     return (
-      apiKey.errors || apiSecret.errors || !apiKey.value || !apiSecret.value
+      !dirty ||
+      apiKey.errors ||
+      apiSecret.errors ||
+      !apiKey.value ||
+      !apiSecret.value
     )
   }
 
   submit = () => {
     const { apiKey, apiSecret, requireAuth } = this.state
+    this.setState({ dirty: false })
     this.props.onSave({
       apiKey: apiKey.value,
       apiSecret: apiSecret.value,
       requireAuth: requireAuth.value
     })
+    Keyboard.dismiss()
   }
 
   render() {
     const { apiKey, apiSecret, requireAuth } = this.state
 
     const { saving } = this.props
-    const disabled = this.canBeSubmitted()
+    const disabled = this.canNotBeSubmitted()
 
     return (
       <View style={styles.container}>
@@ -95,6 +106,7 @@ class APIDetailsForm extends Component {
           errorStyle={{ color: 'red' }}
           errorMessage={apiKey.error}
           onChangeText={this.updateApiKey}
+          onSubmitEditing={Keyboard.dismiss}
         />
         <Input
           autoCapitalize="none"
@@ -105,6 +117,7 @@ class APIDetailsForm extends Component {
           errorStyle={{ color: 'red' }}
           errorMessage={apiSecret.error}
           onChangeText={this.updateApiSecret}
+          onSubmitEditing={Keyboard.dismiss}
         />
         <CheckBox
           checked={requireAuth.value}

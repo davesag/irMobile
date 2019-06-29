@@ -13,7 +13,7 @@ const cell = {
   paddingRight: 5,
   overflow: 'hidden',
   flexWrap: 'nowrap',
-  height: 15
+  height: 16
 }
 
 export default StyleSheet.create({
@@ -23,14 +23,15 @@ export default StyleSheet.create({
   row: {
     justifyContent: 'space-evenly',
     flexDirection: 'row',
-    paddingTop: 2
+    paddingTop: 5
   },
   headerCell: {
     ...cell,
+    fontSize: 11,
     alignSelf: 'center',
     borderBottomWidth: 0.5,
     paddingBottom: 3,
-    height: 25
+    height: 22
   },
   header: {
     fontWeight: 'bold'
@@ -39,7 +40,7 @@ export default StyleSheet.create({
     ...cell
   },
   data: {
-    fontSize: 11,
+    fontSize: 10,
     fontFamily: monospace,
     overflow: 'hidden',
     flexWrap: 'nowrap'
@@ -49,12 +50,12 @@ export default StyleSheet.create({
     alignSelf: 'center',
     borderBottomWidth: 0.5,
     borderTopWidth: 0.5,
-    paddingTop: 3,
+    paddingTop: 5,
     paddingBottom: 5,
     height: 20
   },
   footer: {
-    fontSize: 11,
+    fontSize: 10,
     fontFamily: monospace,
     fontWeight: 'bold'
   }
