@@ -6,7 +6,7 @@ exports[`rendering with data rendered correctly  1`] = `
     Object {
       "flexDirection": "row",
       "justifyContent": "space-evenly",
-      "paddingTop": 2,
+      "paddingTop": 5,
     }
   }
 >
@@ -18,13 +18,13 @@ exports[`rendering with data rendered correctly  1`] = `
         "borderBottomWidth": 0.5,
         "borderTopWidth": 0.5,
         "flexWrap": "nowrap",
-        "height": 20,
+        "height": 25,
         "justifyContent": "center",
         "overflow": "hidden",
         "paddingBottom": 5,
         "paddingLeft": 5,
         "paddingRight": 5,
-        "paddingTop": 3,
+        "paddingTop": 5,
         "width": "25%",
       }
     }
@@ -33,7 +33,7 @@ exports[`rendering with data rendered correctly  1`] = `
       style={
         Object {
           "fontFamily": "Courier New",
-          "fontSize": 11,
+          "fontSize": 9,
           "fontWeight": "bold",
         }
       }
@@ -86,13 +86,13 @@ exports[`rendering with data rendered correctly  1`] = `
         "borderBottomWidth": 0.5,
         "borderTopWidth": 0.5,
         "flexWrap": "nowrap",
-        "height": 20,
+        "height": 25,
         "justifyContent": "center",
         "overflow": "hidden",
         "paddingBottom": 5,
         "paddingLeft": 5,
         "paddingRight": 5,
-        "paddingTop": 3,
+        "paddingTop": 5,
         "width": "25%",
       }
     }
@@ -101,7 +101,7 @@ exports[`rendering with data rendered correctly  1`] = `
       style={
         Object {
           "fontFamily": "Courier New",
-          "fontSize": 11,
+          "fontSize": 9,
           "fontWeight": "bold",
         }
       }
@@ -154,13 +154,13 @@ exports[`rendering with data rendered correctly  1`] = `
         "borderBottomWidth": 0.5,
         "borderTopWidth": 0.5,
         "flexWrap": "nowrap",
-        "height": 20,
+        "height": 25,
         "justifyContent": "center",
         "overflow": "hidden",
         "paddingBottom": 5,
         "paddingLeft": 5,
         "paddingRight": 5,
-        "paddingTop": 3,
+        "paddingTop": 5,
         "width": "25%",
       }
     }
@@ -169,7 +169,7 @@ exports[`rendering with data rendered correctly  1`] = `
       style={
         Object {
           "fontFamily": "Courier New",
-          "fontSize": 11,
+          "fontSize": 9,
           "fontWeight": "bold",
         }
       }

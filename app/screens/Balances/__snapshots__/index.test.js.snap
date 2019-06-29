@@ -76,7 +76,7 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
           Object {
             "flexDirection": "row",
             "justifyContent": "space-evenly",
-            "paddingTop": 2,
+            "paddingTop": 5,
           }
         }
       >
@@ -87,7 +87,7 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
               "alignSelf": "center",
               "borderBottomWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 25,
+              "height": 22,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 3,
@@ -100,6 +100,7 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
           <Text
             style={
               Object {
+                "fontSize": 10,
                 "fontWeight": "bold",
               }
             }
@@ -151,7 +152,7 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
               "alignSelf": "center",
               "borderBottomWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 25,
+              "height": 22,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 3,
@@ -164,6 +165,7 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
           <Text
             style={
               Object {
+                "fontSize": 10,
                 "fontWeight": "bold",
               }
             }
@@ -215,7 +217,7 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
               "alignSelf": "center",
               "borderBottomWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 25,
+              "height": 22,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 3,
@@ -228,6 +230,7 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
           <Text
             style={
               Object {
+                "fontSize": 10,
                 "fontWeight": "bold",
               }
             }
@@ -279,7 +282,7 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
               "alignSelf": "center",
               "borderBottomWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 25,
+              "height": 22,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 3,
@@ -292,6 +295,7 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
           <Text
             style={
               Object {
+                "fontSize": 10,
                 "fontWeight": "bold",
               }
             }
@@ -342,7 +346,7 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
           Object {
             "flexDirection": "row",
             "justifyContent": "space-evenly",
-            "paddingTop": 2,
+            "paddingTop": 5,
           }
         }
       >
@@ -354,13 +358,13 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
               "borderBottomWidth": 0.5,
               "borderTopWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 20,
+              "height": 25,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 5,
               "paddingLeft": 5,
               "paddingRight": 5,
-              "paddingTop": 3,
+              "paddingTop": 5,
               "width": "25%",
             }
           }
@@ -369,7 +373,7 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
             style={
               Object {
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "fontWeight": "bold",
               }
             }
@@ -422,13 +426,13 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
               "borderBottomWidth": 0.5,
               "borderTopWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 20,
+              "height": 25,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 5,
               "paddingLeft": 5,
               "paddingRight": 5,
-              "paddingTop": 3,
+              "paddingTop": 5,
               "width": "25%",
             }
           }
@@ -437,7 +441,7 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
             style={
               Object {
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "fontWeight": "bold",
               }
             }
@@ -490,13 +494,13 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
               "borderBottomWidth": 0.5,
               "borderTopWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 20,
+              "height": 25,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 5,
               "paddingLeft": 5,
               "paddingRight": 5,
-              "paddingTop": 3,
+              "paddingTop": 5,
               "width": "25%",
             }
           }
@@ -505,7 +509,7 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
             style={
               Object {
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "fontWeight": "bold",
               }
             }
@@ -558,13 +562,13 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
               "borderBottomWidth": 0.5,
               "borderTopWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 20,
+              "height": 25,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 5,
               "paddingLeft": 5,
               "paddingRight": 5,
-              "paddingTop": 3,
+              "paddingTop": 5,
               "width": "25%",
             }
           }
@@ -573,7 +577,7 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
             style={
               Object {
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "fontWeight": "bold",
               }
             }
@@ -639,6 +643,7 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
         style={
           Object {
             "opacity": 1,
+            "paddingTop": 10,
           }
         }
       >
@@ -646,7 +651,7 @@ exports[`rendering has no balances but is loading rendered correctly 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#2089dc",
+              "backgroundColor": "hsl(208, 8%, 90%)",
               "borderColor": "#2089dc",
               "borderRadius": 3,
               "borderWidth": 0,
@@ -750,7 +755,7 @@ exports[`rendering when empty balances rendered correctly 1`] = `
           Object {
             "flexDirection": "row",
             "justifyContent": "space-evenly",
-            "paddingTop": 2,
+            "paddingTop": 5,
           }
         }
       >
@@ -761,7 +766,7 @@ exports[`rendering when empty balances rendered correctly 1`] = `
               "alignSelf": "center",
               "borderBottomWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 25,
+              "height": 22,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 3,
@@ -774,6 +779,7 @@ exports[`rendering when empty balances rendered correctly 1`] = `
           <Text
             style={
               Object {
+                "fontSize": 10,
                 "fontWeight": "bold",
               }
             }
@@ -825,7 +831,7 @@ exports[`rendering when empty balances rendered correctly 1`] = `
               "alignSelf": "center",
               "borderBottomWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 25,
+              "height": 22,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 3,
@@ -838,6 +844,7 @@ exports[`rendering when empty balances rendered correctly 1`] = `
           <Text
             style={
               Object {
+                "fontSize": 10,
                 "fontWeight": "bold",
               }
             }
@@ -889,7 +896,7 @@ exports[`rendering when empty balances rendered correctly 1`] = `
               "alignSelf": "center",
               "borderBottomWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 25,
+              "height": 22,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 3,
@@ -902,6 +909,7 @@ exports[`rendering when empty balances rendered correctly 1`] = `
           <Text
             style={
               Object {
+                "fontSize": 10,
                 "fontWeight": "bold",
               }
             }
@@ -953,7 +961,7 @@ exports[`rendering when empty balances rendered correctly 1`] = `
               "alignSelf": "center",
               "borderBottomWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 25,
+              "height": 22,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 3,
@@ -966,6 +974,7 @@ exports[`rendering when empty balances rendered correctly 1`] = `
           <Text
             style={
               Object {
+                "fontSize": 10,
                 "fontWeight": "bold",
               }
             }
@@ -1016,7 +1025,7 @@ exports[`rendering when empty balances rendered correctly 1`] = `
           Object {
             "flexDirection": "row",
             "justifyContent": "space-evenly",
-            "paddingTop": 2,
+            "paddingTop": 5,
           }
         }
       >
@@ -1028,13 +1037,13 @@ exports[`rendering when empty balances rendered correctly 1`] = `
               "borderBottomWidth": 0.5,
               "borderTopWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 20,
+              "height": 25,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 5,
               "paddingLeft": 5,
               "paddingRight": 5,
-              "paddingTop": 3,
+              "paddingTop": 5,
               "width": "25%",
             }
           }
@@ -1043,7 +1052,7 @@ exports[`rendering when empty balances rendered correctly 1`] = `
             style={
               Object {
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "fontWeight": "bold",
               }
             }
@@ -1096,13 +1105,13 @@ exports[`rendering when empty balances rendered correctly 1`] = `
               "borderBottomWidth": 0.5,
               "borderTopWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 20,
+              "height": 25,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 5,
               "paddingLeft": 5,
               "paddingRight": 5,
-              "paddingTop": 3,
+              "paddingTop": 5,
               "width": "25%",
             }
           }
@@ -1111,7 +1120,7 @@ exports[`rendering when empty balances rendered correctly 1`] = `
             style={
               Object {
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "fontWeight": "bold",
               }
             }
@@ -1164,13 +1173,13 @@ exports[`rendering when empty balances rendered correctly 1`] = `
               "borderBottomWidth": 0.5,
               "borderTopWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 20,
+              "height": 25,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 5,
               "paddingLeft": 5,
               "paddingRight": 5,
-              "paddingTop": 3,
+              "paddingTop": 5,
               "width": "25%",
             }
           }
@@ -1179,7 +1188,7 @@ exports[`rendering when empty balances rendered correctly 1`] = `
             style={
               Object {
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "fontWeight": "bold",
               }
             }
@@ -1232,13 +1241,13 @@ exports[`rendering when empty balances rendered correctly 1`] = `
               "borderBottomWidth": 0.5,
               "borderTopWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 20,
+              "height": 25,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 5,
               "paddingLeft": 5,
               "paddingRight": 5,
-              "paddingTop": 3,
+              "paddingTop": 5,
               "width": "25%",
             }
           }
@@ -1247,7 +1256,7 @@ exports[`rendering when empty balances rendered correctly 1`] = `
             style={
               Object {
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "fontWeight": "bold",
               }
             }
@@ -1313,6 +1322,7 @@ exports[`rendering when empty balances rendered correctly 1`] = `
         style={
           Object {
             "opacity": 1,
+            "paddingTop": 10,
           }
         }
       >
@@ -1426,7 +1436,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
           Object {
             "flexDirection": "row",
             "justifyContent": "space-evenly",
-            "paddingTop": 2,
+            "paddingTop": 5,
           }
         }
       >
@@ -1437,7 +1447,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
               "alignSelf": "center",
               "borderBottomWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 25,
+              "height": 22,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 3,
@@ -1450,6 +1460,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
           <Text
             style={
               Object {
+                "fontSize": 10,
                 "fontWeight": "bold",
               }
             }
@@ -1501,7 +1512,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
               "alignSelf": "center",
               "borderBottomWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 25,
+              "height": 22,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 3,
@@ -1514,6 +1525,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
           <Text
             style={
               Object {
+                "fontSize": 10,
                 "fontWeight": "bold",
               }
             }
@@ -1565,7 +1577,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
               "alignSelf": "center",
               "borderBottomWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 25,
+              "height": 22,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 3,
@@ -1578,6 +1590,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
           <Text
             style={
               Object {
+                "fontSize": 10,
                 "fontWeight": "bold",
               }
             }
@@ -1629,7 +1642,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
               "alignSelf": "center",
               "borderBottomWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 25,
+              "height": 22,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 3,
@@ -1642,6 +1655,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
           <Text
             style={
               Object {
+                "fontSize": 10,
                 "fontWeight": "bold",
               }
             }
@@ -1692,7 +1706,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
           Object {
             "flexDirection": "row",
             "justifyContent": "space-evenly",
-            "paddingTop": 2,
+            "paddingTop": 5,
           }
         }
       >
@@ -1701,7 +1715,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
             Object {
               "alignItems": "flex-start",
               "flexWrap": "nowrap",
-              "height": 15,
+              "height": 16,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingLeft": 5,
@@ -1715,7 +1729,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
               Object {
                 "flexWrap": "nowrap",
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "overflow": "hidden",
               }
             }
@@ -1765,7 +1779,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
             Object {
               "alignItems": "flex-start",
               "flexWrap": "nowrap",
-              "height": 15,
+              "height": 16,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingLeft": 5,
@@ -1779,7 +1793,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
               Object {
                 "flexWrap": "nowrap",
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "overflow": "hidden",
               }
             }
@@ -1829,7 +1843,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
             Object {
               "alignItems": "flex-start",
               "flexWrap": "nowrap",
-              "height": 15,
+              "height": 16,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingLeft": 5,
@@ -1843,7 +1857,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
               Object {
                 "flexWrap": "nowrap",
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "overflow": "hidden",
               }
             }
@@ -1893,7 +1907,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
             Object {
               "alignItems": "flex-start",
               "flexWrap": "nowrap",
-              "height": 15,
+              "height": 16,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingLeft": 5,
@@ -1907,7 +1921,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
               Object {
                 "flexWrap": "nowrap",
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "overflow": "hidden",
               }
             }
@@ -1958,7 +1972,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
           Object {
             "flexDirection": "row",
             "justifyContent": "space-evenly",
-            "paddingTop": 2,
+            "paddingTop": 5,
           }
         }
       >
@@ -1967,7 +1981,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
             Object {
               "alignItems": "flex-start",
               "flexWrap": "nowrap",
-              "height": 15,
+              "height": 16,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingLeft": 5,
@@ -1981,7 +1995,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
               Object {
                 "flexWrap": "nowrap",
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "overflow": "hidden",
               }
             }
@@ -2031,7 +2045,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
             Object {
               "alignItems": "flex-start",
               "flexWrap": "nowrap",
-              "height": 15,
+              "height": 16,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingLeft": 5,
@@ -2045,7 +2059,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
               Object {
                 "flexWrap": "nowrap",
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "overflow": "hidden",
               }
             }
@@ -2095,7 +2109,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
             Object {
               "alignItems": "flex-start",
               "flexWrap": "nowrap",
-              "height": 15,
+              "height": 16,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingLeft": 5,
@@ -2109,7 +2123,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
               Object {
                 "flexWrap": "nowrap",
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "overflow": "hidden",
               }
             }
@@ -2159,7 +2173,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
             Object {
               "alignItems": "flex-start",
               "flexWrap": "nowrap",
-              "height": 15,
+              "height": 16,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingLeft": 5,
@@ -2173,7 +2187,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
               Object {
                 "flexWrap": "nowrap",
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "overflow": "hidden",
               }
             }
@@ -2224,7 +2238,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
           Object {
             "flexDirection": "row",
             "justifyContent": "space-evenly",
-            "paddingTop": 2,
+            "paddingTop": 5,
           }
         }
       >
@@ -2236,13 +2250,13 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
               "borderBottomWidth": 0.5,
               "borderTopWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 20,
+              "height": 25,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 5,
               "paddingLeft": 5,
               "paddingRight": 5,
-              "paddingTop": 3,
+              "paddingTop": 5,
               "width": "25%",
             }
           }
@@ -2251,7 +2265,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
             style={
               Object {
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "fontWeight": "bold",
               }
             }
@@ -2304,13 +2318,13 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
               "borderBottomWidth": 0.5,
               "borderTopWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 20,
+              "height": 25,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 5,
               "paddingLeft": 5,
               "paddingRight": 5,
-              "paddingTop": 3,
+              "paddingTop": 5,
               "width": "25%",
             }
           }
@@ -2319,7 +2333,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
             style={
               Object {
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "fontWeight": "bold",
               }
             }
@@ -2372,13 +2386,13 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
               "borderBottomWidth": 0.5,
               "borderTopWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 20,
+              "height": 25,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 5,
               "paddingLeft": 5,
               "paddingRight": 5,
-              "paddingTop": 3,
+              "paddingTop": 5,
               "width": "25%",
             }
           }
@@ -2387,7 +2401,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
             style={
               Object {
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "fontWeight": "bold",
               }
             }
@@ -2440,13 +2454,13 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
               "borderBottomWidth": 0.5,
               "borderTopWidth": 0.5,
               "flexWrap": "nowrap",
-              "height": 20,
+              "height": 25,
               "justifyContent": "center",
               "overflow": "hidden",
               "paddingBottom": 5,
               "paddingLeft": 5,
               "paddingRight": 5,
-              "paddingTop": 3,
+              "paddingTop": 5,
               "width": "25%",
             }
           }
@@ -2455,7 +2469,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
             style={
               Object {
                 "fontFamily": "Courier New",
-                "fontSize": 11,
+                "fontSize": 9,
                 "fontWeight": "bold",
               }
             }
@@ -2521,6 +2535,7 @@ exports[`rendering when has balances and not loading rendered correctly 1`] = `
         style={
           Object {
             "opacity": 1,
+            "paddingTop": 10,
           }
         }
       >
@@ -2678,6 +2693,7 @@ exports[`rendering when no keys rendered correctly 1`] = `
         style={
           Object {
             "opacity": 1,
+            "paddingTop": 10,
           }
         }
       >

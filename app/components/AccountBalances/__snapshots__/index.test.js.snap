@@ -18,7 +18,7 @@ exports[`rendering defaults rendered correctly  1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "space-evenly",
-        "paddingTop": 2,
+        "paddingTop": 5,
       }
     }
   >
@@ -29,7 +29,7 @@ exports[`rendering defaults rendered correctly  1`] = `
           "alignSelf": "center",
           "borderBottomWidth": 0.5,
           "flexWrap": "nowrap",
-          "height": 25,
+          "height": 22,
           "justifyContent": "center",
           "overflow": "hidden",
           "paddingBottom": 3,
@@ -42,6 +42,7 @@ exports[`rendering defaults rendered correctly  1`] = `
       <Text
         style={
           Object {
+            "fontSize": 10,
             "fontWeight": "bold",
           }
         }
@@ -93,7 +94,7 @@ exports[`rendering defaults rendered correctly  1`] = `
           "alignSelf": "center",
           "borderBottomWidth": 0.5,
           "flexWrap": "nowrap",
-          "height": 25,
+          "height": 22,
           "justifyContent": "center",
           "overflow": "hidden",
           "paddingBottom": 3,
@@ -106,6 +107,7 @@ exports[`rendering defaults rendered correctly  1`] = `
       <Text
         style={
           Object {
+            "fontSize": 10,
             "fontWeight": "bold",
           }
         }
@@ -157,7 +159,7 @@ exports[`rendering defaults rendered correctly  1`] = `
           "alignSelf": "center",
           "borderBottomWidth": 0.5,
           "flexWrap": "nowrap",
-          "height": 25,
+          "height": 22,
           "justifyContent": "center",
           "overflow": "hidden",
           "paddingBottom": 3,
@@ -170,6 +172,7 @@ exports[`rendering defaults rendered correctly  1`] = `
       <Text
         style={
           Object {
+            "fontSize": 10,
             "fontWeight": "bold",
           }
         }
@@ -221,7 +224,7 @@ exports[`rendering defaults rendered correctly  1`] = `
           "alignSelf": "center",
           "borderBottomWidth": 0.5,
           "flexWrap": "nowrap",
-          "height": 25,
+          "height": 22,
           "justifyContent": "center",
           "overflow": "hidden",
           "paddingBottom": 3,
@@ -234,6 +237,7 @@ exports[`rendering defaults rendered correctly  1`] = `
       <Text
         style={
           Object {
+            "fontSize": 10,
             "fontWeight": "bold",
           }
         }
@@ -284,7 +288,7 @@ exports[`rendering defaults rendered correctly  1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "space-evenly",
-        "paddingTop": 2,
+        "paddingTop": 5,
       }
     }
   >
@@ -293,7 +297,7 @@ exports[`rendering defaults rendered correctly  1`] = `
         Object {
           "alignItems": "flex-start",
           "flexWrap": "nowrap",
-          "height": 15,
+          "height": 16,
           "justifyContent": "center",
           "overflow": "hidden",
           "paddingLeft": 5,
@@ -307,7 +311,7 @@ exports[`rendering defaults rendered correctly  1`] = `
           Object {
             "flexWrap": "nowrap",
             "fontFamily": "Courier New",
-            "fontSize": 11,
+            "fontSize": 9,
             "overflow": "hidden",
           }
         }
@@ -357,7 +361,7 @@ exports[`rendering defaults rendered correctly  1`] = `
         Object {
           "alignItems": "flex-start",
           "flexWrap": "nowrap",
-          "height": 15,
+          "height": 16,
           "justifyContent": "center",
           "overflow": "hidden",
           "paddingLeft": 5,
@@ -371,7 +375,7 @@ exports[`rendering defaults rendered correctly  1`] = `
           Object {
             "flexWrap": "nowrap",
             "fontFamily": "Courier New",
-            "fontSize": 11,
+            "fontSize": 9,
             "overflow": "hidden",
           }
         }
@@ -421,7 +425,7 @@ exports[`rendering defaults rendered correctly  1`] = `
         Object {
           "alignItems": "flex-start",
           "flexWrap": "nowrap",
-          "height": 15,
+          "height": 16,
           "justifyContent": "center",
           "overflow": "hidden",
           "paddingLeft": 5,
@@ -435,7 +439,7 @@ exports[`rendering defaults rendered correctly  1`] = `
           Object {
             "flexWrap": "nowrap",
             "fontFamily": "Courier New",
-            "fontSize": 11,
+            "fontSize": 9,
             "overflow": "hidden",
           }
         }
@@ -485,7 +489,7 @@ exports[`rendering defaults rendered correctly  1`] = `
         Object {
           "alignItems": "flex-start",
           "flexWrap": "nowrap",
-          "height": 15,
+          "height": 16,
           "justifyContent": "center",
           "overflow": "hidden",
           "paddingLeft": 5,
@@ -499,7 +503,7 @@ exports[`rendering defaults rendered correctly  1`] = `
           Object {
             "flexWrap": "nowrap",
             "fontFamily": "Courier New",
-            "fontSize": 11,
+            "fontSize": 9,
             "overflow": "hidden",
           }
         }
@@ -550,7 +554,7 @@ exports[`rendering defaults rendered correctly  1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "space-evenly",
-        "paddingTop": 2,
+        "paddingTop": 5,
       }
     }
   >
@@ -559,7 +563,7 @@ exports[`rendering defaults rendered correctly  1`] = `
         Object {
           "alignItems": "flex-start",
           "flexWrap": "nowrap",
-          "height": 15,
+          "height": 16,
           "justifyContent": "center",
           "overflow": "hidden",
           "paddingLeft": 5,
@@ -573,7 +577,7 @@ exports[`rendering defaults rendered correctly  1`] = `
           Object {
             "flexWrap": "nowrap",
             "fontFamily": "Courier New",
-            "fontSize": 11,
+            "fontSize": 9,
             "overflow": "hidden",
           }
         }
@@ -623,7 +627,7 @@ exports[`rendering defaults rendered correctly  1`] = `
         Object {
           "alignItems": "flex-start",
           "flexWrap": "nowrap",
-          "height": 15,
+          "height": 16,
           "justifyContent": "center",
           "overflow": "hidden",
           "paddingLeft": 5,
@@ -637,7 +641,7 @@ exports[`rendering defaults rendered correctly  1`] = `
           Object {
             "flexWrap": "nowrap",
             "fontFamily": "Courier New",
-            "fontSize": 11,
+            "fontSize": 9,
             "overflow": "hidden",
           }
         }
@@ -687,7 +691,7 @@ exports[`rendering defaults rendered correctly  1`] = `
         Object {
           "alignItems": "flex-start",
           "flexWrap": "nowrap",
-          "height": 15,
+          "height": 16,
           "justifyContent": "center",
           "overflow": "hidden",
           "paddingLeft": 5,
@@ -701,7 +705,7 @@ exports[`rendering defaults rendered correctly  1`] = `
           Object {
             "flexWrap": "nowrap",
             "fontFamily": "Courier New",
-            "fontSize": 11,
+            "fontSize": 9,
             "overflow": "hidden",
           }
         }
@@ -751,7 +755,7 @@ exports[`rendering defaults rendered correctly  1`] = `
         Object {
           "alignItems": "flex-start",
           "flexWrap": "nowrap",
-          "height": 15,
+          "height": 16,
           "justifyContent": "center",
           "overflow": "hidden",
           "paddingLeft": 5,
@@ -765,7 +769,7 @@ exports[`rendering defaults rendered correctly  1`] = `
           Object {
             "flexWrap": "nowrap",
             "fontFamily": "Courier New",
-            "fontSize": 11,
+            "fontSize": 9,
             "overflow": "hidden",
           }
         }
@@ -816,7 +820,7 @@ exports[`rendering defaults rendered correctly  1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "space-evenly",
-        "paddingTop": 2,
+        "paddingTop": 5,
       }
     }
   >
@@ -828,13 +832,13 @@ exports[`rendering defaults rendered correctly  1`] = `
           "borderBottomWidth": 0.5,
           "borderTopWidth": 0.5,
           "flexWrap": "nowrap",
-          "height": 20,
+          "height": 25,
           "justifyContent": "center",
           "overflow": "hidden",
           "paddingBottom": 5,
           "paddingLeft": 5,
           "paddingRight": 5,
-          "paddingTop": 3,
+          "paddingTop": 5,
           "width": "25%",
         }
       }
@@ -843,7 +847,7 @@ exports[`rendering defaults rendered correctly  1`] = `
         style={
           Object {
             "fontFamily": "Courier New",
-            "fontSize": 11,
+            "fontSize": 9,
             "fontWeight": "bold",
           }
         }
@@ -896,13 +900,13 @@ exports[`rendering defaults rendered correctly  1`] = `
           "borderBottomWidth": 0.5,
           "borderTopWidth": 0.5,
           "flexWrap": "nowrap",
-          "height": 20,
+          "height": 25,
           "justifyContent": "center",
           "overflow": "hidden",
           "paddingBottom": 5,
           "paddingLeft": 5,
           "paddingRight": 5,
-          "paddingTop": 3,
+          "paddingTop": 5,
           "width": "25%",
         }
       }
@@ -911,7 +915,7 @@ exports[`rendering defaults rendered correctly  1`] = `
         style={
           Object {
             "fontFamily": "Courier New",
-            "fontSize": 11,
+            "fontSize": 9,
             "fontWeight": "bold",
           }
         }
@@ -964,13 +968,13 @@ exports[`rendering defaults rendered correctly  1`] = `
           "borderBottomWidth": 0.5,
           "borderTopWidth": 0.5,
           "flexWrap": "nowrap",
-          "height": 20,
+          "height": 25,
           "justifyContent": "center",
           "overflow": "hidden",
           "paddingBottom": 5,
           "paddingLeft": 5,
           "paddingRight": 5,
-          "paddingTop": 3,
+          "paddingTop": 5,
           "width": "25%",
         }
       }
@@ -979,7 +983,7 @@ exports[`rendering defaults rendered correctly  1`] = `
         style={
           Object {
             "fontFamily": "Courier New",
-            "fontSize": 11,
+            "fontSize": 9,
             "fontWeight": "bold",
           }
         }
@@ -1032,13 +1036,13 @@ exports[`rendering defaults rendered correctly  1`] = `
           "borderBottomWidth": 0.5,
           "borderTopWidth": 0.5,
           "flexWrap": "nowrap",
-          "height": 20,
+          "height": 25,
           "justifyContent": "center",
           "overflow": "hidden",
           "paddingBottom": 5,
           "paddingLeft": 5,
           "paddingRight": 5,
-          "paddingTop": 3,
+          "paddingTop": 5,
           "width": "25%",
         }
       }
@@ -1047,7 +1051,7 @@ exports[`rendering defaults rendered correctly  1`] = `
         style={
           Object {
             "fontFamily": "Courier New",
-            "fontSize": 11,
+            "fontSize": 9,
             "fontWeight": "bold",
           }
         }

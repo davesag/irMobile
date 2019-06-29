@@ -6,7 +6,7 @@ exports[`rendering with data rendered correctly  1`] = `
     Object {
       "flexDirection": "row",
       "justifyContent": "space-evenly",
-      "paddingTop": 2,
+      "paddingTop": 5,
     }
   }
 >
@@ -17,7 +17,7 @@ exports[`rendering with data rendered correctly  1`] = `
         "alignSelf": "center",
         "borderBottomWidth": 0.5,
         "flexWrap": "nowrap",
-        "height": 25,
+        "height": 22,
         "justifyContent": "center",
         "overflow": "hidden",
         "paddingBottom": 3,
@@ -30,6 +30,7 @@ exports[`rendering with data rendered correctly  1`] = `
     <Text
       style={
         Object {
+          "fontSize": 10,
           "fontWeight": "bold",
         }
       }
@@ -81,7 +82,7 @@ exports[`rendering with data rendered correctly  1`] = `
         "alignSelf": "center",
         "borderBottomWidth": 0.5,
         "flexWrap": "nowrap",
-        "height": 25,
+        "height": 22,
         "justifyContent": "center",
         "overflow": "hidden",
         "paddingBottom": 3,
@@ -94,6 +95,7 @@ exports[`rendering with data rendered correctly  1`] = `
     <Text
       style={
         Object {
+          "fontSize": 10,
           "fontWeight": "bold",
         }
       }
@@ -145,7 +147,7 @@ exports[`rendering with data rendered correctly  1`] = `
         "alignSelf": "center",
         "borderBottomWidth": 0.5,
         "flexWrap": "nowrap",
-        "height": 25,
+        "height": 22,
         "justifyContent": "center",
         "overflow": "hidden",
         "paddingBottom": 3,
@@ -158,6 +160,7 @@ exports[`rendering with data rendered correctly  1`] = `
     <Text
       style={
         Object {
+          "fontSize": 10,
           "fontWeight": "bold",
         }
       }

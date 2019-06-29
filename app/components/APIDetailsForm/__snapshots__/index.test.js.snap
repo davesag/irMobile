@@ -47,6 +47,7 @@ exports[`rendering defaults rendered correctly  1`] = `
         autoCapitalize="none"
         autoCorrect={false}
         onChangeText={[Function]}
+        onSubmitEditing={[Function]}
         rejectResponderTermination={true}
         style={
           Object {
@@ -103,6 +104,7 @@ exports[`rendering defaults rendered correctly  1`] = `
         autoCapitalize="none"
         autoCorrect={false}
         onChangeText={[Function]}
+        onSubmitEditing={[Function]}
         rejectResponderTermination={true}
         style={
           Object {
@@ -335,6 +337,7 @@ exports[`rendering with keys and saving rendered correctly  1`] = `
         autoCapitalize="none"
         autoCorrect={false}
         onChangeText={[Function]}
+        onSubmitEditing={[Function]}
         rejectResponderTermination={true}
         style={
           Object {
@@ -391,6 +394,7 @@ exports[`rendering with keys and saving rendered correctly  1`] = `
         autoCapitalize="none"
         autoCorrect={false}
         onChangeText={[Function]}
+        onSubmitEditing={[Function]}
         rejectResponderTermination={true}
         style={
           Object {
@@ -613,6 +617,7 @@ exports[`rendering with keys rendered correctly  1`] = `
         autoCapitalize="none"
         autoCorrect={false}
         onChangeText={[Function]}
+        onSubmitEditing={[Function]}
         rejectResponderTermination={true}
         style={
           Object {
@@ -669,6 +674,7 @@ exports[`rendering with keys rendered correctly  1`] = `
         autoCapitalize="none"
         autoCorrect={false}
         onChangeText={[Function]}
+        onSubmitEditing={[Function]}
         rejectResponderTermination={true}
         style={
           Object {
@@ -817,7 +823,7 @@ exports[`rendering with keys rendered correctly  1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#2089dc",
+            "backgroundColor": "hsl(208, 8%, 90%)",
             "borderColor": "#2089dc",
             "borderRadius": 3,
             "borderWidth": 0,
@@ -830,7 +836,15 @@ exports[`rendering with keys rendered correctly  1`] = `
         <Text
           style={
             Object {
-              "color": "white",
+              "color": Object {
+                "color": Array [
+                  208,
+                  8,
+                  63,
+                ],
+                "model": "hsl",
+                "valpha": 1,
+              },
               "fontSize": 18,
               "paddingBottom": 1,
               "paddingTop": 2,
