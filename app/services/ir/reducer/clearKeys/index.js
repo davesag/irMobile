@@ -6,7 +6,8 @@ const clearKeys = state => ({
   requireAuth: false,
   busy: true,
   error: null,
-  message: null
+  message: null,
+  balances: []
 })
 
 export default clearKeys

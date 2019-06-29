@@ -9,7 +9,7 @@ import styles from './styles'
 
 export class SplashScreen extends PureComponent {
   static navigationOptions = {
-    title: 'Splash Screen'
+    title: 'Splash'
   }
 
   static propTypes = {

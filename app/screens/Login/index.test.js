@@ -17,20 +17,40 @@ const requireAuth = true
 let tree
 
 describe('mapStateToProps', () => {
-  const stateProps = mapStateToProps({
-    ir: { apiKey, apiSecret, requireAuth, busy: false }
+  describe('when there are keys', () => {
+    const stateProps = mapStateToProps({
+      ir: { apiKey, apiSecret, requireAuth, busy: false }
+    })
+
+    it('returned keys', () => {
+      expect(stateProps).toHaveProperty('keys', keys)
+    })
+
+    it('returned requireAuth', () => {
+      expect(stateProps).toHaveProperty('requireAuth', requireAuth)
+    })
+
+    it('returned saving', () => {
+      expect(stateProps).toHaveProperty('saving', false)
+    })
   })
 
-  it('returned keys', () => {
-    expect(stateProps).toHaveProperty('keys', keys)
-  })
+  describe('when there are missing keys', () => {
+    const stateProps = mapStateToProps({
+      ir: { apiKey, apiSecret: null, requireAuth, busy: false }
+    })
 
-  it('returned requireAuth', () => {
-    expect(stateProps).toHaveProperty('requireAuth', requireAuth)
-  })
+    it('returned keys is null', () => {
+      expect(stateProps).toHaveProperty('keys', null)
+    })
 
-  it('returned saving', () => {
-    expect(stateProps).toHaveProperty('saving', false)
+    it('returned requireAuth', () => {
+      expect(stateProps).toHaveProperty('requireAuth', requireAuth)
+    })
+
+    it('returned saving', () => {
+      expect(stateProps).toHaveProperty('saving', false)
+    })
   })
 })
 

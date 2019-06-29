@@ -7,18 +7,44 @@ const requireAuth = true
 const state = { ...INITIAL_STATE, busy: true }
 
 describe('if there were keys to restore', () => {
-  const expected = {
-    ...state,
-    busy: false,
-    apiKey,
-    apiSecret,
-    requireAuth
-  }
+  describe('if the keys changed', () => {
+    const expected = {
+      ...state,
+      busy: false,
+      apiKey,
+      apiSecret,
+      requireAuth
+    }
 
-  it('returns expected state', () => {
-    expect(
-      restoreKeysSuccess(state, { payload: { apiKey, apiSecret, requireAuth } })
-    ).toEqual(expected)
+    it('returns expected state', () => {
+      expect(
+        restoreKeysSuccess(state, {
+          payload: { apiKey, apiSecret, requireAuth }
+        })
+      ).toEqual(expected)
+    })
+  })
+
+  describe('if there was a balance and the keys did not change', () => {
+    const unusualState = {
+      ...state,
+      apiKey,
+      apiSecret,
+      balances: ['some', 'balance']
+    }
+    const expected = {
+      ...unusualState,
+      busy: false,
+      requireAuth
+    }
+
+    it('returns expected state', () => {
+      expect(
+        restoreKeysSuccess(unusualState, {
+          payload: { apiKey, apiSecret, requireAuth }
+        })
+      ).toEqual(expected)
+    })
   })
 })
 

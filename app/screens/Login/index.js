@@ -14,7 +14,7 @@ import styles from './styles'
 
 export class LoginScreen extends Component {
   static navigationOptions = {
-    title: 'Supply credentials'
+    title: 'Settings'
   }
 
   static propTypes = {
@@ -55,7 +55,11 @@ export class LoginScreen extends Component {
 
 export const mapStateToProps = ({
   ir: { apiKey, apiSecret, requireAuth, busy }
-}) => ({ keys: { apiKey, apiSecret }, requireAuth, saving: busy })
+}) => ({
+  keys: apiKey && apiSecret ? { apiKey, apiSecret } : null,
+  requireAuth,
+  saving: busy
+})
 
 export const mapDispatchToProps = dispatch =>
   bindActionCreators({ saveKeys }, dispatch)

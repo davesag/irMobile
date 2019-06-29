@@ -11,7 +11,8 @@ const expected = {
   apiKey: null,
   apiSecret: null,
   requireAuth: false,
-  busy: true
+  busy: true,
+  balances: []
 }
 
 it('returns expected state', () => {
