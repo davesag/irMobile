@@ -10,7 +10,6 @@ import BalancesScreen, { mapStateToProps, mapDispatchToProps } from '.'
 
 const apiKey = 'some-key'
 const apiSecret = 'some-secret'
-const keys = { apiKey, apiSecret }
 const balances = [
   {
     currency: 'Aud',
