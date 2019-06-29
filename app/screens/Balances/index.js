@@ -62,6 +62,7 @@ export class BalancesScreen extends Component {
           title="Refresh"
           onPress={this.refreshBalances}
           loading={loading}
+          disabled={loading}
         />
       </View>
     )

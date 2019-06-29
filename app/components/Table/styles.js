@@ -27,20 +27,20 @@ export default StyleSheet.create({
   },
   headerCell: {
     ...cell,
-    fontSize: 11,
     alignSelf: 'center',
     borderBottomWidth: 0.5,
     paddingBottom: 3,
     height: 22
   },
   header: {
+    fontSize: 10,
     fontWeight: 'bold'
   },
   dataCell: {
     ...cell
   },
   data: {
-    fontSize: 10,
+    fontSize: 9,
     fontFamily: monospace,
     overflow: 'hidden',
     flexWrap: 'nowrap'
@@ -52,10 +52,10 @@ export default StyleSheet.create({
     borderTopWidth: 0.5,
     paddingTop: 5,
     paddingBottom: 5,
-    height: 20
+    height: 25
   },
   footer: {
-    fontSize: 10,
+    fontSize: 9,
     fontFamily: monospace,
     fontWeight: 'bold'
   }
