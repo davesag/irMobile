@@ -1,11 +1,5 @@
-import cc from 'camelcase'
-
 import { INITIAL_STATE } from '..'
 import restoreKeysFail from './fail'
-
-const apiKey = 'some api key'
-const apiSecret = 'some api secret'
-const requireAuth = true
 
 const state = { ...INITIAL_STATE, busy: true }
 

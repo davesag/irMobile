@@ -18,7 +18,7 @@ beforeAll(async () => {
 })
 
 it('called getMarketSummary with the correct data', () => {
-  expect(api.getMarketSummary).toBeCalledWith({
+  expect(api.getMarketSummary).toHaveBeenCalledWith({
     primaryCurrencyCode,
     secondaryCurrencyCode
   })

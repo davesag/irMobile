@@ -9,7 +9,7 @@ const hasCodes = (currency, otherCurrency) => ({
  *
  *  @param fxRates — An array of { currencyCodeA, currencyCodeB, rate } tuples
  *  @param currency — The currency code you have a balance for
- *  @param otherCurrency — The currency code you wish to return the balance in
+ *  @param otherCurrency — The currency code you wish to return the balance in
  *  @param balance — The balance of the currency currency you have
  *  @returns [rate, convertedBalance]
  */

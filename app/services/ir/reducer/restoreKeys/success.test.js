@@ -1,5 +1,3 @@
-import cc from 'camelcase'
-
 import { INITIAL_STATE } from '..'
 import restoreKeysSuccess from './success'
 
