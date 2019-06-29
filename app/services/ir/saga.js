@@ -3,12 +3,15 @@ import { takeEvery, call, put, select } from 'redux-saga/effects'
 import {
   restoreKeysSuccess,
   restoreKeysFail,
+  getBalancesSuccess,
+  getBalancesFail,
   saveKeysSuccess,
   saveKeysFail,
   clearKeysSuccess,
   clearKeysFail
 } from './actions'
 
+import getApi from './api'
 import { storeData, getData, clearData } from '../persistence'
 import { getKeys } from './selectors'
 
@@ -49,13 +52,26 @@ export default () => {
           yield put(clearKeysFail(err))
         }
         /* istanbul ignore next */ break
+      case 'GET_BALANCES':
+        try {
+          keys = yield select(getKeys)
+          const { getBalances } = getApi(keys)
+          const balances = yield call(getBalances, 'Aud')
+          yield put(getBalancesSuccess(balances))
+        } catch (err) {
+          yield put(getBalancesFail(err))
+        }
+        /* istanbul ignore next */ break
       default:
         break
     }
   }
 
   function* watcher() {
-    yield takeEvery(['RESTORE_KEYS', 'SAVE_KEYS', 'CLEAR_KEYS'], worker)
+    yield takeEvery(
+      ['RESTORE_KEYS', 'SAVE_KEYS', 'CLEAR_KEYS', 'GET_BALANCES'],
+      worker
+    )
   }
 
   return { worker, watcher }

@@ -5,6 +5,7 @@ import * as persistence from '../persistence'
 
 import keySaga, { KEY } from './saga'
 import * as actions from './actions'
+import getApi from './api'
 
 jest.mock('./selectors')
 selectors.getHistory = jest.fn()
@@ -14,6 +15,8 @@ persistence.storeData = jest.fn()
 persistence.getData = jest.fn()
 persistence.clearData = jest.fn()
 
+jest.mock('./api')
+
 describe('saga', () => {
   const saga = keySaga()
 
@@ -21,6 +24,7 @@ describe('saga', () => {
     persistence.storeData.clearMock()
     persistence.getData.clearMock()
     persistence.clearData.clearMock()
+    getApi.clearMock()
   }
 
   describe('watcher tests', () => {
@@ -28,7 +32,10 @@ describe('saga', () => {
 
     it('triggers events handlers', result => {
       expect(result).toEqual(
-        takeEvery(['RESTORE_KEYS', 'SAVE_KEYS', 'CLEAR_KEYS'], saga.worker)
+        takeEvery(
+          ['RESTORE_KEYS', 'SAVE_KEYS', 'CLEAR_KEYS', 'GET_BALANCES'],
+          saga.worker
+        )
       )
     })
   })
@@ -141,6 +148,50 @@ describe('saga', () => {
 
         it('dispatches clearKeysFail with the error', result => {
           expect(result).toEqual(put(actions.clearKeysFail(error)))
+        })
+      })
+    })
+
+    describe('GET_BALANCES', () => {
+      const balances = 'some balances'
+      const getBalances = () => {}
+
+      const action = { type: 'GET_BALANCES' }
+
+      describe('when it works', () => {
+        getApi.mockImplementation(() => ({ getBalances }))
+        const it = sagaHelper(saga.worker(action))
+
+        afterAll(resetStubs)
+
+        it('selects getKeys', result => {
+          expect(result).toEqual(select(selectors.getKeys))
+          return keys
+        })
+
+        it("calls getBalances with 'Aud'", result => {
+          expect(result).toEqual(call(getBalances, 'Aud'))
+          return balances
+        })
+
+        it('dispatches getBalancesSuccess with the balances', result => {
+          expect(result).toEqual(put(actions.getBalancesSuccess(balances)))
+        })
+      })
+
+      describe('when an error is thrown', () => {
+        const error = new Error('oops')
+
+        const it = sagaHelper(saga.worker(action))
+        afterAll(resetStubs)
+
+        it('selects getKeys', result => {
+          expect(result).toEqual(select(selectors.getKeys))
+          return error
+        })
+
+        it('dispatches getBalancesFail with the error', result => {
+          expect(result).toEqual(put(actions.getBalancesFail(error)))
         })
       })
     })

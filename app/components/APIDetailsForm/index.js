@@ -7,7 +7,8 @@ import { keysShape } from '../../shapes'
 
 import styles from './styles'
 
-const cleanKey = key => key.replace(/[^a-z0-9-]/gi, '')
+const cleanKey = key => key.replace(/[^a-f0-9-]/gi, '')
+const cleanSecret = key => key.replace(/[^a-f0-9]/gi, '')
 
 class APIDetailsForm extends Component {
   static propTypes = {
@@ -41,8 +42,7 @@ class APIDetailsForm extends Component {
     }
   }
 
-  updateField = field => text => {
-    const value = cleanKey(text)
+  updateField = field => value => {
     if (value) {
       this.setState({ [field]: { value, error: null } })
     } else {
@@ -52,6 +52,14 @@ class APIDetailsForm extends Component {
 
   toggleField = field => () => {
     this.setState({ [field]: { value: !this.state[field].value } })
+  }
+
+  updateApiKey = text => {
+    this.updateField('apiKey')(cleanKey(text))
+  }
+
+  updateApiSecret = text => {
+    this.updateField('apiSecret')(cleanSecret(text))
   }
 
   canBeSubmitted = () => {
@@ -86,7 +94,7 @@ class APIDetailsForm extends Component {
           label="apiKey"
           errorStyle={{ color: 'red' }}
           errorMessage={apiKey.error}
-          onChangeText={this.updateField('apiKey')}
+          onChangeText={this.updateApiKey}
         />
         <Input
           autoCapitalize="none"
@@ -96,7 +104,7 @@ class APIDetailsForm extends Component {
           label="apiSecret"
           errorStyle={{ color: 'red' }}
           errorMessage={apiSecret.error}
-          onChangeText={this.updateField('apiSecret')}
+          onChangeText={this.updateApiSecret}
         />
         <CheckBox
           checked={requireAuth.value}
