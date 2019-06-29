@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer'
 
 import AccountBalances from '.'
 
-const details = [
+const balances = [
   { currency: 'Xbt', balance: 3, fiatPrice: 16839.25, fiatValue: 50517.75 },
   {
     currency: 'Eth',
@@ -19,7 +19,7 @@ let tree
 describe('rendering', () => {
   describe('defaults', () => {
     beforeAll(() => {
-      tree = renderer.create(<AccountBalances details={details} />)
+      tree = renderer.create(<AccountBalances balances={balances} />)
     })
 
     it('rendered correctly ', () => {

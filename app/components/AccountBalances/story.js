@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native'
 
 import AccountBalances from '.'
 
-const details = [
+const balances = [
   { currency: 'Xbt', balance: 3, fiatPrice: 16839.25, fiatValue: 50517.75 },
   {
     currency: 'Eth',
@@ -16,6 +16,6 @@ const details = [
 
 storiesOf('AccountBalances', module).add('simple', () => (
   <SafeAreaView>
-    <AccountBalances details={details} />
+    <AccountBalances balances={balances} />
   </SafeAreaView>
 ))

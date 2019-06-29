@@ -19,6 +19,7 @@ import { restoreKeys } from './services/ir/actions'
 
 import SplashScreen from './screens/Splash'
 import LoginScreen from './screens/Login'
+import BalancesScreen from './screens/Balances'
 
 const useStorybook = nav =>
   Config.STORYBOOK === 'true'
@@ -30,7 +31,8 @@ const useStorybook = nav =>
 
 const navBar = useStorybook({
   Splash: SplashScreen,
-  Login: LoginScreen
+  Login: LoginScreen,
+  Balances: BalancesScreen
 })
 
 const MainNavigator = createBottomTabNavigator(navBar)
@@ -38,7 +40,8 @@ const MainNavigator = createBottomTabNavigator(navBar)
 const StackNavigator = createStackNavigator({
   MainNavigator: MainNavigator,
   Splash: SplashScreen,
-  Login: LoginScreen
+  Login: LoginScreen,
+  Balances: BalancesScreen
 })
 
 const AppContainer = createAppContainer(StackNavigator)
