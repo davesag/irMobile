@@ -1,7 +1,5 @@
 # irMobile
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/davesag/irMobile.svg)](https://greenkeeper.io/)
-
 An iOS and Android mobile app that uses the [ir-api](https://github.com/davesag/ir-api) to interact with [Independent Reserve](https://www.independentreserve.com/invite/AJNEHL).
 
 **Note** this is a 3rd Party app and is not developed by, or supported by Independent Reserve.
@@ -18,6 +16,8 @@ The initial <acronym title="minimum viable product">MVP</acronym> version of the
 - [ir-api](https://github.com/davesag/ir-api)
 
 ## Project Status
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/davesag/irMobile.svg)](https://greenkeeper.io/)
 
 This project is under active development and is being used as a learning project to teach myself React Native development.
 
