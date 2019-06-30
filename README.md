@@ -45,7 +45,7 @@ See `.env.develop` for development defaults.
 
 ### Prerequisites
 
-- [NodeJS](htps://nodejs.org) version 10.16.0 (LTS) or better. I use [`nvm`](https://github.com/creationix/nvm) to manage Node versions.
+- [`NodeJS`](https://nodejs.org) version 10.16.0 (LTS) or better. I use [`nvm`](https://github.com/creationix/nvm) to manage Node versions.
 
   ```sh
   brew install nvm
@@ -57,7 +57,7 @@ See `.env.develop` for development defaults.
   brew install yarn
   ```
 
-- `react-native-cli`
+- [`react-native-cli`](https://github.com/react-native-community/cli)
 
   ```sh
   yarn global add react-native-cli
