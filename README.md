@@ -1,4 +1,4 @@
-# ir-app
+# irMobile
 
 An iOS and Android mobile app that uses the [ir-api](https://github.com/davesag/ir-api) to interact with [Independent Reserve](https://www.independentreserve.com/invite/AJNEHL).
 
