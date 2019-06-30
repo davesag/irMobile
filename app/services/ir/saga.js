@@ -1,4 +1,5 @@
 import { takeEvery, call, put, select } from 'redux-saga/effects'
+import { showMessage } from 'react-native-flash-message'
 
 import {
   restoreKeysSuccess,
@@ -13,7 +14,7 @@ import {
 
 import getApi from './api'
 import { storeData, getData, clearData } from '../persistence'
-import { getKeys } from './selectors'
+import { getKeys, getMessage } from './selectors'
 
 export const KEY = '@ir/keys'
 
@@ -24,6 +25,7 @@ export const KEY = '@ir/keys'
 export default () => {
   function* worker({ type }) {
     let keys
+    let message
 
     switch (type) {
       case 'RESTORE_KEYS':
@@ -33,6 +35,13 @@ export default () => {
         } catch (err) {
           yield put(restoreKeysFail(err))
         }
+        /* istanbul ignore next */ break
+      case 'RESTORE_KEYS_FAIL':
+        message = yield select(getMessage)
+        yield call(showMessage, {
+          message,
+          type: 'danger'
+        })
         /* istanbul ignore next */ break
       case 'SAVE_KEYS':
         try {
@@ -44,6 +53,13 @@ export default () => {
           yield put(saveKeysFail(err))
         }
         /* istanbul ignore next */ break
+      case 'SAVE_KEYS_FAIL':
+        message = yield select(getMessage)
+        yield call(showMessage, {
+          message,
+          type: 'warning'
+        })
+        /* istanbul ignore next */ break
       case 'CLEAR_KEYS':
         try {
           yield call(clearData, KEY)
@@ -51,6 +67,13 @@ export default () => {
         } catch (err) {
           yield put(clearKeysFail(err))
         }
+        /* istanbul ignore next */ break
+      case 'CLEAR_KEYS_FAIL':
+        message = yield select(getMessage)
+        yield call(showMessage, {
+          message,
+          type: 'warning'
+        })
         /* istanbul ignore next */ break
       case 'GET_BALANCES':
         try {
@@ -62,6 +85,13 @@ export default () => {
           yield put(getBalancesFail(err))
         }
         /* istanbul ignore next */ break
+      case 'GET_BALANCES_FAIL':
+        message = yield select(getMessage)
+        yield call(showMessage, {
+          message,
+          type: 'danger'
+        })
+        /* istanbul ignore next */ break
       default:
         break
     }
@@ -69,7 +99,16 @@ export default () => {
 
   function* watcher() {
     yield takeEvery(
-      ['RESTORE_KEYS', 'SAVE_KEYS', 'CLEAR_KEYS', 'GET_BALANCES'],
+      [
+        'RESTORE_KEYS',
+        'SAVE_KEYS',
+        'CLEAR_KEYS',
+        'GET_BALANCES',
+        'RESTORE_KEYS_FAIL',
+        'SAVE_KEYS_FAIL',
+        'CLEAR_KEYS_FAIL',
+        'GET_BALANCES_FAIL'
+      ],
       worker
     )
   }
