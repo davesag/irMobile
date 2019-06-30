@@ -16,7 +16,7 @@ jobs:
 
       - run:
           name: Install global packages
-          command: sudo yarn add -g codecov greenkeeper-lockfile@1
+          command: sudo yarn global add codecov greenkeeper-lockfile@1
 
       - run:
           name: Greenkeeper Lockfile
@@ -31,8 +31,6 @@ jobs:
           paths:
             - node_modules
 
-  test:
-    steps:
       - run:
           name: Javascript Linter
           command: yarn lint
@@ -41,8 +39,6 @@ jobs:
           name: Unit Tests with Code Coverage
           command: yarn test --coverage
 
-  report:
-    steps:
       - run:
           name: Push any lockfile changes
           command: greenkeeper-lockfile-upload
@@ -50,11 +46,3 @@ jobs:
       - run:
           name: Send reports to codecov.io
           command: codecov
-
-workflows:
-  version: 2
-  justdoit:
-    jobs:
-      - build
-      - test
-      - report
