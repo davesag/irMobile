@@ -32,8 +32,8 @@ https://facebook.github.io/react-native/docs/getting-started
 <!-- prettier-ignore -->
 | Branch    | Tests | Code Coverage | Comments                  |
 | --------- | ----- | ------------- | ------------------------- |
-| `develop` |       |               | Work in progress          |
-| `master`  |       |               | Latest Production Release |
+| `develop` | [![CircleCI](https://circleci.com/gh/davesag/irMobile/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/irMobile/tree/develop) | [![codecov](https://codecov.io/gh/davesag/irMobile/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/irMobile) | Work in progress          |
+| `master`  | [![CircleCI](https://circleci.com/gh/davesag/irMobile/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/irMobile/tree/master) | [![codecov](https://codecov.io/gh/davesag/irMobile/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/irMobile) | Latest Production Release |
 
 ### Environment Variables
 
