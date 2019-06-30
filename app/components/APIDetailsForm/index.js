@@ -100,6 +100,7 @@ class APIDetailsForm extends Component {
         <Input
           autoCapitalize="none"
           autoCorrect={false}
+          secureTextEntry
           inputStyle={styles.input}
           value={apiKey.value}
           label="apiKey"
@@ -111,6 +112,7 @@ class APIDetailsForm extends Component {
         <Input
           autoCapitalize="none"
           autoCorrect={false}
+          secureTextEntry
           inputStyle={styles.input}
           value={apiSecret.value}
           label="apiSecret"

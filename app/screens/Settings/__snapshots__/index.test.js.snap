@@ -150,6 +150,7 @@ exports[`rendering rendered correctly 1`] = `
           onChangeText={[Function]}
           onSubmitEditing={[Function]}
           rejectResponderTermination={true}
+          secureTextEntry={true}
           style={
             Object {
               "alignSelf": "center",
@@ -207,6 +208,7 @@ exports[`rendering rendered correctly 1`] = `
           onChangeText={[Function]}
           onSubmitEditing={[Function]}
           rejectResponderTermination={true}
+          secureTextEntry={true}
           style={
             Object {
               "alignSelf": "center",
