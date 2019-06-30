@@ -1,0 +1,60 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:latest
+        environment:
+        - NODE_ENV: test
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+          - dependencies-{{ checksum "package.json" }}
+
+      - run:
+          name: Install global packages
+          command: sudo yarn add -g codecov greenkeeper-lockfile@1
+
+      - run:
+          name: Greenkeeper Lockfile
+          command: greenkeeper-lockfile-update
+
+      - run:
+          name: Install dependencies
+          command: yarn install
+
+      - save_cache:
+          key: dependencies-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+
+  test:
+    steps:
+      - run:
+          name: Javascript Linter
+          command: yarn lint
+
+      - run:
+          name: Unit Tests with Code Coverage
+          command: yarn test --coverage
+
+  report:
+    steps:
+      - run:
+          name: Push any lockfile changes
+          command: greenkeeper-lockfile-upload
+
+      - run:
+          name: Send reports to codecov.io
+          command: codecov
+
+workflows:
+  version: 2
+  justdoit:
+    jobs:
+      - build
+      - test
+      - report
