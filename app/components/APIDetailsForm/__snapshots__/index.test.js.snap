@@ -49,6 +49,7 @@ exports[`rendering defaults rendered correctly  1`] = `
         onChangeText={[Function]}
         onSubmitEditing={[Function]}
         rejectResponderTermination={true}
+        secureTextEntry={true}
         style={
           Object {
             "alignSelf": "center",
@@ -106,6 +107,7 @@ exports[`rendering defaults rendered correctly  1`] = `
         onChangeText={[Function]}
         onSubmitEditing={[Function]}
         rejectResponderTermination={true}
+        secureTextEntry={true}
         style={
           Object {
             "alignSelf": "center",
@@ -339,6 +341,7 @@ exports[`rendering with keys and saving rendered correctly  1`] = `
         onChangeText={[Function]}
         onSubmitEditing={[Function]}
         rejectResponderTermination={true}
+        secureTextEntry={true}
         style={
           Object {
             "alignSelf": "center",
@@ -396,6 +399,7 @@ exports[`rendering with keys and saving rendered correctly  1`] = `
         onChangeText={[Function]}
         onSubmitEditing={[Function]}
         rejectResponderTermination={true}
+        secureTextEntry={true}
         style={
           Object {
             "alignSelf": "center",
@@ -619,6 +623,7 @@ exports[`rendering with keys rendered correctly  1`] = `
         onChangeText={[Function]}
         onSubmitEditing={[Function]}
         rejectResponderTermination={true}
+        secureTextEntry={true}
         style={
           Object {
             "alignSelf": "center",
@@ -676,6 +681,7 @@ exports[`rendering with keys rendered correctly  1`] = `
         onChangeText={[Function]}
         onSubmitEditing={[Function]}
         rejectResponderTermination={true}
+        secureTextEntry={true}
         style={
           Object {
             "alignSelf": "center",
