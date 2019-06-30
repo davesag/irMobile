@@ -122,8 +122,7 @@
     "collectCoverage": true,
     "coverageReporters": [
       "text-summary",
-      "json",
-      "html"
+      "lcov"
     ],
     "testURL": "http://localhost/",
     "setupFilesAfterEnv": [
