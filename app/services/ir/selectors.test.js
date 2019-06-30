@@ -1,4 +1,4 @@
-import { getKeys } from './selectors'
+import { getKeys, getMessage } from './selectors'
 
 describe('#getKeys', () => {
   const apiKey = 'some api key'
@@ -10,5 +10,16 @@ describe('#getKeys', () => {
   const state = { ir }
   it('returns the keys', () => {
     expect(getKeys(state)).toEqual(ir)
+  })
+})
+
+describe('#getMessage', () => {
+  const message = 'some message'
+
+  const ir = { message }
+
+  const state = { ir }
+  it('returns the message', () => {
+    expect(getMessage(state)).toEqual(message)
   })
 })

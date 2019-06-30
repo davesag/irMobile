@@ -3,3 +3,5 @@ export const getKeys = ({ ir: { apiKey, apiSecret, requireAuth } }) => ({
   apiSecret,
   requireAuth
 })
+
+export const getMessage = ({ ir: { message } }) => message

@@ -1,8 +1,8 @@
 import sagaHelper from 'redux-saga-testing'
 import { put, call, takeEvery, select } from 'redux-saga/effects'
+import * as flash from 'react-native-flash-message'
 import * as selectors from './selectors'
 import * as persistence from '../persistence'
-
 import keySaga, { KEY } from './saga'
 import * as actions from './actions'
 import getApi from './api'
@@ -16,6 +16,7 @@ persistence.getData = jest.fn()
 persistence.clearData = jest.fn()
 
 jest.mock('./api')
+jest.mock('react-native-flash-message', () => ({ showMessage: () => {} }))
 
 describe('saga', () => {
   const saga = keySaga()
@@ -33,7 +34,16 @@ describe('saga', () => {
     it('triggers events handlers', result => {
       expect(result).toEqual(
         takeEvery(
-          ['RESTORE_KEYS', 'SAVE_KEYS', 'CLEAR_KEYS', 'GET_BALANCES'],
+          [
+            'RESTORE_KEYS',
+            'SAVE_KEYS',
+            'CLEAR_KEYS',
+            'GET_BALANCES',
+            'RESTORE_KEYS_FAIL',
+            'SAVE_KEYS_FAIL',
+            'CLEAR_KEYS_FAIL',
+            'GET_BALANCES_FAIL'
+          ],
           saga.worker
         )
       )
@@ -44,6 +54,7 @@ describe('saga', () => {
     const apiKey = 'some api key'
     const apiSecret = 'some api secret'
     const keys = { apiKey, apiSecret }
+    const message = 'some error message'
 
     describe('RESTORE_KEYS', () => {
       const action = { type: 'RESTORE_KEYS' }
@@ -76,6 +87,25 @@ describe('saga', () => {
         it('dispatches restoreKeysFail with the error', result => {
           expect(result).toEqual(put(actions.restoreKeysFail(error)))
         })
+      })
+    })
+
+    describe('RESTORE_KEYS_FAIL', () => {
+      const action = { type: 'RESTORE_KEYS_FAIL' }
+      const it = sagaHelper(saga.worker(action))
+
+      it('selects getMessage', result => {
+        expect(result).toEqual(select(selectors.getMessage))
+        return message
+      })
+
+      it('calls showMessage with a message object', result => {
+        expect(result).toEqual(
+          call(flash.showMessage, {
+            message,
+            type: 'danger'
+          })
+        )
       })
     })
 
@@ -120,6 +150,25 @@ describe('saga', () => {
       })
     })
 
+    describe('SAVE_KEYS_FAIL', () => {
+      const action = { type: 'SAVE_KEYS_FAIL' }
+      const it = sagaHelper(saga.worker(action))
+
+      it('selects getMessage', result => {
+        expect(result).toEqual(select(selectors.getMessage))
+        return message
+      })
+
+      it('calls showMessage with a message object', result => {
+        expect(result).toEqual(
+          call(flash.showMessage, {
+            message,
+            type: 'warning'
+          })
+        )
+      })
+    })
+
     describe('CLEAR_KEYS', () => {
       const action = { type: 'CLEAR_KEYS' }
 
@@ -149,6 +198,25 @@ describe('saga', () => {
         it('dispatches clearKeysFail with the error', result => {
           expect(result).toEqual(put(actions.clearKeysFail(error)))
         })
+      })
+    })
+
+    describe('CLEAR_KEYS_FAIL', () => {
+      const action = { type: 'CLEAR_KEYS_FAIL' }
+      const it = sagaHelper(saga.worker(action))
+
+      it('selects getMessage', result => {
+        expect(result).toEqual(select(selectors.getMessage))
+        return message
+      })
+
+      it('calls showMessage with a message object', result => {
+        expect(result).toEqual(
+          call(flash.showMessage, {
+            message,
+            type: 'warning'
+          })
+        )
       })
     })
 
@@ -193,6 +261,25 @@ describe('saga', () => {
         it('dispatches getBalancesFail with the error', result => {
           expect(result).toEqual(put(actions.getBalancesFail(error)))
         })
+      })
+    })
+
+    describe('GET_BALANCES_FAIL', () => {
+      const action = { type: 'GET_BALANCES_FAIL' }
+      const it = sagaHelper(saga.worker(action))
+
+      it('selects getMessage', result => {
+        expect(result).toEqual(select(selectors.getMessage))
+        return message
+      })
+
+      it('calls showMessage with a message object', result => {
+        expect(result).toEqual(
+          call(flash.showMessage, {
+            message,
+            type: 'danger'
+          })
+        )
       })
     })
 

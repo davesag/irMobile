@@ -5,6 +5,7 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { Text } from 'react-native'
 import { ThemeProvider } from 'react-native-elements'
+import FlashMessage from 'react-native-flash-message'
 
 import AppMain from './AppMain'
 
@@ -18,6 +19,7 @@ const App = () => (
   <Provider store={store}>
     <ThemeProvider theme={theme}>
       <AppMain />
+      <FlashMessage position="bottom" />
     </ThemeProvider>
   </Provider>
 )
