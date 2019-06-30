@@ -34,8 +34,8 @@ export class BalancesScreen extends Component {
     this.props.getBalances()
   }
 
-  navigateToLogin = () => {
-    this.props.navigation.navigate('Login')
+  navigateToSettings = () => {
+    this.props.navigation.navigate('Settings')
   }
 
   renderDetails = () => {
@@ -48,7 +48,7 @@ export class BalancesScreen extends Component {
           <Button
             style={styles.button}
             title="Enter Keys…"
-            onPress={this.navigateToLogin}
+            onPress={this.navigateToSettings}
           />
         </View>
       )

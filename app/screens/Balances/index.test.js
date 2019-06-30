@@ -158,7 +158,7 @@ describe('refreshBalances', () => {
   })
 })
 
-describe('navigateToLogin', () => {
+describe('navigateToSettings', () => {
   beforeAll(() => {
     tree = renderer.create(
       <BalancesScreen
@@ -168,10 +168,10 @@ describe('navigateToLogin', () => {
         getBalances={() => {}}
       />
     )
-    tree.getInstance().navigateToLogin()
+    tree.getInstance().navigateToSettings()
   })
 
   it('called getBalances', () => {
-    expect(navigation.navigate).toHaveBeenCalledWith('Login')
+    expect(navigation.navigate).toHaveBeenCalledWith('Settings')
   })
 })

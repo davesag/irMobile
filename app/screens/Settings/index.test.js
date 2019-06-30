@@ -6,7 +6,7 @@ import 'react-native'
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import LoginScreen, { mapStateToProps, mapDispatchToProps } from '.'
+import SettingsScreen, { mapStateToProps, mapDispatchToProps } from '.'
 
 const apiKey = 'some-key'
 const apiSecret = 'some-secret'
@@ -69,7 +69,7 @@ describe('rendering', () => {
 
   beforeAll(() => {
     tree = renderer.create(
-      <LoginScreen
+      <SettingsScreen
         keys={keys}
         requireAuth={requireAuth}
         saveKeys={() => {}}

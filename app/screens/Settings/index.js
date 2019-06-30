@@ -12,7 +12,7 @@ import APIDetailsForm from '../../components/APIDetailsForm'
 
 import styles from './styles'
 
-export class LoginScreen extends Component {
+export class SettingsScreen extends Component {
   static navigationOptions = {
     title: 'Settings'
   }
@@ -67,4 +67,4 @@ export const mapDispatchToProps = dispatch =>
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(LoginScreen)
+)(SettingsScreen)
