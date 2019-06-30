@@ -16,6 +16,13 @@ Note this is a 3rd Party app and is not developed by, or supported by Independen
 
 - [ir-api](https://github.com/davesag/ir-api)
 
+## Project Status
+
+This project is under active development.
+
+- See [the project board](https://github.com/davesag/ir-app/projects/1) for work in progress
+- See [the issues list](https://github.com/davesag/ir-app/issues) to report issues
+
 ## Development
 
 To set up your local development environment refer to the official doc:
@@ -89,15 +96,11 @@ yarn android
 
 The Android emulator and iOS simulator are great for testing however features should be tested on physical devices prior to issuing a merge request.
 
-_add instructions for deploying to actual devices_
+- [Official Deployment Instructions](https://facebook.github.io/react-native/docs/0.59/running-on-device)
 
 ### Redux dev tools
 
 To view the state in the app install [the Redux dev tools Chrome plugin](https://chrome.google.com/webstore/detail/remotedev/faicmgpfiaijcedapokpbdejaodbelph/related).
-
-## Deployment
-
-_to be completed_
 
 ## Contributing
 
