@@ -1,16 +1,15 @@
 # ir-app
 
-An iOS and Android mobile app that uses the [ir-api](https://github.com/davesag/ir-api) to interact with Independent Reserve.
+An iOS and Android mobile app that uses the [ir-api](https://github.com/davesag/ir-api) to interact with [Independent Reserve](https://www.independentreserve.com/invite/AJNEHL).
 
-Note this is a 3rd Party app and is not developed by, or supported by Independent Reserve.
+**Note** this is a 3rd Party app and is not developed by, or supported by Independent Reserve.
 
-## Branches
+## Features
 
-<!-- prettier-ignore -->
-| Branch    | Tests | Code Coverage | Comments                  |
-| --------- | ----- | ------------- | ------------------------- |
-| `develop` |       |               | Work in progress          |
-| `master`  |       |               | Latest Production Release |
+The initial <acronym title="minimum viable product">MVP</acronym> version of the app allows an Independent Reserve member to:
+
+1. Add their `apiKey` and `apiSecret`
+2. Check the status of their coin holdings including current prices and an overall balance.
 
 ## Links
 
@@ -18,7 +17,7 @@ Note this is a 3rd Party app and is not developed by, or supported by Independen
 
 ## Project Status
 
-This project is under active development.
+This project is under active development and is being used as a learning project to teach myself React Native development.
 
 - See [the project board](https://github.com/davesag/ir-app/projects/1) for work in progress
 - See [the issues list](https://github.com/davesag/ir-app/issues) to report issues
@@ -27,6 +26,14 @@ This project is under active development.
 
 To set up your local development environment refer to the official doc:
 https://facebook.github.io/react-native/docs/getting-started
+
+### Branches
+
+<!-- prettier-ignore -->
+| Branch    | Tests | Code Coverage | Comments                  |
+| --------- | ----- | ------------- | ------------------------- |
+| `develop` |       |               | Work in progress          |
+| `master`  |       |               | Latest Production Release |
 
 ### Environment Variables
 
@@ -38,7 +45,18 @@ See `.env.develop` for development defaults.
 
 ### Prerequisites
 
-- [NodeJS](htps://nodejs.org), version 10.16.0 (LTS) or better. (I use [`nvm`](https://github.com/creationix/nvm) to manage Node versions — `brew install nvm`.)
+- [NodeJS](htps://nodejs.org) version 10.16.0 (LTS) or better. I use [`nvm`](https://github.com/creationix/nvm) to manage Node versions.
+
+  ```sh
+  brew install nvm
+  ```
+
+- [`yarn`](https://yarnpkg.com) instead of `npm` (typical for React Native builds.)
+
+  ```sh
+  brew install yarn
+  ```
+
 - `react-native-cli`
 
   ```sh
@@ -61,12 +79,6 @@ yarn test
 
 ```sh
 yarn lint
-```
-
-### Run Metro Builder
-
-```sh
-yarn start
 ```
 
 ### Run the app
