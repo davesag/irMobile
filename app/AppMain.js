@@ -17,9 +17,8 @@ import StoryBookUI from '../storybook'
 
 import { restoreKeys } from './services/ir/actions'
 
-import SplashScreen from './screens/Splash'
-import SettingsScreen from './screens/Settings'
 import BalancesScreen from './screens/Balances'
+import SettingsScreen from './screens/Settings'
 
 const useStorybook = nav =>
   Config.STORYBOOK === 'true'
@@ -30,23 +29,20 @@ const useStorybook = nav =>
     : nav
 
 const navBar = useStorybook({
-  Splash: SplashScreen,
-  Settings: SettingsScreen,
-  Balances: BalancesScreen
+  Balances: BalancesScreen,
+  Settings: SettingsScreen
 })
 
 const MainNavigator = createBottomTabNavigator(navBar)
 
 const StackNavigator = createStackNavigator({
   MainNavigator: MainNavigator,
-  Splash: SplashScreen,
-  Settings: SettingsScreen,
-  Balances: BalancesScreen
+  Balances: BalancesScreen,
+  Settings: SettingsScreen
 })
 
 const AppContainer = createAppContainer(StackNavigator)
 
-// TODO: Add https://github.com/joinspontaneous/react-native-loading-spinner-overlay
 class AppMain extends PureComponent {
   static propTypes = {
     doRestoreKeys: PropTypes.func.isRequired

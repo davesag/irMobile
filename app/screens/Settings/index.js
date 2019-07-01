@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { SafeAreaView, View } from 'react-native'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { Text } from 'react-native-elements'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -37,29 +38,31 @@ export class SettingsScreen extends Component {
 
     return (
       <SafeAreaView style={styles.container}>
-        <View>
-          <Text h3>Settings</Text>
-          <Text style={styles.instructions}>
-            An API key and secret are needed to interact with the Independent
-            Reserve API.
-          </Text>
-          <Text style={styles.instructions}>
-            To generate an API key and secret log into Independent Reserve, go
-            to the Settings page, click &ldquo;API Keys&rdquo; and then click
-            &ldquo;generate&rdquo;.
-          </Text>
-          <Text style={styles.instructions}>
-            These keys are saved to your device and never sent to anyone apart
-            from Independent Reserve.
-          </Text>
-        </View>
-        <APIDetailsForm
-          saving={saving}
-          keys={keys}
-          requireAuth={requireAuth}
-          onSave={doSaveKeys}
-          onClear={doClearKeys}
-        />
+        <KeyboardAwareScrollView resetScrollToCoords={{ x: 0, y: 0 }}>
+          <View>
+            <Text h3>Settings</Text>
+            <Text style={styles.instructions}>
+              An API key and secret are needed to interact with the Independent
+              Reserve API.
+            </Text>
+            <Text style={styles.instructions}>
+              To generate an API key and secret log into Independent Reserve, go
+              to the Settings page, click &ldquo;API Keys&rdquo; and then click
+              &ldquo;generate&rdquo;.
+            </Text>
+            <Text style={styles.instructions}>
+              These keys are saved to your device and never sent to anyone apart
+              from Independent Reserve.
+            </Text>
+          </View>
+          <APIDetailsForm
+            saving={saving}
+            keys={keys}
+            requireAuth={requireAuth}
+            onSave={doSaveKeys}
+            onClear={doClearKeys}
+          />
+        </KeyboardAwareScrollView>
       </SafeAreaView>
     )
   }
