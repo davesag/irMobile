@@ -155,7 +155,7 @@ exports[`rendering rendered correctly 1`] = `
         }
       }
     >
-      To generate an API key and secret log into Independent Reserve, go to the Settings page, click "API Keys" and then click "generate".
+      To generate an API key and secret log into Independent Reserve, go to the Settings page, click “API Keys” and then click “generate”.
     </Text>
     <Text
       style={
