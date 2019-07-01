@@ -29,7 +29,7 @@
     "domain-browser": "^1.1.1",
     "events": "^3.0.0",
     "https-browserify": "~1.0.0",
-    "ir-api": "^1.0.2",
+    "ir-api": "^1.0.3",
     "path-browserify": "1.0.0",
     "process": "^0.11.0",
     "punycode": "^2.1.1",

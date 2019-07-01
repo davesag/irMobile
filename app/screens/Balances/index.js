@@ -20,7 +20,7 @@ export class BalancesScreen extends Component {
   static propTypes = {
     navigation: PropTypes.shape(navigationShape).isRequired,
     balances: PropTypes.arrayOf(PropTypes.shape(balancesShape)).isRequired,
-    getBalances: PropTypes.func.isRequired,
+    doGetBalances: PropTypes.func.isRequired,
     hasKeys: PropTypes.bool,
     loading: PropTypes.bool
   }
@@ -31,7 +31,7 @@ export class BalancesScreen extends Component {
   }
 
   refreshBalances = () => {
-    this.props.getBalances()
+    this.props.doGetBalances()
   }
 
   navigateToSettings = () => {
@@ -68,11 +68,6 @@ export class BalancesScreen extends Component {
     )
   }
 
-  componentDidMount() {
-    const { balances, getBalances: doGetBalances } = this.props
-    if (!balances.length) doGetBalances()
-  }
-
   render() {
     return (
       <SafeAreaView style={styles.container}>
@@ -87,7 +82,7 @@ export const mapStateToProps = ({
 }) => ({ hasKeys: Boolean(apiKey && apiSecret), loading: busy, balances })
 
 export const mapDispatchToProps = dispatch =>
-  bindActionCreators({ getBalances }, dispatch)
+  bindActionCreators({ doGetBalances: getBalances }, dispatch)
 
 export default connect(
   mapStateToProps,

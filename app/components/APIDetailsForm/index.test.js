@@ -14,7 +14,9 @@ let tree
 describe('rendering', () => {
   describe('defaults', () => {
     beforeAll(() => {
-      tree = renderer.create(<APIDetailsForm onSave={() => {}} />)
+      tree = renderer.create(
+        <APIDetailsForm onSave={() => {}} onClear={() => {}} />
+      )
     })
 
     it('rendered correctly ', () => {
@@ -25,7 +27,12 @@ describe('rendering', () => {
   describe('with keys', () => {
     beforeAll(() => {
       tree = renderer.create(
-        <APIDetailsForm keys={keys} requireAuth={true} onSave={() => {}} />
+        <APIDetailsForm
+          keys={keys}
+          requireAuth={true}
+          onSave={() => {}}
+          onClear={() => {}}
+        />
       )
     })
 
@@ -42,6 +49,7 @@ describe('rendering', () => {
           requireAuth={true}
           saving
           onSave={() => {}}
+          onClear={() => {}}
         />
       )
     })
@@ -57,7 +65,13 @@ describe('submit', () => {
 
   beforeAll(() => {
     tree = renderer.create(
-      <APIDetailsForm keys={keys} requireAuth={true} saving onSave={onSave} />
+      <APIDetailsForm
+        keys={keys}
+        requireAuth={true}
+        saving
+        onSave={onSave}
+        onClear={() => {}}
+      />
     )
     tree.getInstance().submit()
   })
@@ -71,7 +85,12 @@ describe('updating fields', () => {
   describe('#updateField', () => {
     beforeAll(() => {
       tree = renderer.create(
-        <APIDetailsForm keys={keys} requireAuth={true} onSave={() => {}} />
+        <APIDetailsForm
+          keys={keys}
+          requireAuth={true}
+          onSave={() => {}}
+          onClear={() => {}}
+        />
       )
     })
 
@@ -107,7 +126,12 @@ describe('updating fields', () => {
   describe('#toggleField', () => {
     beforeAll(() => {
       tree = renderer.create(
-        <APIDetailsForm keys={keys} requireAuth={true} onSave={() => {}} />
+        <APIDetailsForm
+          keys={keys}
+          requireAuth={true}
+          onSave={() => {}}
+          onClear={() => {}}
+        />
       )
       tree.getInstance().toggleField('requireAuth')()
     })
@@ -125,7 +149,12 @@ describe('updating fields', () => {
 
     beforeAll(() => {
       tree = renderer.create(
-        <APIDetailsForm keys={keys} requireAuth={true} onSave={() => {}} />
+        <APIDetailsForm
+          keys={keys}
+          requireAuth={true}
+          onSave={() => {}}
+          onClear={() => {}}
+        />
       )
       tree.getInstance().updateApiKey(newKey)
     })
@@ -144,7 +173,12 @@ describe('updating fields', () => {
 
     beforeAll(() => {
       tree = renderer.create(
-        <APIDetailsForm keys={keys} requireAuth={true} onSave={() => {}} />
+        <APIDetailsForm
+          keys={keys}
+          requireAuth={true}
+          onSave={() => {}}
+          onClear={() => {}}
+        />
       )
       tree.getInstance().updateApiSecret(newSecret)
     })
@@ -154,6 +188,45 @@ describe('updating fields', () => {
         value: expected,
         error: null
       })
+    })
+  })
+
+  describe('#clear', () => {
+    const onClear = jest.fn()
+    beforeAll(() => {
+      tree = renderer.create(
+        <APIDetailsForm
+          keys={keys}
+          requireAuth={true}
+          onSave={() => {}}
+          onClear={onClear}
+        />
+      )
+      tree.getInstance().clear()
+    })
+
+    it('cleared the apiKey', () => {
+      expect(tree.getInstance().state).toHaveProperty('apiKey', {
+        value: null,
+        error: null
+      })
+    })
+
+    it('cleared the apiSecret', () => {
+      expect(tree.getInstance().state).toHaveProperty('apiSecret', {
+        value: null,
+        error: null
+      })
+    })
+
+    it('cleared the requireAuth', () => {
+      expect(tree.getInstance().state).toHaveProperty('requireAuth', {
+        value: false
+      })
+    })
+
+    it('called onClear', () => {
+      expect(onClear).toHaveBeenCalled()
     })
   })
 })

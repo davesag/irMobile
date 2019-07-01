@@ -59,7 +59,8 @@ describe('mapDispatchToProps', () => {
 
   it('returns bound function to dispatch', () => {
     expect(dispatchProps).toEqual({
-      saveKeys: expect.any(Function)
+      doSaveKeys: expect.any(Function),
+      doClearKeys: expect.any(Function)
     })
   })
 })
@@ -72,7 +73,8 @@ describe('rendering', () => {
       <SettingsScreen
         keys={keys}
         requireAuth={requireAuth}
-        saveKeys={() => {}}
+        doSaveKeys={() => {}}
+        doClearKeys={() => {}}
         navigation={navigation}
       />
     )

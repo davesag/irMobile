@@ -9,5 +9,16 @@ export default StyleSheet.create({
       android: 'monospace',
       ios: 'Courier New'
     })
+  },
+  buttons: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end'
+  },
+  saveButton: {
+    paddingRight: 10
+  },
+  clearButton: {
+    paddingLeft: 10,
+    paddingRight: 10
   }
 })

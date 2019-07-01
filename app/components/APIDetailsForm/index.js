@@ -15,7 +15,8 @@ class APIDetailsForm extends Component {
     keys: PropTypes.shape(keysShape),
     requireAuth: PropTypes.bool,
     saving: PropTypes.bool,
-    onSave: PropTypes.func.isRequired
+    onSave: PropTypes.func.isRequired,
+    onClear: PropTypes.func.isRequired
   }
 
   static defaultProps = {
@@ -89,9 +90,19 @@ class APIDetailsForm extends Component {
     Keyboard.dismiss()
   }
 
+  clear = () => {
+    const { onClear } = this.props
+    this.setState({
+      apiKey: { value: null, error: null },
+      apiSecret: { value: null, error: null },
+      requireAuth: { value: false },
+      dirty: true
+    })
+    onClear()
+  }
+
   render() {
     const { apiKey, apiSecret, requireAuth } = this.state
-
     const { saving } = this.props
     const disabled = this.canNotBeSubmitted()
 
@@ -101,6 +112,7 @@ class APIDetailsForm extends Component {
           autoCapitalize="none"
           autoCorrect={false}
           secureTextEntry
+          clearTextOnFocus
           inputStyle={styles.input}
           value={apiKey.value}
           label="apiKey"
@@ -113,6 +125,7 @@ class APIDetailsForm extends Component {
           autoCapitalize="none"
           autoCorrect={false}
           secureTextEntry
+          clearTextOnFocus
           inputStyle={styles.input}
           value={apiSecret.value}
           label="apiSecret"
@@ -126,12 +139,22 @@ class APIDetailsForm extends Component {
           onPress={this.toggleField('requireAuth')}
           title="Require passcode for each use"
         />
-        <Button
-          title="Save Keys"
-          disabled={disabled || saving}
-          loading={saving}
-          onPress={this.submit}
-        />
+        <View style={styles.buttons}>
+          <Button
+            style={styles.saveButton}
+            title="Save Keys"
+            disabled={disabled || saving}
+            loading={saving}
+            onPress={this.submit}
+          />
+          <Button
+            style={styles.clearButton}
+            type="outline"
+            title="Clear Keys"
+            disabled={saving || (!apiSecret.value && !apiKey.value)}
+            onPress={this.clear}
+          />
+        </View>
       </View>
     )
   }

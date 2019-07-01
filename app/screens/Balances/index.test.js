@@ -63,7 +63,7 @@ describe('mapDispatchToProps', () => {
 
   it('returns bound function to dispatch', () => {
     expect(dispatchProps).toEqual({
-      getBalances: expect.any(Function)
+      doGetBalances: expect.any(Function)
     })
   })
 })
@@ -75,7 +75,7 @@ describe('rendering', () => {
         <BalancesScreen
           balances={[]}
           navigation={navigation}
-          getBalances={() => {}}
+          doGetBalances={() => {}}
         />
       )
     })
@@ -92,7 +92,7 @@ describe('rendering', () => {
           hasKeys
           balances={[]}
           navigation={navigation}
-          getBalances={() => {}}
+          doGetBalances={() => {}}
         />
       )
     })
@@ -110,7 +110,7 @@ describe('rendering', () => {
           hasKeys
           balances={[]}
           navigation={navigation}
-          getBalances={() => {}}
+          doGetBalances={() => {}}
         />
       )
     })
@@ -127,7 +127,7 @@ describe('rendering', () => {
           hasKeys
           balances={balances}
           navigation={navigation}
-          getBalances={() => {}}
+          doGetBalances={() => {}}
         />
       )
     })
@@ -147,7 +147,7 @@ describe('refreshBalances', () => {
         hasKeys
         balances={balances}
         navigation={navigation}
-        getBalances={getBalances}
+        doGetBalances={getBalances}
       />
     )
     tree.getInstance().refreshBalances()
@@ -165,7 +165,7 @@ describe('navigateToSettings', () => {
         hasKeys
         balances={balances}
         navigation={navigation}
-        getBalances={() => {}}
+        doGetBalances={() => {}}
       />
     )
     tree.getInstance().navigateToSettings()
