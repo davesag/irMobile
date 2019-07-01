@@ -103,7 +103,7 @@ class APIDetailsForm extends Component {
 
   render() {
     const { apiKey, apiSecret, requireAuth } = this.state
-    const { saving, theme } = this.props
+    const { saving } = this.props
     const disabled = this.canNotBeSubmitted()
 
     return (

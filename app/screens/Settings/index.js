@@ -45,7 +45,8 @@ export class SettingsScreen extends Component {
           </Text>
           <Text style={styles.instructions}>
             To generate an API key and secret log into Independent Reserve, go
-            to the Settings page, click "API Keys" and then click "generate".
+            to the Settings page, click &ldquo;API Keys&rdquo; and then click
+            &ldquo;generate&rdquo;.
           </Text>
           <Text style={styles.instructions}>
             These keys are saved to your device and never sent to anyone apart
