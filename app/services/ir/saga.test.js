@@ -35,14 +35,16 @@ describe('saga', () => {
       expect(result).toEqual(
         takeEvery(
           [
-            'RESTORE_KEYS',
-            'SAVE_KEYS',
             'CLEAR_KEYS',
-            'GET_BALANCES',
-            'RESTORE_KEYS_FAIL',
-            'SAVE_KEYS_FAIL',
             'CLEAR_KEYS_FAIL',
-            'GET_BALANCES_FAIL'
+            'GET_BALANCES',
+            'GET_BALANCES_FAIL',
+            'RESTORE_KEYS',
+            'RESTORE_KEYS_FAIL',
+            'RESTORE_KEYS_SUCCESS',
+            'SAVE_KEYS',
+            'SAVE_KEYS_FAIL',
+            'SAVE_KEYS_SUCCESS'
           ],
           saga.worker
         )
@@ -109,6 +111,15 @@ describe('saga', () => {
       })
     })
 
+    describe('RESTORE_KEYS_SUCCESS', () => {
+      const action = { type: 'RESTORE_KEYS_SUCCESS' }
+      const it = sagaHelper(saga.worker(action))
+
+      it('dispatches saveKeysSuccess', result => {
+        expect(result).toEqual(put(actions.getBalances()))
+      })
+    })
+
     describe('SAVE_KEYS', () => {
       const action = { type: 'SAVE_KEYS', payload: keys }
       describe('when it works', () => {
@@ -166,6 +177,15 @@ describe('saga', () => {
             type: 'warning'
           })
         )
+      })
+    })
+
+    describe('SAVE_KEYS_SUCCESS', () => {
+      const action = { type: 'SAVE_KEYS_SUCCESS' }
+      const it = sagaHelper(saga.worker(action))
+
+      it('dispatches saveKeysSuccess', result => {
+        expect(result).toEqual(put(actions.getBalances()))
       })
     })
 

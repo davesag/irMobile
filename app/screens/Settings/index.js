@@ -4,7 +4,7 @@ import { SafeAreaView, View } from 'react-native'
 import { Text } from 'react-native-elements'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { saveKeys } from '../../services/ir/actions'
+import { saveKeys, clearKeys } from '../../services/ir/actions'
 
 import { navigationShape, keysShape } from '../../shapes'
 
@@ -19,7 +19,8 @@ export class SettingsScreen extends Component {
 
   static propTypes = {
     navigation: PropTypes.shape(navigationShape).isRequired,
-    saveKeys: PropTypes.func.isRequired,
+    doSaveKeys: PropTypes.func.isRequired,
+    doClearKeys: PropTypes.func.isRequired,
     keys: PropTypes.shape(keysShape),
     requireAuth: PropTypes.bool,
     saving: PropTypes.bool
@@ -32,21 +33,31 @@ export class SettingsScreen extends Component {
   }
 
   render() {
-    const { keys, requireAuth, saveKeys, saving } = this.props
+    const { keys, requireAuth, doSaveKeys, saving, doClearKeys } = this.props
 
     return (
       <SafeAreaView style={styles.container}>
         <View>
-          <Text h3>Supply your credentials</Text>
-          <Text>
-            These keys are needed to interact with the Independent Reserve API
+          <Text h3>Settings</Text>
+          <Text style={styles.instructions}>
+            An API key and secret are needed to interact with the Independent
+            Reserve API.
+          </Text>
+          <Text style={styles.instructions}>
+            To generate an API key and secret log into Independent Reserve, go
+            to the Settings page, click "API Keys" and then click "generate".
+          </Text>
+          <Text style={styles.instructions}>
+            These keys are saved to your device and never sent to anyone apart
+            from Independent Reserve.
           </Text>
         </View>
         <APIDetailsForm
           saving={saving}
           keys={keys}
           requireAuth={requireAuth}
-          onSave={saveKeys}
+          onSave={doSaveKeys}
+          onClear={doClearKeys}
         />
       </SafeAreaView>
     )
@@ -62,7 +73,7 @@ export const mapStateToProps = ({
 })
 
 export const mapDispatchToProps = dispatch =>
-  bindActionCreators({ saveKeys }, dispatch)
+  bindActionCreators({ doSaveKeys: saveKeys, doClearKeys: clearKeys }, dispatch)
 
 export default connect(
   mapStateToProps,

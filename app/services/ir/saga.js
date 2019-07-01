@@ -4,6 +4,7 @@ import { showMessage } from 'react-native-flash-message'
 import {
   restoreKeysSuccess,
   restoreKeysFail,
+  getBalances,
   getBalancesSuccess,
   getBalancesFail,
   saveKeysSuccess,
@@ -43,6 +44,9 @@ export default () => {
           type: 'danger'
         })
         /* istanbul ignore next */ break
+      case 'RESTORE_KEYS_SUCCESS':
+        yield put(getBalances())
+        /* istanbul ignore next */ break
       case 'SAVE_KEYS':
         try {
           // keys were saved in the state by the saveKeys action.
@@ -59,6 +63,9 @@ export default () => {
           message,
           type: 'warning'
         })
+        /* istanbul ignore next */ break
+      case 'SAVE_KEYS_SUCCESS':
+        yield put(getBalances())
         /* istanbul ignore next */ break
       case 'CLEAR_KEYS':
         try {
@@ -100,14 +107,16 @@ export default () => {
   function* watcher() {
     yield takeEvery(
       [
-        'RESTORE_KEYS',
-        'SAVE_KEYS',
         'CLEAR_KEYS',
-        'GET_BALANCES',
-        'RESTORE_KEYS_FAIL',
-        'SAVE_KEYS_FAIL',
         'CLEAR_KEYS_FAIL',
-        'GET_BALANCES_FAIL'
+        'GET_BALANCES',
+        'GET_BALANCES_FAIL',
+        'RESTORE_KEYS',
+        'RESTORE_KEYS_FAIL',
+        'RESTORE_KEYS_SUCCESS',
+        'SAVE_KEYS',
+        'SAVE_KEYS_FAIL',
+        'SAVE_KEYS_SUCCESS'
       ],
       worker
     )
