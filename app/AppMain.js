@@ -12,6 +12,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import Config from 'react-native-config'
 import { View } from 'react-native'
+import SplashScreen from 'react-native-splash-screen'
 
 import StoryBookUI from '../storybook'
 
@@ -50,6 +51,7 @@ class AppMain extends PureComponent {
 
   componentDidMount() {
     this.props.doRestoreKeys()
+    SplashScreen.hide()
   }
 
   render() {
