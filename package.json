@@ -95,7 +95,8 @@
     ],
     "testURL": "http://localhost/",
     "setupFilesAfterEnv": [
-      "<rootDir>setupTests.js"
+      "<rootDir>setupTests.js",
+      "<rootDir>node_modules/react-native-gesture-handler/jestSetup.js"
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/*"
