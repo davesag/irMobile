@@ -46,7 +46,6 @@
 		49F679A21563452EA0F8417C /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C647017222F14C898F500456 /* Entypo.ttf */; };
 		4C720A9F6C3540B3AE4F0BC9 /* libRNCAsyncStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 271F04140BC947C09FC11BD0 /* libRNCAsyncStorage.a */; };
 		59F53E9A0F6E4DC2BAB3E1C7 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97E02A6156054FEB902FA2BC /* MaterialIcons.ttf */; };
-		6662974D2D2041B1BA89054C /* libRNScreens.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1926E23CE24442779E49272F /* libRNScreens.a */; };
 		6CEDA1F89C914DF884270103 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7330DEB12441438A585522 /* libSplashScreen.a */; };
 		73D150A5A8294E738C9E65D5 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD480D89CC934B2FB38CCCC7 /* MaterialCommunityIcons.ttf */; };
 		758F4F886C7443CAA3C6DA57 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12175435C5C0486297197467 /* FontAwesome5_Brands.ttf */; };
@@ -368,13 +367,6 @@
 			remoteGlobalIDString = B5C32A36220C603B000FFB8D;
 			remoteInfo = "RNGestureHandler-tvOS";
 		};
-		F5D62DCC22C7510E004D4112 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2857D893248C481CBE896365 /* RNScreens.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 134814201AA4EA6300B7C361;
-			remoteInfo = RNScreens;
-		};
 		F5D62DD022C7510E004D4112 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CCE450DB9A8545EDB1824213 /* RNVectorIcons.xcodeproj */;
@@ -430,9 +422,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = irMobile/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		17BB035A929A429BBCA620C0 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
-		1926E23CE24442779E49272F /* libRNScreens.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNScreens.a; sourceTree = "<group>"; };
 		271F04140BC947C09FC11BD0 /* libRNCAsyncStorage.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNCAsyncStorage.a; sourceTree = "<group>"; };
-		2857D893248C481CBE896365 /* RNScreens.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNScreens.xcodeproj; path = "../node_modules/react-native-screens/ios/RNScreens.xcodeproj"; sourceTree = "<group>"; };
 		2AD4944CDE42465AAE283866 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* irMobile-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "irMobile-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* irMobile-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "irMobile-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -496,7 +486,6 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				4C720A9F6C3540B3AE4F0BC9 /* libRNCAsyncStorage.a in Frameworks */,
 				3E6AF1F860F0493C909E2F3B /* libRNGestureHandler.a in Frameworks */,
-				6662974D2D2041B1BA89054C /* libRNScreens.a in Frameworks */,
 				C532EBAA17B44D3BB566A13A /* libRNVectorIcons.a in Frameworks */,
 				D5E5E9EAEABD491AB6FD64B9 /* libTcpSockets.a in Frameworks */,
 				8F4669CAF0184B7BA74C5695 /* libUdpSockets.a in Frameworks */,
@@ -695,7 +684,6 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				CEF94651B8A341A7A3C342B6 /* RNCAsyncStorage.xcodeproj */,
 				BBD780D764384A52B01D8CDD /* RNGestureHandler.xcodeproj */,
-				2857D893248C481CBE896365 /* RNScreens.xcodeproj */,
 				CCE450DB9A8545EDB1824213 /* RNVectorIcons.xcodeproj */,
 				E412F97A43EF4D6C882AF61F /* TcpSockets.xcodeproj */,
 				73ADAA7D146E42E79FE4AC2A /* UdpSockets.xcodeproj */,
@@ -829,14 +817,6 @@
 			isa = PBXGroup;
 			children = (
 				F5D62DBB22C7510E004D4112 /* libRNCAsyncStorage.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F5D62DAD22C7510E004D4112 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F5D62DCD22C7510E004D4112 /* libRNScreens.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1020,10 +1000,6 @@
 				{
 					ProductGroup = F5D62DA522C7510D004D4112 /* Products */;
 					ProjectRef = BBD780D764384A52B01D8CDD /* RNGestureHandler.xcodeproj */;
-				},
-				{
-					ProductGroup = F5D62DAD22C7510E004D4112 /* Products */;
-					ProjectRef = 2857D893248C481CBE896365 /* RNScreens.xcodeproj */;
 				},
 				{
 					ProductGroup = F5D62DA922C7510E004D4112 /* Products */;
@@ -1347,13 +1323,6 @@
 			remoteRef = F5D62DC022C7510E004D4112 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F5D62DCD22C7510E004D4112 /* libRNScreens.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNScreens.a;
-			remoteRef = F5D62DCC22C7510E004D4112 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		F5D62DD122C7510E004D4112 /* libRNVectorIcons.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1541,7 +1510,6 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-screens/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-udp/ios/**",
@@ -1573,7 +1541,6 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-screens/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-udp/ios/**",
@@ -1606,7 +1573,6 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-screens/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-udp/ios/**",
@@ -1635,7 +1601,6 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-screens/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-udp/ios/**",
@@ -1670,7 +1635,6 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-screens/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-udp/ios/**",
@@ -1709,7 +1673,6 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-screens/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-udp/ios/**",
@@ -1747,7 +1710,6 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-screens/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-udp/ios/**",
@@ -1785,7 +1747,6 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-screens/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-udp/ios/**",
