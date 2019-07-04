@@ -122,5 +122,10 @@
         "statements": 100
       }
     }
+  },
+  "greenkeeper": {
+    "ignore": [
+      "react-native"
+    ]
   }
 }
