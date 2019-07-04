@@ -12,16 +12,27 @@ const keys = {
 storiesOf('APIDetailsForm', module)
   .add('empty', () => (
     <SafeAreaView>
-      <APIDetailsForm onSave={() => {}} />
+      <APIDetailsForm onSave={() => {}} onClear={() => {}} />
     </SafeAreaView>
   ))
   .add('with values', () => (
     <SafeAreaView>
-      <APIDetailsForm keys={keys} requireAuth={true} onSave={() => {}} />
+      <APIDetailsForm
+        keys={keys}
+        requireAuth={true}
+        onSave={() => {}}
+        onClear={() => {}}
+      />
     </SafeAreaView>
   ))
   .add('saving', () => (
     <SafeAreaView>
-      <APIDetailsForm keys={keys} requireAuth={true} saving onSave={() => {}} />
+      <APIDetailsForm
+        keys={keys}
+        requireAuth={true}
+        saving
+        onSave={() => {}}
+        onClear={() => {}}
+      />
     </SafeAreaView>
   ))
