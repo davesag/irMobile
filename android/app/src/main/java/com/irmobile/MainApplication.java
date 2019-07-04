@@ -6,7 +6,6 @@ import com.facebook.react.ReactApplication;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.tradle.react.UdpSocketsModule;
 import com.peel.react.TcpSocketsModule;
-import com.peel.react.rnos.RNOSModule;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.swmansion.rnscreens.RNScreensPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
@@ -34,7 +33,6 @@ public class MainApplication extends Application implements ReactApplication {
             new SplashScreenReactPackage(),
             new UdpSocketsModule(),
             new TcpSocketsModule(),
-            new RNOSModule(),
             new VectorIconsPackage(),
             new RNScreensPackage(),
             new RNGestureHandlerPackage(),
