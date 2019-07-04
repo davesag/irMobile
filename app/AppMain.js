@@ -10,7 +10,6 @@ import {
 } from 'react-navigation'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import Config from 'react-native-config'
 import { View } from 'react-native'
 import SplashScreen from 'react-native-splash-screen'
 
@@ -22,7 +21,7 @@ import BalancesScreen from './screens/Balances'
 import SettingsScreen from './screens/Settings'
 
 const useStorybook = nav =>
-  Config.STORYBOOK === 'true'
+  process.env.NODE_ENV === 'development'
     ? /* istanbul ignore next */ {
         ...nav,
         StoryBook: StoryBookUI

@@ -10,7 +10,6 @@ import com.peel.react.rnos.RNOSModule;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.swmansion.rnscreens.RNScreensPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
-import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -39,7 +38,6 @@ public class MainApplication extends Application implements ReactApplication {
             new VectorIconsPackage(),
             new RNScreensPackage(),
             new RNGestureHandlerPackage(),
-            new ReactNativeConfigPackage(),
             new AsyncStoragePackage()
       );
     }
