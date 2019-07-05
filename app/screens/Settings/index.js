@@ -6,6 +6,7 @@ import { Text } from 'react-native-elements'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { saveKeys, clearKeys } from '../../services/ir/actions'
+import makeNavigationOptions from '../../utils/makeNavigationOptions'
 
 import { navigationShape, keysShape } from '../../shapes'
 
@@ -14,9 +15,7 @@ import APIDetailsForm from '../../components/APIDetailsForm'
 import styles from './styles'
 
 export class SettingsScreen extends Component {
-  static navigationOptions = {
-    title: 'Settings'
-  }
+  static navigationOptions = makeNavigationOptions('Settings', 'cog')
 
   static propTypes = {
     navigation: PropTypes.shape(navigationShape).isRequired,
