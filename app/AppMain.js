@@ -21,10 +21,11 @@ import Settings from './screens/Settings'
 
 import styles from './styles'
 import useStorybook from './utils/useStorybook'
+import navigationOptions from './utils/tabNavigationOptions'
 
 const navBar = useStorybook({ Balances, Settings, About })
-const MainNavigator = createBottomTabNavigator(navBar)
-const StackNavigator = createStackNavigator({ MainNavigator })
+const TabNavigator = createBottomTabNavigator(navBar, { navigationOptions })
+const StackNavigator = createStackNavigator({ TabNavigator })
 const AppContainer = createAppContainer(StackNavigator)
 
 class AppMain extends PureComponent {
