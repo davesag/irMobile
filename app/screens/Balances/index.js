@@ -5,6 +5,7 @@ import { Button, Text } from 'react-native-elements'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { getBalances } from '../../services/ir/actions'
+import makeNavigationOptions from '../../utils/makeNavigationOptions'
 
 import { navigationShape, balancesShape } from '../../shapes'
 
@@ -13,9 +14,7 @@ import AccountBalances from '../../components/AccountBalances'
 import styles from './styles'
 
 export class BalancesScreen extends Component {
-  static navigationOptions = {
-    title: 'Balances'
-  }
+  static navigationOptions = makeNavigationOptions('Balances', 'piggy-bank')
 
   static propTypes = {
     navigation: PropTypes.shape(navigationShape).isRequired,
