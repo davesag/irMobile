@@ -4,8 +4,6 @@ import android.app.Application;
 
 import com.facebook.react.ReactApplication;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
-import com.tradle.react.UdpSocketsModule;
-import com.peel.react.TcpSocketsModule;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
@@ -30,8 +28,6 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
             new SplashScreenReactPackage(),
-            new UdpSocketsModule(),
-            new TcpSocketsModule(),
             new VectorIconsPackage(),
             new RNGestureHandlerPackage(),
             new AsyncStoragePackage()

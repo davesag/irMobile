@@ -10,6 +10,8 @@ import styles from './styles'
 const cleanKey = key => key.replace(/[^a-f0-9-]/gi, '')
 const cleanSecret = key => key.replace(/[^a-f0-9]/gi, '')
 
+// https://stackoverflow.com/questions/56896843/react-native-0-59-10-how-do-i-remove-usenativedriver-when-running-tests-b
+
 class APIDetailsForm extends Component {
   static propTypes = {
     keys: PropTypes.shape(keysShape),
