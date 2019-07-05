@@ -6,7 +6,6 @@ import { name as appName } from '../app.json'
 
 // import stories
 configure(() => {
-  /* eslint-disable global-require */
   require('./stories')
 }, module)
 

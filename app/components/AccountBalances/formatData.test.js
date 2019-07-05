@@ -30,6 +30,7 @@ describe('#formatData', () => {
   let footer
 
   beforeAll(() => {
+    /* eslint-disable-next-line no-extra-semi */
     ;({ body, footer } = formatData(details))
   })
 

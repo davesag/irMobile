@@ -9,6 +9,8 @@ const body = [['A', 'B', 'C', 'D'], ['E', 'F', 'G', 'H']]
 const header = ['Aye', 'Bee', 'Sea', 'Dee']
 const footer = ['Total', '', '', 'Eee']
 
+const customStyle = { padding: 10 }
+
 storiesOf('Table', module)
   .add('simple', () => (
     <SafeAreaView>
@@ -31,7 +33,7 @@ storiesOf('Table', module)
         header={header}
         footer={footer}
         body={body}
-        tableStyle={{ padding: 10 }}
+        tableStyle={customStyle}
       />
     </SafeAreaView>
   ))

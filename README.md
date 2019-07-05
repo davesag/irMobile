@@ -1,6 +1,6 @@
 # irMobile
 
-An iOS and Android mobile app that uses the [ir-api](https://github.com/davesag/ir-api) to interact with [Independent Reserve](https://www.independentreserve.com/invite/AJNEHL).
+An iOS app that uses the [ir-api](https://github.com/davesag/ir-api) to interact with [Independent Reserve](https://www.independentreserve.com/invite/AJNEHL).
 
 **Note** this is a 3rd Party app and is not developed by, or supported by Independent Reserve.
 
@@ -10,6 +10,8 @@ The initial <acronym title="minimum viable product">MVP</acronym> version of the
 
 1. Add their `apiKey` and `apiSecret`
 2. Check the status of their coin holdings including current prices and an overall balance.
+
+See [milestone/1](https://github.com/davesag/irMobile/milestone/1) for specifics.
 
 ## Links
 
@@ -29,6 +31,25 @@ This project is under active development and is being used as a learning project
 To set up your local development environment refer to the official doc:
 https://facebook.github.io/react-native/docs/getting-started
 
+### React Native Version
+
+This app is currently built with React Native version 0.59.10.
+
+- [react-native/docs/0.59](https://facebook.github.io/react-native/docs/0.59/getting-started)
+
+I have tried to upgrade it to React Native 0.60.0 but that caused too many problems.
+
+Under React Native 0.60.0 we see the following
+
+- tests never complete (jest hangs)
+- code does deploy to the iOS simulator
+- code deploys to the phone with `development` targets turned on, but with many warnings, and very slowly.
+- code _does not_ deploy to the phone with `release` targets turned on.
+
+**Conclusion**: It's far too early to upgrade to React Native 0.60.0
+
+This will be revisited in [issues/40](https://github.com/davesag/irMobile/issues/40).
+
 ### Branches
 
 <!-- prettier-ignore -->
@@ -36,14 +57,6 @@ https://facebook.github.io/react-native/docs/getting-started
 | --------- | ----- | ------------- | ------------------------- |
 | `develop` | [![CircleCI](https://circleci.com/gh/davesag/irMobile/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/irMobile/tree/develop) | [![codecov](https://codecov.io/gh/davesag/irMobile/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/irMobile) | Work in progress          |
 | `master`  | [![CircleCI](https://circleci.com/gh/davesag/irMobile/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/irMobile/tree/master) | [![codecov](https://codecov.io/gh/davesag/irMobile/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/irMobile) | Latest Production Release |
-
-### Environment Variables
-
-See `.env.develop` for development defaults.
-
-| Variable    | Notes                                                        |
-| ----------- | ------------------------------------------------------------ |
-| `STORYBOOK` | Use storybook. You'll want this to be `true` for development |
 
 ### Prerequisites
 
@@ -59,10 +72,10 @@ See `.env.develop` for development defaults.
   brew install yarn
   ```
 
-- [`react-native-cli`](https://github.com/react-native-community/cli)
+- [`react-native-cli`](https://github.com/react-native-community/cli) (version 1.3.0) — see note above about upgrading React Native to 0.60.0.
 
   ```sh
-  yarn global add react-native-cli
+  yarn global add react-native-cli@1.3.0
   ```
 
 ### Installing dependencies

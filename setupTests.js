@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import 'react-native'
 
 /**
@@ -32,9 +31,7 @@ copyProps(window, global)
  */
 const originalConsoleError = console.error
 console.error = message => {
-  if (message.startsWith('Warning:')) {
-    return
-  }
+  if (message.startsWith('Warning:')) return
 
   originalConsoleError(message)
 }

@@ -10,6 +10,8 @@ import styles from './styles'
 const cleanKey = key => key.replace(/[^a-f0-9-]/gi, '')
 const cleanSecret = key => key.replace(/[^a-f0-9]/gi, '')
 
+// https://stackoverflow.com/questions/56896843/react-native-0-59-10-how-do-i-remove-usenativedriver-when-running-tests-b
+
 class APIDetailsForm extends Component {
   static propTypes = {
     keys: PropTypes.shape(keysShape),
@@ -45,14 +47,12 @@ class APIDetailsForm extends Component {
   }
 
   updateField = field => value => {
-    if (value) {
-      this.setState({ [field]: { value, error: null }, dirty: true })
-    } else {
+    if (value) this.setState({ [field]: { value, error: null }, dirty: true })
+    else
       this.setState({
         [field]: { value, error: 'Required field' },
         dirty: true
       })
-    }
   }
 
   toggleField = field => () => {
@@ -116,7 +116,7 @@ class APIDetailsForm extends Component {
           inputStyle={styles.input}
           value={apiKey.value}
           label="apiKey"
-          errorStyle={{ color: 'red' }}
+          errorStyle={styles.error}
           errorMessage={apiKey.error}
           onChangeText={this.updateApiKey}
           onSubmitEditing={Keyboard.dismiss}
@@ -129,7 +129,7 @@ class APIDetailsForm extends Component {
           inputStyle={styles.input}
           value={apiSecret.value}
           label="apiSecret"
-          errorStyle={{ color: 'red' }}
+          errorStyle={styles.error}
           errorMessage={apiSecret.error}
           onChangeText={this.updateApiSecret}
           onSubmitEditing={Keyboard.dismiss}
