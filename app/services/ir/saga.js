@@ -85,8 +85,8 @@ export default () => {
       case 'GET_BALANCES':
         try {
           keys = yield select(getKeys)
-          const { getBalances } = getApi(keys)
-          const balances = yield call(getBalances, 'Aud')
+          const { getBalances: getAccountBalances } = getApi(keys)
+          const balances = yield call(getAccountBalances, 'Aud')
           yield put(getBalancesSuccess(balances))
         } catch (err) {
           yield put(getBalancesFail(err))

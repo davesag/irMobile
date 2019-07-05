@@ -20,6 +20,8 @@ import { restoreKeys } from './services/ir/actions'
 import BalancesScreen from './screens/Balances'
 import SettingsScreen from './screens/Settings'
 
+import styles from './styles'
+
 const useStorybook = nav =>
   process.env.NODE_ENV === 'development'
     ? /* istanbul ignore next */ {
@@ -55,7 +57,7 @@ class AppMain extends PureComponent {
 
   render() {
     return (
-      <View style={{ flex: 1 }}>
+      <View style={styles.container}>
         <AppContainer />
       </View>
     )

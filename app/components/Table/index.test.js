@@ -8,6 +8,8 @@ const body = [['A', 'B', 'C'], ['D', 'E', 'F']]
 const header = ['Aye', 'Bee', 'Sea']
 const footer = ['Total', '', 'Dee']
 
+const customStyle = { padding: 10 }
+
 let tree
 
 describe('rendering', () => {
@@ -50,7 +52,7 @@ describe('rendering', () => {
           body={body}
           header={header}
           footer={footer}
-          tableStyle={{ padding: 10 }}
+          tableStyle={customStyle}
         />
       )
     })

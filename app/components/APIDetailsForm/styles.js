@@ -20,5 +20,8 @@ export default StyleSheet.create({
   clearButton: {
     paddingLeft: 10,
     paddingRight: 10
+  },
+  error: {
+    color: 'red'
   }
 })

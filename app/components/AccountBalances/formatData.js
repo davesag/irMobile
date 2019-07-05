@@ -51,11 +51,11 @@ const formatData = data => {
     checkLongest(row)('fiatValue', 2)
   ])
 
-  const fiatValue = data.reduce((acc, { fiatValue }) => {
+  const fValue = data.reduce((acc, { fiatValue }) => {
     acc = acc + fiatValue
     return acc
   }, 0)
-  const total = checkLongest({ fiatValue })('fiatValue', 2)
+  const total = checkLongest({ fiatValue: fValue })('fiatValue', 2)
 
   // { currency: 'Eth', balance: 21.62806365, fiatPrice: 464.04, fiatValue: 10036.286656146001 }
 
