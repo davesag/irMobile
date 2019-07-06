@@ -6,7 +6,8 @@ import PropTypes from 'prop-types'
 import {
   createAppContainer,
   createBottomTabNavigator,
-  createStackNavigator
+  createStackNavigator,
+  createSwitchNavigator
 } from 'react-navigation'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -17,16 +18,31 @@ import { restoreKeys } from './services/ir/actions'
 
 import About from './screens/About'
 import Balances from './screens/Balances'
+import Loading from './screens/Loading'
 import Settings from './screens/Settings'
 
 import styles from './styles'
 import useStorybook from './utils/useStorybook'
 import navigationOptions from './utils/tabNavigationOptions'
 
-const navBar = useStorybook({ Balances, Settings, About })
-const TabNavigator = createBottomTabNavigator(navBar, { navigationOptions })
-const StackNavigator = createStackNavigator({ TabNavigator })
-const AppContainer = createAppContainer(StackNavigator)
+const loggedInNavBar = useStorybook({ Balances, Settings, About })
+const LoggedInTabNavigator = createBottomTabNavigator(loggedInNavBar, {
+  navigationOptions
+})
+const LoggedInStackNavigator = createStackNavigator({ LoggedInTabNavigator })
+
+const loggedOutNavBar = useStorybook({ Settings, About })
+const LoggedOutTabNavigator = createBottomTabNavigator(loggedOutNavBar, {
+  navigationOptions
+})
+const LoggedOutStackNavigator = createStackNavigator({ LoggedOutTabNavigator })
+
+const MainNavigator = createSwitchNavigator(
+  { Loading, LoggedInStackNavigator, LoggedOutStackNavigator },
+  { initialRouteName: 'Loading' }
+)
+
+const AppContainer = createAppContainer(MainNavigator)
 
 class AppMain extends PureComponent {
   static propTypes = {

@@ -19,11 +19,9 @@ export class AboutScreen extends PureComponent {
     return (
       <SafeAreaView style={styles.container}>
         <View>
-          <Text h3>About</Text>
           <Text style={styles.instructions}>
             Wonderfully written about-text goes here.
           </Text>
-          <Text h4>Credits</Text>
           <Text style={styles.instructions}>
             Nice things about the people who helped make it.
           </Text>

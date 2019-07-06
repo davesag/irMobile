@@ -11,8 +11,14 @@ import SettingsScreen, { mapStateToProps, mapDispatchToProps } from '.'
 const apiKey = 'some-key'
 const apiSecret = 'some-secret'
 const keys = { apiKey, apiSecret }
-
 const requireAuth = true
+
+const navigate = jest.fn()
+const navigation = { navigate }
+
+const resetStubs = () => {
+  navigate.clearMock()
+}
 
 let tree
 
@@ -66,8 +72,6 @@ describe('mapDispatchToProps', () => {
 })
 
 describe('rendering', () => {
-  const navigation = {}
-
   beforeAll(() => {
     tree = renderer.create(
       <SettingsScreen
@@ -82,5 +86,60 @@ describe('rendering', () => {
 
   it('rendered correctly', () => {
     expect(tree).toMatchSnapshot()
+  })
+})
+
+describe('when keys are saved', () => {
+  const doSaveKeys = jest.fn()
+
+  beforeAll(() => {
+    renderer
+      .create(
+        <SettingsScreen
+          doSaveKeys={doSaveKeys}
+          doClearKeys={() => {}}
+          navigation={navigation}
+        />
+      )
+      .getInstance()
+      .handleSaveKeys(keys)
+  })
+
+  afterAll(resetStubs)
+
+  it('called doSaveKeys with the keys', () => {
+    expect(doSaveKeys).toHaveBeenCalledWith(keys)
+  })
+
+  it('called navigate("LoggedInStackNavigator")', () => {
+    expect(navigate).toHaveBeenCalledWith('LoggedInStackNavigator')
+  })
+})
+
+describe('when keys are cleared', () => {
+  const doClearKeys = jest.fn()
+
+  beforeAll(() => {
+    renderer
+      .create(
+        <SettingsScreen
+          keys={keys}
+          doSaveKeys={() => {}}
+          doClearKeys={doClearKeys}
+          navigation={navigation}
+        />
+      )
+      .getInstance()
+      .handleClearKeys()
+  })
+
+  afterAll(resetStubs)
+
+  it('called doClearKeys', () => {
+    expect(doClearKeys).toHaveBeenCalled()
+  })
+
+  it('called navigate("LoggedOutStackNavigator")', () => {
+    expect(navigate).toHaveBeenCalledWith('LoggedOutStackNavigator')
   })
 })
