@@ -39,7 +39,6 @@ export class SettingsScreen extends Component {
       <SafeAreaView style={styles.container}>
         <KeyboardAwareScrollView resetScrollToCoords={{ x: 0, y: 0 }}>
           <View>
-            <Text h3>Settings</Text>
             <Text style={styles.instructions}>
               An API key and secret are needed to interact with the Independent
               Reserve API.

@@ -54,7 +54,6 @@ export class BalancesScreen extends Component {
 
     return (
       <View>
-        <Text h3>Balances</Text>
         <AccountBalances balances={balances} />
         <Button
           style={styles.button}
