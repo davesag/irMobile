@@ -32,6 +32,24 @@ export class SettingsScreen extends Component {
     saving: false
   }
 
+  handleClearKeys = () => {
+    const {
+      navigation: { navigate },
+      doClearKeys
+    } = this.props
+    doClearKeys()
+    navigate('LoggedOutStackNavigator')
+  }
+
+  handleSaveKeys = keys => {
+    const {
+      navigation: { navigate },
+      doSaveKeys
+    } = this.props
+    doSaveKeys(keys)
+    navigate('LoggedInStackNavigator')
+  }
+
   render() {
     const { keys, requireAuth, doSaveKeys, saving, doClearKeys } = this.props
 
@@ -57,8 +75,8 @@ export class SettingsScreen extends Component {
             saving={saving}
             keys={keys}
             requireAuth={requireAuth}
-            onSave={doSaveKeys}
-            onClear={doClearKeys}
+            onSave={this.handleSaveKeys}
+            onClear={this.handleClearKeys}
           />
         </KeyboardAwareScrollView>
       </SafeAreaView>
