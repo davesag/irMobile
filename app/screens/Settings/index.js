@@ -51,7 +51,7 @@ export class SettingsScreen extends Component {
   }
 
   render() {
-    const { keys, requireAuth, doSaveKeys, saving, doClearKeys } = this.props
+    const { keys, requireAuth, saving } = this.props
 
     return (
       <SafeAreaView style={styles.container}>
