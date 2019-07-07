@@ -69,9 +69,7 @@ describe('rendering', () => {
 describe('is loading', () => {
   beforeAll(() => {
     renderer
-      .create(
-        <AccessGatewayScreen loading={true} navigation={navigation} />
-      )
+      .create(<AccessGatewayScreen loading={true} navigation={navigation} />)
       .getInstance()
       .componentDidUpdate()
   })
@@ -88,7 +86,11 @@ describe('once loading is done', () => {
     beforeAll(() => {
       renderer
         .create(
-          <AccessGatewayScreen loading={false} navigation={navigation} hasKeys={true} />
+          <AccessGatewayScreen
+            loading={false}
+            navigation={navigation}
+            hasKeys={true}
+          />
         )
         .getInstance()
         .componentDidUpdate()
@@ -104,9 +106,7 @@ describe('once loading is done', () => {
   describe('when keys do not arrive', () => {
     beforeAll(() => {
       renderer
-        .create(
-          <AccessGatewayScreen loading={false} navigation={navigation} />
-        )
+        .create(<AccessGatewayScreen loading={false} navigation={navigation} />)
         .getInstance()
         .componentDidUpdate()
     })

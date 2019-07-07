@@ -16,7 +16,7 @@ export class AccessGatewayScreen extends Component {
 
   static defaultProps = {
     hasKeys: false,
-    loading: true,
+    loading: true
   }
 
   componentDidUpdate() {
