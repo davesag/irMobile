@@ -14,6 +14,11 @@ const apiSecret = 'some-secret'
 const requireAuth = true
 const navigate = jest.fn()
 const navigation = { navigate, getParam: jest.fn(() => 'blue') }
+const theme = {
+  colors: {
+    startup: 'blue'
+  }
+}
 
 const resetStubs = () => {
   navigate.clearMock()
@@ -54,7 +59,7 @@ describe('rendering', () => {
 
   beforeAll(() => {
     tree = renderer.create(
-      <AccessGatewayScreen loading navigation={navigation} />
+      <AccessGatewayScreen loading navigation={navigation} theme={theme} />
     )
   })
 
@@ -68,7 +73,13 @@ describe('rendering', () => {
 describe('is loading', () => {
   beforeAll(() => {
     renderer
-      .create(<AccessGatewayScreen loading={true} navigation={navigation} />)
+      .create(
+        <AccessGatewayScreen
+          loading={true}
+          navigation={navigation}
+          theme={theme}
+        />
+      )
       .getInstance()
       .componentDidUpdate()
   })
@@ -89,6 +100,7 @@ describe('once loading is done', () => {
             loading={false}
             navigation={navigation}
             hasKeys={true}
+            theme={theme}
           />
         )
         .getInstance()
@@ -105,7 +117,13 @@ describe('once loading is done', () => {
   describe('when keys do not arrive', () => {
     beforeAll(() => {
       renderer
-        .create(<AccessGatewayScreen loading={false} navigation={navigation} />)
+        .create(
+          <AccessGatewayScreen
+            loading={false}
+            navigation={navigation}
+            theme={theme}
+          />
+        )
         .getInstance()
         .componentDidUpdate()
     })

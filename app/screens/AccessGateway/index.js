@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { View, ActivityIndicator } from 'react-native'
 import { connect } from 'react-redux'
+import { withTheme } from 'react-native-elements'
 
 import { navigationShape } from '../../shapes'
 
@@ -31,7 +32,11 @@ export class AccessGatewayScreen extends Component {
   }
 
   render() {
-    const backgroundColor = this.props.navigation.getParam('colour', 'blue')
+    const {
+      navigation: { getParam },
+      theme: { colors }
+    } = this.props
+    const backgroundColor = getParam('colour', colors.startup)
     return (
       <View style={[styles.container, { backgroundColor }]}>
         <ActivityIndicator />
@@ -48,4 +53,4 @@ export const mapStateToProps = ({ ir: { apiKey, apiSecret, busy } }) => ({
 export default connect(
   mapStateToProps,
   null
-)(AccessGatewayScreen)
+)(withTheme(AccessGatewayScreen))

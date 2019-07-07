@@ -6,6 +6,7 @@ export default {
     ...Platform.select({
       android: colors.platform.android,
       default: colors.platform.ios
-    })
+    }),
+    startup: '#325691'
   }
 }
