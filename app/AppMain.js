@@ -18,7 +18,7 @@ import { restoreKeys } from './services/ir/actions'
 
 import About from './screens/About'
 import Balances from './screens/Balances'
-import Loading from './screens/Loading'
+import AccessGateway from './screens/AccessGateway'
 import Settings from './screens/Settings'
 
 import styles from './styles'
@@ -38,8 +38,8 @@ const LoggedOutTabNavigator = createBottomTabNavigator(loggedOutNavBar, {
 const LoggedOutStackNavigator = createStackNavigator({ LoggedOutTabNavigator })
 
 const MainNavigator = createSwitchNavigator(
-  { Loading, LoggedInStackNavigator, LoggedOutStackNavigator },
-  { initialRouteName: 'Loading' }
+  { AccessGateway, LoggedInStackNavigator, LoggedOutStackNavigator },
+  { initialRouteName: 'AccessGateway' }
 )
 
 const AppContainer = createAppContainer(MainNavigator)

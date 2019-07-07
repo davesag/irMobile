@@ -6,15 +6,14 @@ import 'react-native'
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import LoadingScreen, { mapStateToProps } from '.'
+import AccessGatewayScreen, { mapStateToProps } from '.'
 
 const apiKey = 'some-key'
 const apiSecret = 'some-secret'
-const keys = { apiKey, apiSecret }
 
 const requireAuth = true
 const navigate = jest.fn()
-const navigation = { navigate }
+const navigation = { navigate, getParam: jest.fn(() => 'blue') }
 
 const resetStubs = () => {
   navigate.clearMock()
@@ -26,8 +25,8 @@ describe('mapStateToProps', () => {
       ir: { apiKey, apiSecret, busy: false }
     })
 
-    it('returned keys', () => {
-      expect(stateProps).toHaveProperty('keys', keys)
+    it('returned hasKeys', () => {
+      expect(stateProps).toHaveProperty('hasKeys', true)
     })
 
     it('returned loading', () => {
@@ -40,8 +39,8 @@ describe('mapStateToProps', () => {
       ir: { apiKey, apiSecret: null, requireAuth, busy: false }
     })
 
-    it('returned keys is null', () => {
-      expect(stateProps).toHaveProperty('keys', null)
+    it('returned hasKeys is false', () => {
+      expect(stateProps).toHaveProperty('hasKeys', false)
     })
 
     it('returned loading', () => {
@@ -55,9 +54,11 @@ describe('rendering', () => {
 
   beforeAll(() => {
     tree = renderer.create(
-      <LoadingScreen loading navigation={{ navigate: () => {} }} />
+      <AccessGatewayScreen loading navigation={navigation} />
     )
   })
+
+  afterAll(resetStubs)
 
   it('rendered correctly', () => {
     expect(tree).toMatchSnapshot()
@@ -67,11 +68,9 @@ describe('rendering', () => {
 describe('is loading', () => {
   beforeAll(() => {
     renderer
-      .create(
-        <LoadingScreen loading={true} navigation={navigation} keys={null} />
-      )
+      .create(<AccessGatewayScreen loading={true} navigation={navigation} />)
       .getInstance()
-      .componentDidUpdate({ navigation, loading: false, keys: null })
+      .componentDidUpdate()
   })
 
   afterAll(resetStubs)
@@ -86,10 +85,14 @@ describe('once loading is done', () => {
     beforeAll(() => {
       renderer
         .create(
-          <LoadingScreen loading={false} navigation={navigation} keys={keys} />
+          <AccessGatewayScreen
+            loading={false}
+            navigation={navigation}
+            hasKeys={true}
+          />
         )
         .getInstance()
-        .componentDidUpdate({ navigation, loading: true, keys: null })
+        .componentDidUpdate()
     })
 
     afterAll(resetStubs)
@@ -102,11 +105,9 @@ describe('once loading is done', () => {
   describe('when keys do not arrive', () => {
     beforeAll(() => {
       renderer
-        .create(
-          <LoadingScreen loading={false} navigation={navigation} keys={null} />
-        )
+        .create(<AccessGatewayScreen loading={false} navigation={navigation} />)
         .getInstance()
-        .componentDidUpdate({ navigation, loading: true, keys: null })
+        .componentDidUpdate()
     })
 
     afterAll(resetStubs)

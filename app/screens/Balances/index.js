@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { SafeAreaView, View } from 'react-native'
-import { Button, Text } from 'react-native-elements'
+import { Button } from 'react-native-elements'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { getBalances } from '../../services/ir/actions'
@@ -38,19 +38,7 @@ export class BalancesScreen extends Component {
   }
 
   renderDetails = () => {
-    const { hasKeys, balances, loading } = this.props
-    if (!hasKeys)
-      return (
-        <View>
-          <Text h3>Missing Keys</Text>
-          <Text>We need your Independent Reserve API Keys</Text>
-          <Button
-            style={styles.button}
-            title="Enter Keys…"
-            onPress={this.navigateToSettings}
-          />
-        </View>
-      )
+    const { balances, loading } = this.props
 
     return (
       <View>

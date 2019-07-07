@@ -3,36 +3,37 @@ import PropTypes from 'prop-types'
 import { View, ActivityIndicator } from 'react-native'
 import { connect } from 'react-redux'
 
-import { navigationShape, keysShape } from '../../shapes'
+import { navigationShape } from '../../shapes'
 
 import styles from './styles'
 
-export class LoadingScreen extends Component {
+export class AccessGatewayScreen extends Component {
   static propTypes = {
     navigation: PropTypes.shape(navigationShape).isRequired,
-    keys: PropTypes.shape(keysShape),
+    hasKeys: PropTypes.bool,
     loading: PropTypes.bool
   }
 
   static defaultProps = {
-    keys: null,
+    hasKeys: false,
     loading: true
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate() {
     const {
       navigation: { navigate },
-      keys,
+      hasKeys,
       loading
     } = this.props
     if (!loading)
-      if (keys) navigate('LoggedInStackNavigator')
+      if (hasKeys) navigate('LoggedInStackNavigator')
       else navigate('LoggedOutStackNavigator')
   }
 
   render() {
+    const backgroundColor = this.props.navigation.getParam('colour', 'blue')
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, { backgroundColor }]}>
         <ActivityIndicator />
       </View>
     )
@@ -40,11 +41,11 @@ export class LoadingScreen extends Component {
 }
 
 export const mapStateToProps = ({ ir: { apiKey, apiSecret, busy } }) => ({
-  keys: apiKey && apiSecret ? { apiKey, apiSecret } : null,
+  hasKeys: Boolean(apiKey && apiSecret),
   loading: busy
 })
 
 export default connect(
   mapStateToProps,
   null
-)(LoadingScreen)
+)(AccessGatewayScreen)

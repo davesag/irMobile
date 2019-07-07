@@ -111,8 +111,8 @@ describe('when keys are saved', () => {
     expect(doSaveKeys).toHaveBeenCalledWith(keys)
   })
 
-  it('called navigate("LoggedInStackNavigator")', () => {
-    expect(navigate).toHaveBeenCalledWith('LoggedInStackNavigator')
+  it('called navigate("AccessGateway")', () => {
+    expect(navigate).toHaveBeenCalledWith('AccessGateway')
   })
 })
 
@@ -139,7 +139,7 @@ describe('when keys are cleared', () => {
     expect(doClearKeys).toHaveBeenCalled()
   })
 
-  it('called navigate("LoggedOutStackNavigator")', () => {
-    expect(navigate).toHaveBeenCalledWith('LoggedOutStackNavigator')
+  it('called navigate("AccessGateway")', () => {
+    expect(navigate).toHaveBeenCalledWith('AccessGateway', { colour: 'white' })
   })
 })
