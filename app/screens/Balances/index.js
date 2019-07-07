@@ -38,19 +38,7 @@ export class BalancesScreen extends Component {
   }
 
   renderDetails = () => {
-    const { hasKeys, balances, loading } = this.props
-    if (!hasKeys)
-      return (
-        <View>
-          <Text h3>Missing Keys</Text>
-          <Text>We need your Independent Reserve API Keys</Text>
-          <Button
-            style={styles.button}
-            title="Enter Keys…"
-            onPress={this.navigateToSettings}
-          />
-        </View>
-      )
+    const { balances, loading } = this.props
 
     return (
       <View>

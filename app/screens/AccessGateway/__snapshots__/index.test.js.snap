@@ -3,12 +3,17 @@
 exports[`rendering rendered correctly 1`] = `
 <View
   style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "center",
-      "margin": 10,
-    }
+    Array [
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "margin": 0,
+      },
+      Object {
+        "backgroundColor": "blue",
+      },
+    ]
   }
 >
   <ActivityIndicator

@@ -38,7 +38,7 @@ export class SettingsScreen extends Component {
       doClearKeys
     } = this.props
     doClearKeys()
-    navigate('LoggedOutStackNavigator')
+    navigate('AccessGateway', { colour: 'white' })
   }
 
   handleSaveKeys = keys => {
@@ -47,7 +47,7 @@ export class SettingsScreen extends Component {
       doSaveKeys
     } = this.props
     doSaveKeys(keys)
-    navigate('LoggedInStackNavigator')
+    navigate('AccessGateway')
   }
 
   render() {
