@@ -1,4 +1,4 @@
-import { arrayOf, func, number, oneOfType, shape, string } from 'prop-types'
+import { func, number, shape, string } from 'prop-types'
 
 export const navigationShape = {
   goBack: func.isRequired,
@@ -17,7 +17,7 @@ export const balancesShape = {
   fiatValue: number.isRequired
 }
 
-const errorShape = {
+export const errorShape = {
   name: string.isRequired,
   message: string,
   details: shape({

@@ -10,7 +10,6 @@ import AccessGatewayScreen, { mapStateToProps } from '.'
 
 const apiKey = 'some-key'
 const apiSecret = 'some-secret'
-const keys = { apiKey, apiSecret }
 
 const requireAuth = true
 const navigate = jest.fn()

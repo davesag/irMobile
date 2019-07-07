@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { View, ActivityIndicator } from 'react-native'
 import { connect } from 'react-redux'
 
-import { navigationShape, keysShape } from '../../shapes'
+import { navigationShape } from '../../shapes'
 
 import styles from './styles'
 

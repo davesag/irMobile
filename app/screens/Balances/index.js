@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { SafeAreaView, View } from 'react-native'
-import { Button, Text } from 'react-native-elements'
+import { Button } from 'react-native-elements'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { getBalances } from '../../services/ir/actions'
