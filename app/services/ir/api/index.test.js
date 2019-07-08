@@ -18,7 +18,7 @@ describe('when credentials are supplied', () => {
   const api = getApi({ apiKey, apiSecret })
 
   it('called ir with the key and secret', () => {
-    expect(ir).toHaveBeenCalledWith(apiKey, apiSecret, { timeout: 100 })
+    expect(ir).toHaveBeenCalledWith(apiKey, apiSecret, { timeout: 5000 })
   })
 
   it('calls getBalances with an api', () => {
