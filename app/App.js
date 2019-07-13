@@ -4,7 +4,7 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import { Text } from 'react-native'
-import { ThemeProvider } from 'react-native-elements'
+import { Provider as ThemeProvider } from 'react-native-paper'
 import FlashMessage from 'react-native-flash-message'
 
 import AppMain from './AppMain'

@@ -11,6 +11,15 @@ exports[`rendering defaults rendered correctly  1`] = `
   <View
     style={
       Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginTop": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
       }
@@ -30,6 +39,15 @@ exports[`rendering with keys and saving rendered correctly  1`] = `
   <View
     style={
       Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginTop": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
       }
@@ -46,6 +64,15 @@ exports[`rendering with keys rendered correctly  1`] = `
     }
   }
 >
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginTop": 10,
+      }
+    }
+  />
   <View
     style={
       Object {

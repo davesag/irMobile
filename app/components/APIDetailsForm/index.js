@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Keyboard, View } from 'react-native'
-import { Button, CheckBox, Input } from 'react-native-elements'
+import { Button, Switch, TextInput, Text } from 'react-native-paper'
 
 import { keysShape } from '../../shapes'
 
@@ -9,8 +9,6 @@ import styles from './styles'
 
 const cleanKey = key => key.replace(/[^a-f0-9-]/gi, '')
 const cleanSecret = key => key.replace(/[^a-f0-9]/gi, '')
-
-// https://stackoverflow.com/questions/56896843/react-native-0-59-10-how-do-i-remove-usenativedriver-when-running-tests-b
 
 class APIDetailsForm extends Component {
   static propTypes = {
@@ -108,7 +106,7 @@ class APIDetailsForm extends Component {
 
     return (
       <View style={styles.container}>
-        <Input
+        <TextInput
           autoCapitalize="none"
           autoCorrect={false}
           secureTextEntry
@@ -116,12 +114,12 @@ class APIDetailsForm extends Component {
           inputStyle={styles.input}
           value={apiKey.value}
           label="apiKey"
-          errorStyle={styles.error}
+          error={apiKey.error}
           errorMessage={apiKey.error}
           onChangeText={this.updateApiKey}
           onSubmitEditing={Keyboard.dismiss}
         />
-        <Input
+        <TextInput
           autoCapitalize="none"
           autoCorrect={false}
           secureTextEntry
@@ -129,31 +127,42 @@ class APIDetailsForm extends Component {
           inputStyle={styles.input}
           value={apiSecret.value}
           label="apiSecret"
-          errorStyle={styles.error}
+          error={apiSecret.error}
           errorMessage={apiSecret.error}
           onChangeText={this.updateApiSecret}
           onSubmitEditing={Keyboard.dismiss}
         />
-        <CheckBox
-          checked={requireAuth.value}
-          onPress={this.toggleField('requireAuth')}
-          title="Require passcode for each use"
-        />
+        <View
+          style={{ marginTop: 10, flexDirection: 'row', alignItems: 'center' }}
+        >
+          <Switch
+            value={requireAuth.value}
+            onValueChange={this.toggleField('requireAuth')}
+          />
+          <Text style={{ marginLeft: 10 }}>Require passcode for each use</Text>
+        </View>
         <View style={styles.buttons}>
           <Button
             style={styles.saveButton}
+            mode="contained"
             title="Save Keys"
             disabled={disabled || saving}
             loading={saving}
             onPress={this.submit}
-          />
+            accessibilityLabel="Save Keys"
+          >
+            Save Keys
+          </Button>
           <Button
             style={styles.clearButton}
-            type="outline"
+            mode="outlined"
             title="Clear Keys"
             disabled={saving || (!apiSecret.value && !apiKey.value)}
             onPress={this.clear}
-          />
+            accessibilityLabel="Clear Keys"
+          >
+            Clear Keys
+          </Button>
         </View>
       </View>
     )
