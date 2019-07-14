@@ -9,10 +9,18 @@ const keys = {
   apiSecret: 'abcd123'
 }
 
+const onClear = () => {
+  console.log('Cleared the form')
+}
+
+const onSave = () => {
+  console.log('Saved the form')
+}
+
 storiesOf('APIDetailsForm', module)
   .add('empty', () => (
     <SafeAreaView>
-      <APIDetailsForm onSave={() => {}} onClear={() => {}} />
+      <APIDetailsForm onSave={onSave} onClear={onClear} />
     </SafeAreaView>
   ))
   .add('with values', () => (
@@ -20,8 +28,8 @@ storiesOf('APIDetailsForm', module)
       <APIDetailsForm
         keys={keys}
         requireAuth={true}
-        onSave={() => {}}
-        onClear={() => {}}
+        onSave={onSave}
+        onClear={onClear}
       />
     </SafeAreaView>
   ))
@@ -31,8 +39,8 @@ storiesOf('APIDetailsForm', module)
         keys={keys}
         requireAuth={true}
         saving
-        onSave={() => {}}
-        onClear={() => {}}
+        onSave={onSave}
+        onClear={onClear}
       />
     </SafeAreaView>
   ))

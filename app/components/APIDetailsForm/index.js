@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Keyboard, View } from 'react-native'
-import { Button, Switch, TextInput, Text } from 'react-native-paper'
+import { Button, Switch, TextInput, Text, HelperText } from 'react-native-paper'
+import { Formik, Field } from 'formik'
 
 import { keysShape } from '../../shapes'
 
 import styles from './styles'
+import { validateKey, validateSecret } from './validation'
 
 const cleanKey = key => key.replace(/[^a-f0-9-]/gi, '')
 const cleanSecret = key => key.replace(/[^a-f0-9]/gi, '')
@@ -25,146 +27,130 @@ class APIDetailsForm extends Component {
     saving: false
   }
 
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      apiKey: {
-        value: props.keys ? props.keys.apiKey : null,
-        error: null
-      },
-      apiSecret: {
-        value: props.keys ? props.keys.apiSecret : null,
-        error: null
-      },
-      requireAuth: {
-        value: props.requireAuth
-      },
-      dirty: false
-    }
-  }
-
-  updateField = field => value => {
-    if (value) this.setState({ [field]: { value, error: null }, dirty: true })
-    else
-      this.setState({
-        [field]: { value, error: 'Required field' },
-        dirty: true
-      })
-  }
-
-  toggleField = field => () => {
-    this.setState({ [field]: { value: !this.state[field].value }, dirty: true })
-    Keyboard.dismiss()
-  }
-
-  updateApiKey = text => {
-    this.updateField('apiKey')(cleanKey(text))
-  }
-
-  updateApiSecret = text => {
-    this.updateField('apiSecret')(cleanSecret(text))
-  }
-
-  canNotBeSubmitted = () => {
-    const { apiKey, apiSecret, dirty } = this.state
-    return (
-      !dirty ||
-      apiKey.errors ||
-      apiSecret.errors ||
-      !apiKey.value ||
-      !apiSecret.value
-    )
-  }
-
-  submit = () => {
-    const { apiKey, apiSecret, requireAuth } = this.state
-    this.setState({ dirty: false })
-    this.props.onSave({
-      apiKey: apiKey.value,
-      apiSecret: apiSecret.value,
-      requireAuth: requireAuth.value
-    })
-    Keyboard.dismiss()
-  }
-
-  clear = () => {
-    const { onClear } = this.props
-    this.setState({
-      apiKey: { value: null, error: null },
-      apiSecret: { value: null, error: null },
-      requireAuth: { value: false },
-      dirty: true
-    })
-    onClear()
-  }
-
   render() {
-    const { apiKey, apiSecret, requireAuth } = this.state
-    const { saving } = this.props
-    const disabled = this.canNotBeSubmitted()
+    const { keys: keysProp, requireAuth, saving, onSave, onClear } = this.props
+    const keys = keysProp || {}
+    const hasKeys = Object.keys(keys).length !== 0
 
     return (
-      <View style={styles.container}>
-        <TextInput
-          autoCapitalize="none"
-          autoCorrect={false}
-          secureTextEntry
-          clearTextOnFocus
-          inputStyle={styles.input}
-          value={apiKey.value}
-          label="apiKey"
-          error={apiKey.error}
-          errorMessage={apiKey.error}
-          onChangeText={this.updateApiKey}
-          onSubmitEditing={Keyboard.dismiss}
-        />
-        <TextInput
-          autoCapitalize="none"
-          autoCorrect={false}
-          secureTextEntry
-          clearTextOnFocus
-          inputStyle={styles.input}
-          value={apiSecret.value}
-          label="apiSecret"
-          error={apiSecret.error}
-          errorMessage={apiSecret.error}
-          onChangeText={this.updateApiSecret}
-          onSubmitEditing={Keyboard.dismiss}
-        />
-        <View
-          style={{ marginTop: 10, flexDirection: 'row', alignItems: 'center' }}
-        >
-          <Switch
-            value={requireAuth.value}
-            onValueChange={this.toggleField('requireAuth')}
-          />
-          <Text style={{ marginLeft: 10 }}>Require passcode for each use</Text>
-        </View>
-        <View style={styles.buttons}>
-          <Button
-            style={styles.saveButton}
-            mode="contained"
-            title="Save Keys"
-            disabled={disabled || saving}
-            loading={saving}
-            onPress={this.submit}
-            accessibilityLabel="Save Keys"
-          >
-            Save Keys
-          </Button>
-          <Button
-            style={styles.clearButton}
-            mode="outlined"
-            title="Clear Keys"
-            disabled={saving || (!apiSecret.value && !apiKey.value)}
-            onPress={this.clear}
-            accessibilityLabel="Clear Keys"
-          >
-            Clear Keys
-          </Button>
-        </View>
-      </View>
+      <Formik
+        initialValues={{ ...keys, requireAuth }}
+        onSubmit={(values, actions) => {
+          console.log('submit', values)
+          onSave(values)
+          Keyboard.dismiss()
+        }}
+        enableReinitialize={true}
+        isInitialValid={hasKeys}
+        validateOnBlur={true}
+        validateOnChange={true}
+      >
+        {({
+          values,
+          touched,
+          errors,
+          dirty,
+          handleChange,
+          handleBlur,
+          handleSubmit,
+          ...props
+        }) => {
+          const hasErrors = Object.keys(errors).length !== 0
+          const canNotBeSubmitted = hasErrors || !dirty || saving
+
+          const handleChangeKey = value => {
+            handleChange('apiKey')(cleanKey(value))
+          }
+
+          const handleChangeSecret = value => {
+            handleChange('apiSecret')(cleanSecret(value))
+          }
+          const hasFieldErrors = ['apiKey', 'apiSecret'].reduce((acc, elem) => {
+            acc[elem] = Boolean(errors[elem] && touched[elem])
+            return acc
+          }, {})
+
+          return (
+            <View style={styles.container}>
+              <View>
+                <Field
+                  name="apiKey"
+                  style={styles.input}
+                  autoCapitalize="none"
+                  autoCorrect={false}
+                  secureTextEntry
+                  label="apiKey"
+                  disabled={saving}
+                  error={hasFieldErrors.apiKey}
+                  onChangeText={handleChangeKey}
+                  onBlur={handleBlur('apiKey')}
+                  onFocus={() => {
+                    if (values.apiKey) handleChange('apiKey')(null)
+                  }}
+                  value={values.apiKey}
+                  component={TextInput}
+                  validate={validateKey}
+                />
+                <HelperText type="error" visible={hasFieldErrors.apiKey}>
+                  {errors.apiKey}
+                </HelperText>
+              </View>
+              <View>
+                <Field
+                  name="apiSecret"
+                  style={styles.input}
+                  autoCapitalize="none"
+                  autoCorrect={false}
+                  secureTextEntry
+                  label="apiSecret"
+                  disabled={saving}
+                  error={hasFieldErrors.apiSecret}
+                  onChangeText={handleChangeSecret}
+                  onBlur={handleBlur('apiSecret')}
+                  onFocus={() => {
+                    if (values.apiSecret) handleChange('apiSecret')(null)
+                  }}
+                  value={values.apiSecret}
+                  component={TextInput}
+                  validate={validateSecret}
+                />
+                <HelperText type="error" visible={hasFieldErrors.apiSecret}>
+                  {errors.apiSecret}
+                </HelperText>
+              </View>
+              <View style={styles.switchWrapper}>
+                <Switch
+                  value={values.requireAuth}
+                  onValueChange={handleChange('requireAuth')}
+                />
+                <Text style={styles.switchLabel}>
+                  Require passcode for each use
+                </Text>
+              </View>
+              <View style={styles.buttons}>
+                <Button
+                  style={styles.saveButton}
+                  mode="contained"
+                  disabled={canNotBeSubmitted}
+                  onPress={handleSubmit}
+                  accessibilityLabel="Save Keys"
+                >
+                  Save Keys
+                </Button>
+                <Button
+                  style={styles.clearButton}
+                  mode="outlined"
+                  onPress={onClear}
+                  disabled={saving}
+                  accessibilityLabel="Clear Keys"
+                >
+                  Clear Keys
+                </Button>
+              </View>
+            </View>
+          )
+        }}
+      </Formik>
     )
   }
 }
