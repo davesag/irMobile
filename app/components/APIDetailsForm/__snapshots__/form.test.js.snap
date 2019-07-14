@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`rendering defaults rendered correctly  1`] = `
+exports[`form has errors renders correctly 1`] = `
 <View
   style={
     Object {
@@ -29,7 +29,7 @@ exports[`rendering defaults rendered correctly  1`] = `
 </View>
 `;
 
-exports[`rendering with keys and saving rendered correctly  1`] = `
+exports[`form is saving renders correctly 1`] = `
 <View
   style={
     Object {
@@ -58,7 +58,36 @@ exports[`rendering with keys and saving rendered correctly  1`] = `
 </View>
 `;
 
-exports[`rendering with keys rendered correctly  1`] = `
+exports[`form is touched renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "paddingTop": 10,
+    }
+  }
+>
+  <View />
+  <View />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "flex-end",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`fresh form renders correctly 1`] = `
 <View
   style={
     Object {

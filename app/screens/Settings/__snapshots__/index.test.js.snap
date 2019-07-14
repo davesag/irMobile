@@ -56,12 +56,13 @@ exports[`rendering rendered correctly 1`] = `
           }
         }
       >
+        <View />
+        <View />
         <View
           style={
             Object {
               "alignItems": "center",
               "flexDirection": "row",
-              "marginTop": 10,
             }
           }
         />
