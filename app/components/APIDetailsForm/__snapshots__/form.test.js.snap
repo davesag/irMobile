@@ -23,6 +23,7 @@ exports[`form has errors renders correctly 1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
+        "marginTop": 10,
       }
     }
   />
@@ -52,6 +53,7 @@ exports[`form is saving renders correctly 1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
+        "marginTop": 10,
       }
     }
   />
@@ -81,6 +83,7 @@ exports[`form is touched renders correctly 1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
+        "marginTop": 10,
       }
     }
   />
@@ -110,6 +113,7 @@ exports[`fresh form renders correctly 1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
+        "marginTop": 10,
       }
     }
   />

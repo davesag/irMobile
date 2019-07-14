@@ -23,6 +23,7 @@ exports[`rendering defaults rendered correctly  1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
+        "marginTop": 10,
       }
     }
   />
@@ -52,6 +53,7 @@ exports[`rendering with keys and saving rendered correctly  1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
+        "marginTop": 10,
       }
     }
   />
@@ -81,6 +83,7 @@ exports[`rendering with keys rendered correctly  1`] = `
       Object {
         "flexDirection": "row",
         "justifyContent": "flex-end",
+        "marginTop": 10,
       }
     }
   />
