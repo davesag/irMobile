@@ -1,27 +1,33 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { View } from 'react-native'
-import { Text } from 'react-native-paper'
+import { DataTable, withTheme } from 'react-native-paper'
+
+import Cell from '../Cell'
 
 import styles from '../styles'
 
-const Header = ({ data }) =>
+const Header = ({ data, theme, makeKey }) =>
   data ? (
-    <View style={styles.row}>
-      {data.map(text => (
-        <View key={text} style={styles.headerCell}>
-          <Text style={styles.header}>{text}</Text>
-        </View>
+    <DataTable.Header style={styles.headerStyle(theme)}>
+      {data.map((value, i) => (
+        <DataTable.Title
+          key={makeKey(value, i)}
+          style={styles.cellStyle(i, data, theme)}
+        >
+          <Cell value={value} />
+        </DataTable.Title>
       ))}
-    </View>
+    </DataTable.Header>
   ) : null
 
 Header.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.string)
+  data: PropTypes.arrayOf(PropTypes.string),
+  theme: PropTypes.object.isRequired,
+  makeKey: PropTypes.func.isRequired
 }
 
 Header.defaultProps = {
   data: null
 }
 
-export default Header
+export default withTheme(Header)

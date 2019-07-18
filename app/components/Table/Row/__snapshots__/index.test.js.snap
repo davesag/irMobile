@@ -1,56 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`rendering rendered correctly  1`] = `
-<View
-  style={
-    Object {
-      "flexDirection": "row",
-      "justifyContent": "space-evenly",
-      "paddingTop": 5,
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "alignItems": "flex-start",
-        "flexWrap": "nowrap",
-        "height": 16,
-        "justifyContent": "center",
-        "overflow": "hidden",
-        "paddingLeft": 5,
-        "paddingRight": 5,
-        "width": "25%",
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignItems": "flex-start",
-        "flexWrap": "nowrap",
-        "height": 16,
-        "justifyContent": "center",
-        "overflow": "hidden",
-        "paddingLeft": 5,
-        "paddingRight": 5,
-        "width": "25%",
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignItems": "flex-start",
-        "flexWrap": "nowrap",
-        "height": 16,
-        "justifyContent": "center",
-        "overflow": "hidden",
-        "paddingLeft": 5,
-        "paddingRight": 5,
-        "width": "25%",
-      }
-    }
-  />
+exports[`given data rendered correctly  1`] = `
+<View>
+  <View />
+  <View />
+  <View />
 </View>
 `;
+
+exports[`given no data rendered correctly  1`] = `null`;

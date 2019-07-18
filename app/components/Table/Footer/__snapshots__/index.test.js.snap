@@ -1,72 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`rendering with data rendered correctly  1`] = `
-<View
-  style={
-    Object {
-      "flexDirection": "row",
-      "justifyContent": "space-evenly",
-      "paddingTop": 5,
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "alignItems": "flex-start",
-        "alignSelf": "center",
-        "borderBottomWidth": 0.5,
-        "borderTopWidth": 0.5,
-        "flexWrap": "nowrap",
-        "height": 25,
-        "justifyContent": "center",
-        "overflow": "hidden",
-        "paddingBottom": 5,
-        "paddingLeft": 5,
-        "paddingRight": 5,
-        "paddingTop": 5,
-        "width": "25%",
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignItems": "flex-start",
-        "alignSelf": "center",
-        "borderBottomWidth": 0.5,
-        "borderTopWidth": 0.5,
-        "flexWrap": "nowrap",
-        "height": 25,
-        "justifyContent": "center",
-        "overflow": "hidden",
-        "paddingBottom": 5,
-        "paddingLeft": 5,
-        "paddingRight": 5,
-        "paddingTop": 5,
-        "width": "25%",
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignItems": "flex-start",
-        "alignSelf": "center",
-        "borderBottomWidth": 0.5,
-        "borderTopWidth": 0.5,
-        "flexWrap": "nowrap",
-        "height": 25,
-        "justifyContent": "center",
-        "overflow": "hidden",
-        "paddingBottom": 5,
-        "paddingLeft": 5,
-        "paddingRight": 5,
-        "paddingTop": 5,
-        "width": "25%",
-      }
-    }
-  />
+<View>
+  <View>
+    <Text>
+      Cell
+    </Text>
+  </View>
+  <View>
+    <Text>
+      Cell
+    </Text>
+  </View>
+  <View>
+    <Text>
+      Cell
+    </Text>
+  </View>
 </View>
 `;
 

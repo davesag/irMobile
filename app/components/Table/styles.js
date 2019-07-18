@@ -5,58 +5,64 @@ const monospace = Platform.select({
   ios: 'Courier New'
 })
 
-const cell = {
-  alignItems: 'flex-start',
-  justifyContent: 'center',
-  width: '25%',
-  paddingLeft: 5,
-  paddingRight: 5,
-  overflow: 'hidden',
-  flexWrap: 'nowrap',
-  height: 16
+const borderWidth = 0.2
+const horizontalPadding = 3
+
+const cellStyle = (index, array, theme, align) => {
+  const style = {
+    paddingLeft: index === 0 ? 0 : horizontalPadding,
+    paddingRight: index === array.length - 1 ? 0 : horizontalPadding,
+    marginVertical: 5,
+    paddingVertical: -10,
+    width: index === 0 ? 50 : 150,
+    borderRightWidth: index === array.length - 1 ? 0 : borderWidth,
+    borderRightColor: theme.colors.tableBorderColor
+  }
+
+  const justifyContent = align
+    ? align === 'left'
+      ? /* istanbul ignore next */ 'flex-start'
+      : 'flex-end'
+    : undefined
+
+  return justifyContent
+    ? {
+        ...style,
+        justifyContent
+      }
+    : style
 }
 
+const rowStyle = theme => ({
+  paddingHorizontal: horizontalPadding
+})
+
+const headerStyle = theme => ({
+  ...rowStyle(theme),
+  borderBottomWidth: borderWidth * 2,
+  borderBottomColor: theme.colors.tableBorderColor
+})
+
+const footerStyle = theme => ({
+  ...rowStyle(theme),
+  borderTopWidth: borderWidth * 2,
+  borderTopColor: theme.colors.tableBorderColor
+})
+
 export default StyleSheet.create({
-  table: {
-    alignSelf: 'flex-start'
-  },
-  row: {
-    justifyContent: 'space-evenly',
-    flexDirection: 'row',
-    paddingTop: 5
-  },
-  headerCell: {
-    ...cell,
-    alignSelf: 'center',
-    borderBottomWidth: 0.5,
-    paddingBottom: 3,
-    height: 22
-  },
-  header: {
-    fontSize: 10,
-    fontWeight: 'bold'
-  },
-  dataCell: {
-    ...cell
-  },
   data: {
     fontSize: 9,
     fontFamily: monospace,
     overflow: 'hidden',
     flexWrap: 'nowrap'
   },
-  footerCell: {
-    ...cell,
-    alignSelf: 'center',
-    borderBottomWidth: 0.5,
-    borderTopWidth: 0.5,
-    paddingTop: 5,
-    paddingBottom: 5,
-    height: 25
-  },
   footer: {
     fontSize: 9,
     fontFamily: monospace,
     fontWeight: 'bold'
-  }
+  },
+  cellStyle,
+  rowStyle,
+  headerStyle,
+  footerStyle
 })

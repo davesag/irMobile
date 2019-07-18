@@ -16,6 +16,8 @@ const balances = [
 
 let tree
 
+jest.mock('../Table')
+
 describe('rendering', () => {
   describe('defaults', () => {
     beforeAll(() => {

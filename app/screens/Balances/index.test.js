@@ -28,6 +28,8 @@ const navigation = { navigate: jest.fn() }
 
 let tree
 
+jest.mock('../../components/AccountBalances')
+
 describe('mapStateToProps', () => {
   describe('when there are keys', () => {
     const stateProps = mapStateToProps({

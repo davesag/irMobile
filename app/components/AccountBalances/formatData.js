@@ -38,8 +38,9 @@ const checkLongest = row => (field, decimals) => {
 const pad = field => string => {
   const [lhs, rhs] = string.split('.')
   const padLeft = lhs.padStart(LONGEST[field].lhs, ' ')
-  const padRight = (rhs || '').padEnd(LONGEST[field].rhs, ' ')
-  return rhs ? `${padLeft}.${padRight}` : `${padLeft} ${padRight}`
+  const padRight = (rhs || '').padEnd(LONGEST[field].rhs, '0')
+
+  return `${padLeft}.${padRight}`
 }
 
 const formatData = data => {

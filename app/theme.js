@@ -19,7 +19,7 @@ const platform = {
   }
 }
 
-export default {
+const theme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
@@ -27,6 +27,9 @@ export default {
     accent: platform[Platform.OS]
       ? platform[Platform.OS].primary
       : DefaultTheme.colors.accent,
-    startup: '#325691'
+    startup: '#325691',
+    tableBorderColor: '#6a6a6a'
   }
 }
+
+export default theme
