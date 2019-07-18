@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { SafeAreaView, View } from 'react-native'
-import { Button } from 'react-native-elements'
+import { Button } from 'react-native-paper'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { getBalances } from '../../services/ir/actions'
@@ -44,12 +44,14 @@ export class BalancesScreen extends Component {
       <View>
         <AccountBalances balances={balances} />
         <Button
+          mode="contained"
           style={styles.button}
-          title="Refresh"
           onPress={this.refreshBalances}
           loading={loading}
           disabled={loading}
-        />
+        >
+          Refresh
+        </Button>
       </View>
     )
   }

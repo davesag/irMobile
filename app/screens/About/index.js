@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { SafeAreaView, View } from 'react-native'
-import { Text } from 'react-native-elements'
+import { Text } from 'react-native-paper'
 import makeNavigationOptions from '../../utils/makeNavigationOptions'
 
 import { navigationShape } from '../../shapes'

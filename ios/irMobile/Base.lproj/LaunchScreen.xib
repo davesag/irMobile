@@ -12,16 +12,16 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view userInteractionEnabled="NO" contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <rect key="frame" x="0.0" y="0.0" width="412" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="irMobile" textAlignment="center" lineBreakMode="tailTruncation" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYa-69-cgN">
-                    <rect key="frame" x="52" y="210" width="376" height="60"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="irMobile" textAlignment="center" lineBreakMode="tailTruncation" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYa-69-cgN">
+                    <rect key="frame" x="131.20000000000005" y="210" width="149" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                     </accessibility>
-                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="44"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -29,7 +29,7 @@
             <color key="backgroundColor" red="0.19607843137254902" green="0.33725490196078434" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="547.82608695652175" y="454.6875"/>
+            <point key="canvasLocation" x="597.10144927536237" y="454.6875"/>
         </view>
     </objects>
 </document>

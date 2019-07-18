@@ -56,11 +56,22 @@ exports[`rendering rendered correctly 1`] = `
           }
         }
       >
+        <View />
+        <View />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        />
         <View
           style={
             Object {
               "flexDirection": "row",
               "justifyContent": "flex-end",
+              "marginTop": 10,
             }
           }
         />

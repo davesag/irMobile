@@ -8,6 +8,6 @@ export default StyleSheet.create({
     margin: 10
   },
   button: {
-    paddingTop: 10
+    marginTop: 10
   }
 })
