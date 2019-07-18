@@ -6,8 +6,6 @@ import Cell from '../Cell'
 
 import styles from '../styles'
 
-jest.mock('../Cell')
-
 const Footer = ({ data, theme, makeKey }) =>
   data ? (
     <DataTable.Row style={styles.footerStyle(theme)}>

@@ -6,8 +6,6 @@ import Header from './Header'
 import Body from './Body'
 import Footer from './Footer'
 
-import styles from './styles'
-
 const Table = ({ body, header, footer, tableStyle, theme }) => {
   const [makeBodyKey, makeFooterKey] = header
     ? [
