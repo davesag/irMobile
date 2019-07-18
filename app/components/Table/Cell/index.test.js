@@ -1,18 +1,17 @@
 import 'react-native'
 import React from 'react'
 import renderer from 'react-test-renderer'
-import theme from '../../../theme'
 
-import Header from '.'
+import Cell from '.'
 
-const makeKey = (value, i) => i
+const value = 'some value'
 
 let tree
 
 describe('rendering', () => {
-  describe('without data', () => {
+  describe('non numeric and no style', () => {
     beforeAll(() => {
-      tree = renderer.create(<Header theme={theme} makeKey={makeKey} />)
+      tree = renderer.create(<Cell value={value} />)
     })
 
     it('rendered correctly ', () => {
@@ -20,13 +19,11 @@ describe('rendering', () => {
     })
   })
 
-  describe('with data', () => {
-    const data = ['Aye', 'Bee', 'Sea']
+  describe('numeric and with style', () => {
+    const style = { borderTop: 10 }
 
     beforeAll(() => {
-      tree = renderer.create(
-        <Header data={data} theme={theme} makeKey={makeKey} />
-      )
+      tree = renderer.create(<Cell value={value} style={style} numeric />)
     })
 
     it('rendered correctly ', () => {

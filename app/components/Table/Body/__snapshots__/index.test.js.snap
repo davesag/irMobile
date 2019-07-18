@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rendering rendered correctly  1`] = `
+<RCTScrollView>
+  <View>
+    <View>
+      <Text>
+        d
+      </Text>
+      <Text>
+        d
+      </Text>
+      <Text>
+        d
+      </Text>
+    </View>
+    <View>
+      <Text>
+        d
+      </Text>
+      <Text>
+        d
+      </Text>
+      <Text>
+        d
+      </Text>
+    </View>
+  </View>
+</RCTScrollView>
+`;

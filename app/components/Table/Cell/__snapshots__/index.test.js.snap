@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rendering non numeric and no style rendered correctly  1`] = `null`;
+
+exports[`rendering numeric and with style rendered correctly  1`] = `null`;

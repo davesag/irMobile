@@ -1,6 +1,7 @@
 import 'react-native'
 import React from 'react'
 import renderer from 'react-test-renderer'
+import theme from '../../theme'
 
 import Table from '.'
 
@@ -12,10 +13,14 @@ const customStyle = { padding: 10 }
 
 let tree
 
+jest.mock('./Header')
+jest.mock('./Body')
+jest.mock('./Footer')
+
 describe('rendering', () => {
   describe('without header or footer', () => {
     beforeAll(() => {
-      tree = renderer.create(<Table body={body} />)
+      tree = renderer.create(<Table body={body} theme={theme} />)
     })
 
     it('rendered correctly ', () => {
@@ -25,7 +30,9 @@ describe('rendering', () => {
 
   describe('with header', () => {
     beforeAll(() => {
-      tree = renderer.create(<Table body={body} header={header} />)
+      tree = renderer.create(
+        <Table body={body} header={header} theme={theme} />
+      )
     })
 
     it('rendered correctly ', () => {
@@ -36,7 +43,7 @@ describe('rendering', () => {
   describe('with footer', () => {
     beforeAll(() => {
       tree = renderer.create(
-        <Table body={body} header={header} footer={footer} />
+        <Table body={body} footer={footer} theme={theme} />
       )
     })
 
@@ -53,6 +60,7 @@ describe('rendering', () => {
           header={header}
           footer={footer}
           tableStyle={customStyle}
+          theme={theme}
         />
       )
     })

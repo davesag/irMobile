@@ -1,792 +1,161 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`rendering with footer rendered correctly  1`] = `
-<View
-  style={
-    Array [
-      Object {
-        "alignSelf": "flex-start",
-      },
-      null,
-    ]
-  }
->
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "space-evenly",
-        "paddingTop": 5,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "alignSelf": "center",
-          "borderBottomWidth": 0.5,
-          "flexWrap": "nowrap",
-          "height": 22,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingBottom": 3,
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "alignSelf": "center",
-          "borderBottomWidth": 0.5,
-          "flexWrap": "nowrap",
-          "height": 22,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingBottom": 3,
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "alignSelf": "center",
-          "borderBottomWidth": 0.5,
-          "flexWrap": "nowrap",
-          "height": 22,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingBottom": 3,
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
+<View>
+  <View>
+    <View>
+      <Text>
+        A
+      </Text>
+      <Text>
+        B
+      </Text>
+      <Text>
+        C
+      </Text>
+    </View>
+    <View>
+      <Text>
+        D
+      </Text>
+      <Text>
+        E
+      </Text>
+      <Text>
+        F
+      </Text>
+    </View>
   </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "space-evenly",
-        "paddingTop": 5,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-  </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "space-evenly",
-        "paddingTop": 5,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-  </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "space-evenly",
-        "paddingTop": 5,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "alignSelf": "center",
-          "borderBottomWidth": 0.5,
-          "borderTopWidth": 0.5,
-          "flexWrap": "nowrap",
-          "height": 25,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingBottom": 5,
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "paddingTop": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "alignSelf": "center",
-          "borderBottomWidth": 0.5,
-          "borderTopWidth": 0.5,
-          "flexWrap": "nowrap",
-          "height": 25,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingBottom": 5,
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "paddingTop": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "alignSelf": "center",
-          "borderBottomWidth": 0.5,
-          "borderTopWidth": 0.5,
-          "flexWrap": "nowrap",
-          "height": 25,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingBottom": 5,
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "paddingTop": 5,
-          "width": "25%",
-        }
-      }
-    />
+  <View>
+    <Text>
+      d
+    </Text>
+    <Text>
+      d
+    </Text>
+    <Text>
+      d
+    </Text>
   </View>
 </View>
 `;
 
 exports[`rendering with header and footer and custom style rendered correctly  1`] = `
-<View
-  style={
-    Array [
-      Object {
-        "alignSelf": "flex-start",
-      },
-      Object {
-        "padding": 10,
-      },
-    ]
-  }
->
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "space-evenly",
-        "paddingTop": 5,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "alignSelf": "center",
-          "borderBottomWidth": 0.5,
-          "flexWrap": "nowrap",
-          "height": 22,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingBottom": 3,
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "alignSelf": "center",
-          "borderBottomWidth": 0.5,
-          "flexWrap": "nowrap",
-          "height": 22,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingBottom": 3,
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "alignSelf": "center",
-          "borderBottomWidth": 0.5,
-          "flexWrap": "nowrap",
-          "height": 22,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingBottom": 3,
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
+<View>
+  <View>
+    <Text>
+      d
+    </Text>
+    <Text>
+      d
+    </Text>
+    <Text>
+      d
+    </Text>
   </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "space-evenly",
-        "paddingTop": 5,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
+  <View>
+    <View>
+      <Text>
+        A
+      </Text>
+      <Text>
+        B
+      </Text>
+      <Text>
+        C
+      </Text>
+    </View>
+    <View>
+      <Text>
+        D
+      </Text>
+      <Text>
+        E
+      </Text>
+      <Text>
+        F
+      </Text>
+    </View>
   </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "space-evenly",
-        "paddingTop": 5,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-  </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "space-evenly",
-        "paddingTop": 5,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "alignSelf": "center",
-          "borderBottomWidth": 0.5,
-          "borderTopWidth": 0.5,
-          "flexWrap": "nowrap",
-          "height": 25,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingBottom": 5,
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "paddingTop": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "alignSelf": "center",
-          "borderBottomWidth": 0.5,
-          "borderTopWidth": 0.5,
-          "flexWrap": "nowrap",
-          "height": 25,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingBottom": 5,
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "paddingTop": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "alignSelf": "center",
-          "borderBottomWidth": 0.5,
-          "borderTopWidth": 0.5,
-          "flexWrap": "nowrap",
-          "height": 25,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingBottom": 5,
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "paddingTop": 5,
-          "width": "25%",
-        }
-      }
-    />
+  <View>
+    <Text>
+      d
+    </Text>
+    <Text>
+      d
+    </Text>
+    <Text>
+      d
+    </Text>
   </View>
 </View>
 `;
 
 exports[`rendering with header rendered correctly  1`] = `
-<View
-  style={
-    Array [
-      Object {
-        "alignSelf": "flex-start",
-      },
-      null,
-    ]
-  }
->
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "space-evenly",
-        "paddingTop": 5,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "alignSelf": "center",
-          "borderBottomWidth": 0.5,
-          "flexWrap": "nowrap",
-          "height": 22,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingBottom": 3,
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "alignSelf": "center",
-          "borderBottomWidth": 0.5,
-          "flexWrap": "nowrap",
-          "height": 22,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingBottom": 3,
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "alignSelf": "center",
-          "borderBottomWidth": 0.5,
-          "flexWrap": "nowrap",
-          "height": 22,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingBottom": 3,
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
+<View>
+  <View>
+    <Text>
+      d
+    </Text>
+    <Text>
+      d
+    </Text>
+    <Text>
+      d
+    </Text>
   </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "space-evenly",
-        "paddingTop": 5,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-  </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "space-evenly",
-        "paddingTop": 5,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
+  <View>
+    <View>
+      <Text>
+        A
+      </Text>
+      <Text>
+        B
+      </Text>
+      <Text>
+        C
+      </Text>
+    </View>
+    <View>
+      <Text>
+        D
+      </Text>
+      <Text>
+        E
+      </Text>
+      <Text>
+        F
+      </Text>
+    </View>
   </View>
 </View>
 `;
 
 exports[`rendering without header or footer rendered correctly  1`] = `
-<View
-  style={
-    Array [
-      Object {
-        "alignSelf": "flex-start",
-      },
-      null,
-    ]
-  }
->
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "space-evenly",
-        "paddingTop": 5,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-  </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "space-evenly",
-        "paddingTop": 5,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flexWrap": "nowrap",
-          "height": 16,
-          "justifyContent": "center",
-          "overflow": "hidden",
-          "paddingLeft": 5,
-          "paddingRight": 5,
-          "width": "25%",
-        }
-      }
-    />
+<View>
+  <View>
+    <View>
+      <Text>
+        A
+      </Text>
+      <Text>
+        B
+      </Text>
+      <Text>
+        C
+      </Text>
+    </View>
+    <View>
+      <Text>
+        D
+      </Text>
+      <Text>
+        E
+      </Text>
+      <Text>
+        F
+      </Text>
+    </View>
   </View>
 </View>
 `;
