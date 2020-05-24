@@ -45,7 +45,7 @@
     "@babel/core": "^7.5.5",
     "@babel/runtime": "^7.5.5",
     "@react-native-community/eslint-config": "^0.0.5",
-    "@storybook/react-native": "^5.1.9",
+    "@storybook/react-native": "^5.3.19",
     "babel-eslint": "^10.0.2",
     "babel-jest": "^24.8.0",
     "camelcase": "^5.3.1",
